@@ -1,15 +1,20 @@
 # NoMoreApply — Services Brochure Pipeline
 
 ```mermaid
-flowchart TD
-    A["resources/\nraw PDFs, exports, snapshots\n(humans maintain)"]
-    B["sources/*.md\none structured profile per person\n(humans distill)"]
-    C["templates/wandercode.latex\nMakefile + scripts/"]
-    D["output/*.pdf\nteam-brochure + 3 individual profiles\n(gitignored)"]
-    E["nomoreapply.github.io/services/\npublic, always reflects latest push"]
+flowchart LR
+    classDef manual fill:#e8f4e8,stroke:#4a7c4a,color:#1a1a1a
+    classDef auto   fill:#e8eef8,stroke:#3a5f8a,color:#1a1a1a
 
-    A -->|"extract + distill"| B
-    B -->|"git push triggers CI"| C
-    C -->|"pandoc + xelatex\npandoc/extra Docker"| D
-    D -->|"GitHub Actions\ndeploy-pages"| E
+    A[resources/]:::manual
+    B[sources/*.md]:::manual
+    C[templates/ + Makefile]:::auto
+    D[output/*.pdf]:::auto
+    E[nomoreapply.github.io/services/]:::auto
+
+    A -->|humans: extract + distill| B
+    B -->|git push triggers CI| C
+    C -->|pandoc + xelatex| D
+    D -->|GitHub Actions deploy-pages| E
 ```
+
+**Green = human-maintained. Blue = fully automated by CI.**
