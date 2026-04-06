@@ -63,8 +63,8 @@ After editing `sources/`, the commit and push triggers CI — PDFs rebuild autom
 
 When layout, styling, or build mechanics change:
 
-1. Edit `templates/wandercode.latex` and/or `Makefile`/`scripts/`.
-2. Test locally before pushing: `docker run --rm -v $(pwd):/data -w /data pandoc/extra:latest /bin/sh -c "make all"`.
+1. Edit `templates/wandercode.typ` and/or `Makefile`/`scripts/`.
+2. Test locally before pushing: `make all` (requires `pandoc` and `typst` installed locally, or via Docker).
 3. Verify the output visually: cream background, Inter font, correct sections, no overflow.
 4. If a toolchain fallback is triggered (switching away from XeLaTeX), document the reason in `docs/audit-trail.md` and update the "Current stack" line in this file.
 
@@ -84,6 +84,8 @@ Rationale: Why. What alternatives were considered and rejected.
 ```
 
 Do not log routine content edits (updating a person's bio, adding a bullet) — only decisions that affect how the pipeline works or what it produces.
+
+**The audit trail is append-only.** Never edit or delete existing entries. Only prepend new ones above the previous most-recent entry.
 
 ## Audit Trail
 

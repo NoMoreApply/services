@@ -1,27 +1,9 @@
-# Audit Trail — NoMoreApply/services
-
-All material AI-assisted decisions, in reverse chronological order.
+# Audit Trail
 
 ---
 
-**2026-04-06** — PDF output format
+**2026-04-06** — Switched PDF engine from XeLaTeX to Typst
 
-Decision: Two outputs per CI run: (1) 1-page team brochure combining all 3 members, (2) one individual profile page per person.
+Decision: Replaced `templates/wandercode.latex` with `templates/wandercode.typ`; updated Makefile to use `--pdf-engine=typst`.
 
-Rationale: Team brochure for intro/overview use; individual profiles for deeper dives. Both serve startup CTOs/founders and enterprise procurement.
-
----
-
-**2026-04-06** — Repository and hosting
-
-Decision: Build and publish from `NoMoreApply/services` repo to `nomoreapply.github.io/services/`.
-
-Rationale: Keeps brochure assets co-located with the services repo. Avoids creating a separate public repo for a single artifact. Revisit if the repo grows and a dedicated `brochure` repo makes more sense.
-
----
-
-**2026-04-06** — Initial architecture decision
-
-Decision: Pandoc + XeLaTeX as the primary toolchain, mirroring the existing `cmin764/cmin764` CV pipeline.
-
-Rationale: Proven setup already in production use for Cosmin's CV. Team familiarity reduces onboarding friction. Fallback paths (WeasyPrint, Typst) documented above and will be evaluated if styling requirements outgrow what LaTeX templates can deliver cleanly.
+Rationale: XeLaTeX via `pandoc/extra` took 3-5 minutes per build locally (cold font cache, multi-pass compilation, 2GB image). Typst compiles in seconds, uses the same `pandoc/extra` image (Typst is bundled), and has simpler template syntax. No content or schema changes — same Pandoc variable system (`$name$`, `$body$`, etc.). LaTeX fonts directory (`templates/fonts/`) retained in repo but no longer used by the pipeline.

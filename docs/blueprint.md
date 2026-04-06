@@ -10,8 +10,8 @@ Complete execution guide for all remaining phases after initial scaffolding.
 3. Commit and push.
 
 **CI's job (automated, triggered on every push):**
-- Reads `sources/*.md` and `templates/wandercode.latex`
-- Runs Pandoc + XeLaTeX to produce all PDFs
+- Reads `sources/*.md` and `templates/wandercode.typ`
+- Runs Pandoc + Typst to produce all PDFs
 - Publishes to GitHub Pages
 
 We never generate PDFs manually. The PDF is always the CI output. If something looks wrong in the PDF, fix the source markdown or the template, then push — CI rebuilds.
@@ -25,7 +25,7 @@ resources/ (raw PDFs, exports, web snapshots)
     v
 sources/*.md (structured Markdown per person)  <-- commit & push triggers CI
     |
-    | [CI: pandoc + xelatex]
+    | [CI: pandoc + typst]
     v
 output/*.pdf (team brochure + 3 individual profiles)
     |
@@ -106,9 +106,11 @@ cta: "Reach out via nomoreapply.com"
 
 ---
 
-## Phase 4: LaTeX Template
+## Phase 4: Typst Template
 
-**File:** `templates/wandercode.latex`
+**File:** `templates/wandercode.typ`
+
+Switched from XeLaTeX to Typst (see `docs/audit-trail.md`). Compiles in seconds vs. minutes.
 
 ### Design spec (Wandercode aesthetic)
 
@@ -119,53 +121,35 @@ cta: "Reach out via nomoreapply.com"
 | Background | `#F5F4EF` (cream) |
 | Body text | `#1A1A2E` (near-black) |
 | Accent | `#2A6F6F` (teal) — rules, dividers, links only |
-| Font | Inter via fontspec (files in `templates/fonts/`) |
+| Font | Inter (files in `templates/fonts/`, loaded via Typst `font` setting) |
 | Body size | 10.5pt |
-| Line spread | 1.65 |
-| H1 (name) | 18pt Inter SemiBold |
-| H2 (sections) | 11pt Inter SemiBold, uppercase, wide tracking, teal rule below |
+| Line leading | 0.8em |
+| H1 (name) | 22pt Inter Bold |
+| H2 (sections) | 9pt Inter SemiBold, uppercase, wide tracking, teal rule below |
 | Footer | Entity name + URL only |
-
-Fallback font if Inter unavailable in container: Fira Sans (ships with TeX Live). Document in CLAUDE.md if switched.
 
 ### Template modes
 
 Controlled by `$documenttype$` Pandoc variable:
 
 **`individual`** (default)
-- Name as H1, role + tagline as subtitle block
-- Contact details right-aligned in header
-- All 5 sections full width
-- Thin accent rule between sections
+- Name as large bold heading, role + tagline as subtitle block
+- Contact line (location, email, LinkedIn, GitHub, website)
+- Teal rule separator, then all 5 body sections
 
 **`team`**
 - Centered team name + tagline at top
 - Team description paragraph
-- 3 member cards in sequence, each with accent left-border rule:
-  - Name, role (small-caps label), Summary, top 3-4 Expertise bullets
+- Member cards via `accentcard` environment (teal left-border)
 - CTA footer
 
-### Required LaTeX packages
+### Toolchain
 
-`geometry`, `fontspec`, `xcolor`, `pagecolor`, `titlesec`, `enumitem`, `hyperref`, `fancyhdr`, `parskip`
-
-All available in `pandoc/extra:latest`.
-
-### Font setup
-
-Download Inter from Google Fonts (OFL license). Place these files in `templates/fonts/`:
-- `Inter-Regular.ttf`
-- `Inter-SemiBold.ttf`
-- `Inter-Bold.ttf`
-
-Reference in template:
-```latex
-\setmainfont[
-  Path=templates/fonts/,
-  BoldFont=Inter-SemiBold.ttf,
-  BoldItalicFont=Inter-SemiBold.ttf
-]{Inter-Regular.ttf}
+```sh
+pandoc --pdf-engine=typst --template=templates/wandercode.typ sources/person.md -o output/person.pdf
 ```
+
+Inter `.ttf` files in `templates/fonts/` are used by Typst directly (no fontspec/TeX needed).
 
 ---
 
@@ -175,8 +159,8 @@ Reference in template:
 
 ```makefile
 PANDOC    = pandoc
-ENGINE    = --pdf-engine=xelatex
-TEMPLATE  = --template=templates/wandercode.latex
+ENGINE    = --pdf-engine=typst
+TEMPLATE  = --template=templates/wandercode.typ
 COMMON    = $(ENGINE) $(TEMPLATE)
 
 INDIVIDUAL_SRCS = sources/angel-aytov.md sources/catalin-waack.md sources/cosmin-poieana.md
@@ -185,10 +169,10 @@ TEAM        = output/team-brochure.pdf
 
 all: $(TEAM) $(INDIVIDUALS)
 
-output/%.pdf: sources/%.md templates/wandercode.latex | output
+output/%.pdf: sources/%.md templates/wandercode.typ | output
 	$(PANDOC) $< -o $@ $(COMMON)
 
-output/team-brochure.pdf: sources/team.md $(INDIVIDUAL_SRCS) templates/wandercode.latex | output
+output/team-brochure.pdf: sources/team.md $(INDIVIDUAL_SRCS) templates/wandercode.typ | output
 	bash scripts/assemble-team.sh
 	$(PANDOC) output/team-assembled.md -o $@ $(COMMON)
 
@@ -205,7 +189,7 @@ clean:
 
 **Local test command:**
 ```sh
-docker run --rm -v $(pwd):/data -w /data pandoc/extra:latest /bin/sh -c "make all"
+make all   # requires pandoc + typst installed locally
 ```
 
 ---
@@ -219,7 +203,7 @@ Triggers:
 - `workflow_dispatch` (manual)
 
 Jobs:
-1. **build**: checkout → `make all` in `pandoc/extra` container → assemble `_site/` with PDFs + `index.html` → upload Pages artifact
+1. **build**: checkout → install `pandoc` + `typst` (or use `pandoc/extra` container) → `make all` → assemble `_site/` with PDFs + `index.html` → upload Pages artifact
 2. **deploy**: `actions/deploy-pages@v4` → publishes to `nomoreapply.github.io/services/`
 
 **Prerequisites (manual, one-time):**
@@ -245,7 +229,7 @@ Root-level `README.md` with:
 
 ### Blockers
 - [ ] Enable GitHub Pages on NoMoreApply/services (org admin: Cosmin)
-- [ ] Source Inter font files → `templates/fonts/`
+- [x] Source Inter font files → `templates/fonts/` ✓
 - [ ] Angel Aytov CV (missing — high priority)
 
 ### Content
@@ -257,10 +241,10 @@ Root-level `README.md` with:
 - [ ] Download wandercode.ltd pages for Cosmin → `resources/`
 
 ### Build
-- [ ] Write LaTeX template `templates/wandercode.latex`
-- [ ] Write `scripts/assemble-team.sh`
-- [ ] Write `Makefile`
-- [ ] Test locally with Docker
+- [x] Write Typst template `templates/wandercode.typ` ✓
+- [x] Write `scripts/assemble-team.sh` ✓
+- [x] Write `Makefile` ✓
+- [ ] Test locally (pandoc + typst installing via brew)
 - [ ] Write CI workflow
 - [ ] Write `README.md`
 - [ ] Verify PDFs render correctly (cream bg, Inter font, all sections)
