@@ -1,0 +1,66 @@
+resources:
+  - file: Angel_Aytov-profile-06_04_2026.pdf
+    person: Angel Aytov
+    type: linkedin-profile
+    source_url: "https://linkedin.com/in/angel-aytov"
+    added: 2026-04-06
+    notes: "LinkedIn profile export. No CV available yet."
+
+  - file: Catalin_Waack-CV-06_04_2026.pdf
+    person: Catalin Waack
+    type: cv
+    source_url: null
+    added: 2026-04-06
+    notes: "Full CV PDF shared directly."
+
+  - file: Catalin_Waack-profile-06_04_2026.pdf
+    person: Catalin Waack
+    type: linkedin-profile
+    source_url: "https://linkedin.com/in/catalinwaack"
+    added: 2026-04-06
+    notes: "LinkedIn profile export."
+
+  - file: Cosmin_Poieana-CV-06_04_2026.pdf
+    person: Cosmin Poieana
+    type: cv
+    source_url: "https://cmin764.github.io/cmin764/cv.pdf"
+    added: 2026-04-06
+    notes: "CV also maintained as Markdown at github.com/cmin764/cmin764/cv.md."
+
+  - file: Cosmin_Poieana-profile-06_04_2026.pdf
+    person: Cosmin Poieana
+    type: linkedin-profile
+    source_url: "https://linkedin.com/in/cmin764"
+    added: 2026-04-06
+    notes: "LinkedIn profile export. Additional resources: wandercode.ltd, portfolio at github.com/stars/cmin764/lists/portfolio."
+
+todos:
+  - person: Angel Aytov
+    missing: cv
+    priority: high
+    notes: "No CV provided. Profile built from LinkedIn export only."
+
+  - person: Catalin Waack
+    missing:
+      - contra.com/catalin_waack_jxfa7eut/work
+      - rivoara.com content
+      - electacar.com content
+      - catalinwaack.com content
+    priority: medium
+    notes: "Framing should emphasize AI/consulting positioning."
+
+  - person: Cosmin Poieana
+    missing:
+      - wandercode.ltd service pages
+      - blog (cmin764.medium.com)
+      - portfolio items from github starred list
+    priority: low
+    notes: "Richest existing resource set; cv.md at cmin764 repo is primary input."
+
+  - item: admin
+    description: "Enable GitHub Pages on NoMoreApply/services repo (deploy from GitHub Actions). Manual org-admin step."
+    priority: high
+
+  - item: fonts
+    description: "Source Inter .ttf font files and add to templates/fonts/. Inter is OFL-licensed."
+    priority: high

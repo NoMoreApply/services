@@ -1,0 +1,90 @@
+# CLAUDE.md — NoMoreApply/services
+
+## Project
+
+PDF brochure pipeline for the NoMoreApply engineering collective. Converts per-person Markdown profiles into polished PDFs (one team brochure + individual pages) via Pandoc + XeLaTeX, built automatically in CI and published to GitHub Pages.
+
+## Toolchain
+
+**Current stack:** Pandoc + XeLaTeX via `pandoc/extra` Docker image (same pipeline as `cmin764/cmin764` CV).
+
+**Fallback options (document trigger + rationale before switching):**
+1. **WeasyPrint/CSS** — if XeLaTeX hits layout or font limitations that require CSS to resolve cleanly. HTML-to-PDF path makes web-style design easier.
+2. **Typst** — if both LaTeX and WeasyPrint prove too cumbersome. Modern, Rust-based, clean markup. Lighter than XeLaTeX but newer ecosystem.
+
+Pin the Docker image version (e.g. `pandoc/extra:3.1.13`) in CI; only move to `latest` intentionally.
+
+## Conventions
+
+- **Profile ordering:** always alphabetical: Angel Aytov, Catalin Waack, Cosmin Poieana
+- **Resource filenames:** `{FirstName}_{LastName}-{type}-{DD_MM_YYYY}.ext`
+- **Source filenames:** kebab-case (`angel-aytov.md`, `catalin-waack.md`, `cosmin-poieana.md`)
+- **Generated PDFs:** go to `output/` (gitignored). Never generate PDFs manually — CI owns this.
+- **CI rebuild triggers:** changes to `sources/`, `templates/`, `scripts/`, `Makefile`, or `.github/workflows/build-pdfs.yml`
+
+## Source Markdown Schema
+
+Each `sources/*.md` file must follow the same YAML front matter + H2 section structure so the template can consume them consistently. Sections in order:
+1. `## Summary`
+2. `## Expertise`
+3. `## Notable Work`
+4. `## Tech Stack`
+5. `## Background`
+
+Gaps (e.g. missing CV data) are marked with `<!-- TODO: ... -->` comments inline.
+
+## Ongoing Maintenance Procedures
+
+These are the recurring operations an agent will be asked to perform. Follow them exactly.
+
+### 1. Adding or updating a resource
+
+When new material arrives for a person (CV, LinkedIn export, website snapshot, portfolio link, etc.):
+
+1. Place the file in `resources/` with the naming convention `{FirstName}_{LastName}-{type}-{DD_MM_YYYY}.ext`, using today's date.
+2. Add or update the corresponding entry in `metadata.yml`: file, person, type, source_url, added date, notes.
+3. If this replaces an older file of the same type, keep the old file (historical record) and add the new one alongside it with the updated date suffix.
+
+Do not edit `sources/` yet — that is a separate step.
+
+### 2. Syncing resources into sources
+
+When resources have been updated and the source markdown needs to reflect them:
+
+1. Read the relevant files in `resources/` for the person being updated.
+2. Extract and distill content into the person's `sources/*.md` file, following the schema above. This is a one-way sync: `resources/` is the source of truth.
+3. Keep the prose tight: brochure-style, not a CV dump. Each section should be the sharpest possible version of the person's story.
+4. Mark any gaps where data is unavailable with `<!-- TODO: describe what's missing -->`.
+5. Do not touch other people's source files in the same operation.
+
+After editing `sources/`, the commit and push triggers CI — PDFs rebuild automatically.
+
+### 3. Updating the template or build system
+
+When layout, styling, or build mechanics change:
+
+1. Edit `templates/wandercode.latex` and/or `Makefile`/`scripts/`.
+2. Test locally before pushing: `docker run --rm -v $(pwd):/data -w /data pandoc/extra:latest /bin/sh -c "make all"`.
+3. Verify the output visually: cream background, Inter font, correct sections, no overflow.
+4. If a toolchain fallback is triggered (switching away from XeLaTeX), document the reason in `docs/audit-trail.md` and update the "Current stack" line in this file.
+
+### 4. Logging an audit trail entry
+
+Whenever a material decision is made (toolchain change, schema change, structural change, hosting change):
+
+1. Open `docs/audit-trail.md`.
+2. Prepend a new entry in this format:
+
+```
+**YYYY-MM-DD** — Short title
+
+Decision: One sentence.
+
+Rationale: Why. What alternatives were considered and rejected.
+```
+
+Do not log routine content edits (updating a person's bio, adding a bullet) — only decisions that affect how the pipeline works or what it produces.
+
+## Audit Trail
+
+See [docs/audit-trail.md](docs/audit-trail.md).
