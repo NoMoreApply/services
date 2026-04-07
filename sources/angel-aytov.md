@@ -11,7 +11,7 @@ email: "angel@aytov.com"
 
 ## Summary
 
-Angel builds AI and data infrastructure that goes beyond prototypes into regulated, observable production systems. Over 15 years across FinTech, HealthTech, and Automotive — at companies including Mercedes-Benz, Toyota, Credit Suisse, and Metapack — with a current focus on agentic AI: GraphRAG pipelines, multi-agent reasoning, real-time voice interfaces, and the observability layer that makes them auditable. Based in Dublin, open to remote or hybrid engagements across Europe.
+Angel builds AI and data infrastructure that goes beyond prototypes into regulated, observable production systems. Over 15 years across FinTech, HealthTech, and Automotive (Mercedes-Benz, Toyota, Credit Suisse, Metapack), with a current focus on agentic AI: GraphRAG pipelines, multi-agent reasoning, real-time voice interfaces, and the observability layer that makes them auditable. Based in Dublin, open to remote or hybrid engagements across Europe.
 
 ## Expertise
 
@@ -29,13 +29,13 @@ Angel builds AI and data infrastructure that goes beyond prototypes into regulat
 
 **DEMICON / Mercedes-Benz** (2022–2024): Senior AWS Cloud Engineer on the Mercedes-Benz automotive account. Built custom guardrails and monitoring using Node.js, Selenium, Lambda, Step Functions, and Grafana. Migrated Terragrunt to Terraform Enterprise. Configured GitLab CI/CD pipelines and automated scaling (EC2 ASG, ECS, RDS/Aurora).
 
-**Y TREE — FinTech** (2021–2022): Led implementation of a new ALM core module for financial life intelligence. Deployed microservices on AWS EKS with Kubernetes/Helm. Prototyped in Java/Kotlin (Spring Boot) and TypeScript (Express/Node.js).
+**Y TREE, FinTech** (2021–2022): Led implementation of a new ALM core module for financial life intelligence. Deployed microservices on AWS EKS with Kubernetes/Helm. Prototyped in Java/Kotlin (Spring Boot) and TypeScript (Express/Node.js).
 
 **Toyota Connected Europe** (2021): Designed and built microservices for the user subscription activation flow using Spring Boot, Spring WebFlux, Java 11, MongoDB, and Kong API Gateway. Built a shared security module (OpenID Connect + JWT) integrated across all production components.
 
 **Credit Suisse** (2020–2021): Lead Full Stack Engineer on an investment wealth management platform. Contributed to TradeNet and RM Plus financial data feeds. Stack: Angular, Java, Spring Boot, Oracle RDBMS.
 
-<!-- TODO: add further highlights once CV is available — Angel's CV has not been provided yet -->
+<!-- TODO: add further highlights once CV is available - Angel's CV has not been provided yet -->
 
 ## Tech Stack
 

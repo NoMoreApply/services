@@ -6,13 +6,20 @@ PDF brochure pipeline for the NoMoreApply engineering collective. Converts per-p
 
 ## Toolchain
 
-**Current stack:** Pandoc + XeLaTeX via `pandoc/extra` Docker image (same pipeline as `cmin764/cmin764` CV).
+**Current stack:** Pandoc + Typst (local install). See `docs/audit-trail.md` for why XeLaTeX was dropped.
 
-**Fallback options (document trigger + rationale before switching):**
-1. **WeasyPrint/CSS** — if XeLaTeX hits layout or font limitations that require CSS to resolve cleanly. HTML-to-PDF path makes web-style design easier.
-2. **Typst** — if both LaTeX and WeasyPrint prove too cumbersome. Modern, Rust-based, clean markup. Lighter than XeLaTeX but newer ecosystem.
+**Fallback option:** WeasyPrint/CSS - if Typst hits layout limitations. Document trigger and rationale in `docs/audit-trail.md` before switching.
 
 Pin the Docker image version (e.g. `pandoc/extra:3.1.13`) in CI; only move to `latest` intentionally.
+
+## Writing Style
+
+All prose in `sources/` must follow these rules. Apply them when extracting or editing content.
+
+- **No em dashes.** Replace ` — ` with a comma, colon, or plain hyphen. No exceptions.
+- **No AI-sounding filler.** Avoid phrases like "leveraged", "spearheaded", "delivered impactful solutions", "passionate about", "driven by", "results-oriented". Write like a person, not a job board.
+- **Concrete over vague.** Name companies, technologies, outcomes. "Built a GraphRAG pipeline used in clinical trials" beats "developed innovative AI solutions".
+- **Active voice, present tense** for current work; simple past for completed roles.
 
 ## Conventions
 

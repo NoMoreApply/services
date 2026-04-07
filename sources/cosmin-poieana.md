@@ -17,7 +17,7 @@ AI handles the repetition. Humans fill the gaps that need judgment. Cosmin build
 
 - RAG pipelines, multi-agent architectures, and LLM integration (OpenAI, Anthropic, LangChain) in production
 - AI product strategy: technical audits, risk registers, roadmaps for regulated industries (hrtech, fintech, biotech, iGaming)
-- Embedded fractional engineering: inside your Slack, GitHub, and standups — shared conventions, MCP/CLI integrations, blueprint-first methods
+- Embedded fractional engineering: inside your Slack, GitHub, and standups, shared conventions, MCP/CLI integrations, blueprint-first methods
 - Python at depth: FastAPI, Django, Flask, async, distributed systems (gRPC, Celery, Dramatiq)
 - Team AI adoption: Claude Code, Cursor workflows, multi-agent code review, compressing weeks into hours
 - Full-stack delivery when needed: React/Next.js frontend, PostgreSQL/Redis/MongoDB backends, Docker/Kubernetes
@@ -29,9 +29,9 @@ AI handles the repetition. Humans fill the gaps that need judgment. Cosmin build
 
 **Wandercode / A5 Labs** (2025): Built Python/FastAPI services and a C++ inference server delivering Game Theory Optimal (GTO) and reinforcement learning strategies for high-stakes poker tournaments.
 
-**Sema4AI** (2023–2024): Led a team of 5 engineers building AI Actions for OpenGPT-powered agents. Core product: an Action Server (FastAPI) that discovers and runs action packages in isolation — wrapping Google, Slack, HubSpot, and local document operations. Also designed OAuth2 flows, drove DX improvements, and managed hiring and 360 reviews.
+**Sema4AI** (2023–2024): Led a team of 5 engineers building AI Actions for OpenGPT-powered agents. Core product: an Action Server (FastAPI) that discovers and runs action packages in isolation, wrapping Google, Slack, HubSpot, and local document operations. Also designed OAuth2 flows, drove DX improvements, and managed hiring and 360 reviews.
 
-**Robocorp** (2021–2023, acquired by Sema4AI): Built the Python RPA library ecosystem — intelligent document processing, browser automation (Selenium/Playwright), OCR, OAuth2, PDF handling. 10k-user community. Prioritized ruthlessly from direct customer support.
+**Robocorp** (2021–2023, acquired by Sema4AI): Built the Python RPA library ecosystem: intelligent document processing, browser automation (Selenium/Playwright), OCR, OAuth2, PDF handling. 10k-user community. Prioritized ruthlessly from direct customer support.
 
 **Comfy → Siemens** (2019–2020): Architected microservices for a smart buildings IoT platform (Go + Python/Django, gRPC/protobuf, PostGIS). Saw the full arc of a Siemens acquisition.
 

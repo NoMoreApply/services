@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 ## assemble-team.sh — combine team front matter + per-member Summary/Expertise
 ## Usage: assemble-team.sh <output.md> <team.md> <member1.md> [member2.md ...]
-##
-## Produces a single markdown file: team YAML front matter + intro body
-## from team.md, followed by one accentcard block per member.
 
 set -euo pipefail
 
@@ -11,11 +8,16 @@ OUT="$1"; shift
 TEAM_MD="$1"; shift
 MEMBERS=("$@")
 
-# Extract YAML front matter from team.md (between --- delimiters)
-FRONT_MATTER=$(awk '/^---/{found++; if(found==2){exit}} found{print}' "$TEAM_MD")
+# Strip em dashes from a string, replace with plain hyphen
+strip_emdash() {
+  echo "$1" | sed 's/ — / - /g; s/—/-/g'
+}
 
-# Extract body (after second --- delimiter) from team.md
-TEAM_BODY=$(awk 'found{print} /^---/{found++; if(found==2){found=3}}' "$TEAM_MD")
+# Front matter: lines between first and second --- (exclusive of both)
+FRONT_MATTER=$(awk 'NR==1{next} /^---/{exit} {print}' "$TEAM_MD")
+
+# Body: everything after the second ---
+TEAM_BODY=$(awk 'BEGIN{n=0} /^---/{n++; next} n>=2{print}' "$TEAM_MD" | sed 's/ — / - /g; s/—/-/g')
 
 {
   echo "---"
@@ -26,30 +28,38 @@ TEAM_BODY=$(awk 'found{print} /^---/{found++; if(found==2){found=3}}' "$TEAM_MD"
   echo ""
 } > "$OUT"
 
-# For each member: extract name, role, tagline from front matter,
-# then extract Summary and Expertise sections.
 for MD in "${MEMBERS[@]}"; do
   NAME=$(awk -F'"' '/^name:/{print $2}' "$MD")
-  ROLE=$(awk -F'"' '/^role:/{print $2}' "$MD")
-  TAGLINE=$(awk -F'"' '/^tagline:/{print $2}' "$MD")
+  ROLE=$(strip_emdash "$(awk -F'"' '/^role:/{print $2}' "$MD")")
+  TAGLINE=$(strip_emdash "$(awk -F'"' '/^tagline:/{print $2}' "$MD")")
 
-  # Extract ## Summary section (up to next ## or EOF)
-  SUMMARY=$(awk '/^## Summary/{found=1; next} found && /^## /{exit} found{print}' "$MD" | sed '/^[[:space:]]*$/d' | head -5)
+  SUMMARY=$(awk '/^## Summary/{found=1; next} found && /^## /{exit} found && NF{print}' "$MD" | head -4 | sed 's/ — / - /g; s/—/-/g')
 
-  # Extract ## Expertise bullets (up to next ## or EOF)
-  EXPERTISE=$(awk '/^## Expertise/{found=1; next} found && /^## /{exit} found{print}' "$MD" | grep '^-' | head -4)
+  # Expertise as Typst list items (one per line, indented)
+  EXPERTISE_ITEMS=$(awk '/^## Expertise/{found=1; next} found && /^## /{exit} found && /^-/{print}' "$MD" | head -4 | sed 's/^- //; s/ — / - /g; s/—/-/g')
+
+  # Build Typst list block
+  TYPST_LIST=""
+  while IFS= read -r line; do
+    [ -z "$line" ] && continue
+    TYPST_LIST="${TYPST_LIST}  - ${line}"$'\n'
+  done <<< "$EXPERTISE_ITEMS"
 
   {
-    echo ""
-    echo "\\begin{accentcard}"
-    echo "**${NAME}** — *${ROLE}*"
-    echo ""
-    echo "${TAGLINE}"
-    echo ""
-    echo "${SUMMARY}"
-    echo ""
-    echo "${EXPERTISE}"
-    echo "\\end{accentcard}"
+    printf '```{=typst}\n'
+    echo "#v(0.6em)"
+    echo "#accentcard(["
+    echo "  #text(size: 13pt, weight: \"bold\")[${NAME}]"
+    echo "  #linebreak()"
+    echo "  #text(size: 10pt, fill: midgrey)[${ROLE}]"
+    echo "  #linebreak()"
+    echo "  #text(size: 9.5pt, style: \"italic\", fill: midgrey)[${TAGLINE}]"
+    echo "  #v(0.4em)"
+    echo "  ${SUMMARY}"
+    echo "  #v(0.3em)"
+    printf '%s' "$TYPST_LIST"
+    echo "])"
+    printf '```\n'
     echo ""
   } >> "$OUT"
 done

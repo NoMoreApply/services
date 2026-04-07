@@ -4,7 +4,7 @@
 
 #let cream = rgb("#F5F4EF")
 #let nearblack = rgb("#1A1A2E")
-#let teal = rgb("#2A6F6F")
+#let teal = rgb("#A0303A")
 #let midgrey = rgb("#666677")
 
 #set page(
@@ -37,6 +37,15 @@
 
 // Bullet list
 #set list(indent: 1em, spacing: 0.2em)
+
+// Member card with teal left border (team mode)
+#let accentcard(body) = block(
+  width: 100%,
+  inset: (left: 12pt, top: 6pt, bottom: 6pt, right: 0pt),
+  stroke: (left: 3pt + teal),
+  spacing: 0.8em,
+  body
+)
 
 $if(individual)$
 // ── INDIVIDUAL PROFILE ──────────────────────────────────────────────────────
