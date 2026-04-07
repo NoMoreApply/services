@@ -15,8 +15,9 @@ ALL_PDFS := $(TEAM_PDF) $(PROFILES)
 
 PANDOC_FLAGS := \
 	--pdf-engine=typst \
+	--pdf-engine-opt=--font-path=templates/fonts \
 	--template=$(TEMPLATE) \
-	--variable=documenttype:individual
+	--variable=individual:true
 
 .PHONY: all clean
 
@@ -24,14 +25,15 @@ all: $(ALL_PDFS)
 
 ## Individual profiles
 $(OUTDIR)/%-profile.pdf: $(SOURCES)/%.md $(TEMPLATE) | $(OUTDIR)
-	$(PANDOC) $(PANDOC_FLAGS) --variable=documenttype:individual -o $@ $<
+	$(PANDOC) $(PANDOC_FLAGS) -o $@ $<
 
 ## Team brochure: assemble first, then render
 $(TEAM_PDF): $(TEAM_MD) $(TEMPLATE) | $(OUTDIR)
 	$(PANDOC) \
 		--pdf-engine=typst \
+		--pdf-engine-opt=--font-path=templates/fonts \
 		--template=$(TEMPLATE) \
-		--variable=documenttype:team \
+		--variable=team:true \
 		-o $@ $<
 
 $(TEAM_MD): $(SOURCES)/team.md $(addprefix $(SOURCES)/,$(addsuffix .md,$(MEMBERS))) | $(OUTDIR)

@@ -38,8 +38,7 @@
 // Bullet list
 #set list(indent: 1em, spacing: 0.2em)
 
-$if(documenttype)$
-$if(documenttype/individual)$
+$if(individual)$
 // ── INDIVIDUAL PROFILE ──────────────────────────────────────────────────────
 
 #text(size: 22pt, weight: "bold")[$name$]
@@ -66,7 +65,7 @@ $if(documenttype/individual)$
 $body$
 
 $else$
-$if(documenttype/team)$
+$if(team)$
 // ── TEAM BROCHURE ───────────────────────────────────────────────────────────
 
 #align(center)[
@@ -91,7 +90,4 @@ $body$
 ]
 
 $endif$
-$endif$
-$else$
-$body$
 $endif$
