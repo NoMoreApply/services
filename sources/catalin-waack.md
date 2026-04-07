@@ -2,7 +2,7 @@
 name: "Catalin Waack"
 role: "Product Engineer & AI Consultant"
 tagline: "From idea to paying customers, fast."
-location: "Remote (Europe)"
+location: "Romania (remote, European timezones)"
 linkedin: "https://www.linkedin.com/in/catalinwaack"
 github: "https://github.com/c4t4"
 website: "https://catalinwaack.com"
@@ -36,13 +36,15 @@ Catalin turns early-stage ideas into working products that people pay for. Fifte
 **Tailorwine, Fullstack & PM** (2022): Shipped B2B MVP using B2C data to demonstrate value. Acquired REWE and EDEKA as clients.
 
 <!-- TODO: add detail from contra.com/catalin_waack_jxfa7eut/work when profile is downloaded -->
-<!-- TODO: add electacar.com and rivoara.com project details when content is available -->
+**Rivoara** (ongoing): Building an ecommerce brand selling shower filters across Europe, company based in Poland. Full ownership from product sourcing to storefront.
+
+<!-- TODO: add electacar.com and rivoara.com full project details when content is available -->
 
 ## Tech Stack
 
 **Languages:** TypeScript, JavaScript (15+ years), Python, Swift/SwiftUI, PHP
 
-**Frontend:** React, Next.js, Tailwind CSS, Angular, AEM
+**Frontend:** React, Next.js, Tailwind CSS, Angular, AEM, Shopify/Hydrogen
 
 **Backend:** Node.js, FastAPI, Express, Strapi, Supabase, Laravel
 

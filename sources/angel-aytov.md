@@ -59,4 +59,4 @@ Certifications: Sun Certified Java Programmer (Java 6), Oracle Java SE 11 Progra
 
 <!-- TODO: source full certifications list and any speaking/community activity once CV is available -->
 
-Open to: AI Automation Architect, Principal Engineer, MLOps Engineer, Data Engineer, AWS Architect roles.
+Available now. Open to: AI Automation Architect, Principal Engineer, MLOps Engineer, Data Engineer, AWS Architect roles. Remote or hybrid across Europe.

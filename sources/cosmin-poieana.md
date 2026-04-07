@@ -16,7 +16,7 @@ AI handles the repetition. Humans fill the gaps that need judgment. Cosmin build
 ## Expertise
 
 - RAG pipelines, multi-agent architectures, and LLM integration (OpenAI, Anthropic, LangChain) in production
-- AI product strategy: technical audits, risk registers, roadmaps for regulated industries (hrtech, fintech, biotech, iGaming)
+- AI product strategy: technical audits, risk registers, roadmaps for regulated industries (SaaS, med/biotech, fintech, HR tech)
 - Embedded fractional engineering: inside your Slack, GitHub, and standups, shared conventions, MCP/CLI integrations, blueprint-first methods
 - Python at depth: FastAPI, Django, Flask, async, distributed systems (gRPC, Celery, Dramatiq)
 - Team AI adoption: Claude Code, Cursor workflows, multi-agent code review, compressing weeks into hours
@@ -37,7 +37,7 @@ AI handles the repetition. Humans fill the gaps that need judgment. Cosmin build
 
 ## Tech Stack
 
-**Languages:** Python (13+ years professional), TypeScript/JavaScript, Go, C/C++
+**Languages:** Python (13+ years professional), TypeScript/JavaScript, Go, C/C++, SQL
 
 **AI/ML:** LangChain, RAG pipelines, OpenAI/Anthropic APIs, Claude Code, MCP, Cursor, prompt engineering
 

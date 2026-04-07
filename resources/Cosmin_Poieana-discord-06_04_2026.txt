@@ -1,0 +1,9 @@
+Source: Discord (date approximate: early 2026)
+
+Roles: AI Product Engineer, Founding Engineer, Sr. Software Engineer [Lead]
+Skills: Communication/Leadership, Web, RPA/automation, Python/Go, FastAPI/Flask/Django, React/Next, SQL, Claude Code + Cursor, AI, LLM/GPT
+Timezone: GMT-/+3
+Contract: remote, part-time
+Availability: now
+Looking for: SaaS, med/biotech, fintech, HR tech
+Links: https://github.com/cmin764

@@ -1,0 +1,28 @@
+Source: Discord (date approximate: 2025-12-22)
+
+Full-stack dev with experience in React/Next.js + Python + Shopify/Hydrogen
+Catalin Waack
+
+Hey all, I'm Catalin Waack
+
+Basics
+- Role: Fullstack software developer (frontend, backend, automation, AI)
+- Tech: React, Next.js, Python, Shopify (Hydrogen)
+- Location: Romania (Europe), here at least until next year
+
+Context
+- Freelancing mostly with clients in Germany, Austria, and the US
+- Also in an early-stage startup based in San Francisco (tiny team), inventing algorithm for motion and audio matching.
+- Building my own ecommerce brand selling shower filters in Europe (company based in Poland)
+- Lately doing vibe coding with a big focus on conception + speed
+
+Community
+- Likes sales, learning about different niches, and connecting with people
+- Can help grow communities by doing outreach and bringing in new members
+- Support wanted: intros, feedback, and any US-move advice
+
+Personal
+- Traveled the last 3 years
+- Started coding around 14 trying to learn hacking/exploits, then moved on
+
+https://www.linkedin.com/in/catalinwaack/
