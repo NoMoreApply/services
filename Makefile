@@ -2,7 +2,7 @@
 ## Usage (local): make all  (requires pandoc and typst installed natively)
 
 PANDOC   := pandoc
-TEMPLATE := templates/wandercode.typ
+TEMPLATE := templates/nomoreapply.typ
 OUTDIR   := output
 SOURCES  := sources
 

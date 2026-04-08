@@ -2,11 +2,23 @@
 
 ## Project
 
-PDF brochure pipeline for the NoMoreApply engineering collective. Converts per-person Markdown profiles into polished PDFs (one team brochure + individual pages) via Pandoc + XeLaTeX, built automatically in CI and published to GitHub Pages.
+PDF brochure pipeline for the NoMoreApply engineering collective. Converts per-person Markdown profiles into polished PDFs (one team brochure + individual pages) via Pandoc + Typst, built automatically in CI and published to GitHub Pages.
 
 ## Toolchain
 
 **Current stack:** Pandoc + Typst (local install). See `docs/audit-trail.md` for why XeLaTeX was dropped.
+
+**Template:** `templates/nomoreapply.typ` — design aligned to nomoreapply.com brand.
+
+**Design tokens:**
+- Background: `#FAFAFA` (off-white)
+- Text: `#09090B` (near-black)
+- Accent: `#DC143C` (NMA crimson — role lines, team taglines only)
+- Secondary: `#71717A` (muted grey)
+- Dividers: `#E4E4E7` (light grey rules and card borders)
+- Font: Inter, weights 400/600/700
+- Name: 26pt bold, tracking -0.02em
+- Section headings: 7.5pt bold uppercase, tracking 0.1em, grey rule
 
 **Fallback option:** WeasyPrint/CSS - if Typst hits layout limitations. Document trigger and rationale in `docs/audit-trail.md` before switching.
 
@@ -70,9 +82,9 @@ After editing `sources/`, the commit and push triggers CI. PDFs rebuild automati
 
 When layout, styling, or build mechanics change:
 
-1. Edit `templates/wandercode.typ` and/or `Makefile`/`scripts/`.
+1. Edit `templates/nomoreapply.typ` and/or `Makefile`/`scripts/`.
 2. Test locally before pushing: `make all` (requires `pandoc` and `typst` installed natively).
-3. Verify the output visually: cream background, Inter font, correct sections, no overflow.
+3. Verify the output visually: off-white background, Inter font, correct sections, no overflow.
 4. If a toolchain fallback is triggered (switching away from XeLaTeX), document the reason in `docs/audit-trail.md` and update the "Current stack" line in this file.
 
 ### 4. Logging an audit trail entry
