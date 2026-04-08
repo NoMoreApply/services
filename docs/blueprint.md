@@ -10,7 +10,7 @@ Complete execution guide for all remaining phases after initial scaffolding.
 3. Commit and push.
 
 **CI's job (automated, triggered on every push):**
-- Reads `sources/*.md` and `templates/wandercode.typ`
+- Reads `sources/*.md` and `templates/nomoreapply.typ`
 - Runs Pandoc + Typst to produce all PDFs
 - Publishes to GitHub Pages
 
@@ -29,7 +29,7 @@ sources/*.md (structured Markdown per person)  <-- commit & push triggers CI
     v
 output/*.pdf (team brochure + 3 individual profiles)
     |
-    | [CI: GitHub Actions → Pages]
+    | [CI: GitHub Actions -> Pages]
     v
 nomoreapply.github.io/services/ (public, always reflects latest push)
 ```
@@ -37,6 +37,8 @@ nomoreapply.github.io/services/ (public, always reflects latest push)
 ---
 
 ## Phase 3: Source Markdown Extraction
+
+**Status: in progress** (Cosmin complete, Angel and Catalin have open TODOs)
 
 **Goal:** One well-structured `.md` file per person under `sources/`, extracted from available resources.
 
@@ -67,185 +69,146 @@ Gaps are marked with `<!-- TODO: source missing -->` so they're visible in diffs
 
 ### Per-person extraction guide
 
-**Cosmin Poieana (`sources/cosmin-poieana.md`)**
-- Primary: `/Users/cmin/Work/cmin764/cmin764/cv.md` (full Markdown source)
-- Supplementary: wandercode.ltd service pages, portfolio GitHub list
-- Compress 13 experience entries to 3-5 highlights (Wandercode, VONQ, Sema4AI, Robocorp + acquisition note)
-- Anchor the "2B tokens/month" stat - it's concrete and credibility-building
-- Role framing: "Fractional AI Product Strategist"
+**Cosmin Poieana (`sources/cosmin-poieana.md`)** - complete, 0 TODOs
+- Primary: `resources/Cosmin_Poieana-CV-06_04_2026.pdf`
+- Supplementary: LinkedIn profile PDF, Discord post
+- Remaining to pull: wandercode.ltd service pages, blog (cmin764.medium.com), portfolio starred list
 
-**Catalin Waack (`sources/catalin-waack.md`)**
+**Catalin Waack (`sources/catalin-waack.md`)** - 2 TODOs remaining
 - Primary: `resources/Catalin_Waack-CV-06_04_2026.pdf`
-- Supplementary: LinkedIn profile PDF, contra.com profile
-- Frame for AI/consulting positioning (not raw CV listing)
-- Include electacar.com and rivoara.com as client/project evidence
-- Download contra.com profile and add to resources when available
+- Supplementary: LinkedIn profile PDF, Discord post
+- Remaining to pull: contra.com profile, catalinwaack.com, electacar.com, rivoara.com
 
-**Angel Aytov (`sources/angel-aytov.md`)**
-- Primary: `resources/Angel_Aytov-profile-06_04_2026.pdf` (LinkedIn only)
-- CV not yet available - mark all gaps with TODO comments
-- Use roles of interest as positioning signal: AI Automation Architect, Principal Engineer, MLOps Engineer, Data Engineer, AWS Architect
-- Location: Dublin, Ireland (remote/hybrid)
+**Angel Aytov (`sources/angel-aytov.md`)** - 4 TODOs remaining
+- Primary: `resources/Angel_Aytov-profile-06_04_2026.pdf` (LinkedIn only - no CV yet)
+- Supplementary: Discord post
+- CV not yet available - all gaps marked with TODO comments
+- Role targets: AI Automation Architect, Principal Engineer, MLOps Engineer, Data Engineer, AWS Architect
+- Location: Dublin, Ireland
 
 ### Team master file (`sources/team.md`)
 
-Contains team-level front matter and a brief intro paragraph. The build script populates the member section from individual files.
-
-```yaml
----
-documenttype: team
-team_name: "NoMoreApply"
-team_tagline: "Trusted engineers. Direct introductions."
-team_description: >
-  A vetted collective of senior engineers available for fractional and contract
-  engagements. We embed inside your team - shared Slack, shared GitHub, shared
-  standups. Not a vendor on the outside.
-cta: "Reach out via nomoreapply.com"
----
-```
+Contains team-level front matter and intro paragraph. `scripts/assemble-team.sh` injects Summary + Expertise from each individual file before the team PDF is built.
 
 ---
 
 ## Phase 4: Typst Template
 
-**File:** `templates/wandercode.typ`
+**Status: complete**
 
-Switched from XeLaTeX to Typst (see `docs/audit-trail.md`). Compiles in seconds vs. minutes.
+**File:** `templates/nomoreapply.typ` (note: `wandercode.typ` is a legacy leftover, unused)
 
-### Design spec (Wandercode aesthetic)
+### Design tokens (NMA brand)
 
 | Element | Value |
 |---------|-------|
 | Paper | A4 |
-| Margins | 25mm L/R, 20mm top, 25mm bottom |
-| Background | `#F5F4EF` (cream) |
-| Body text | `#1A1A2E` (near-black) |
-| Accent | `#2A6F6F` (teal) - rules, dividers, links only |
-| Font | Inter (files in `templates/fonts/`, loaded via Typst `font` setting) |
-| Body size | 10.5pt |
-| Line leading | 0.8em |
-| H1 (name) | 22pt Inter Bold |
-| H2 (sections) | 9pt Inter SemiBold, uppercase, wide tracking, teal rule below |
-| Footer | Entity name + URL only |
+| Background | `#FAFAFA` (off-white) |
+| Body text | `#09090B` (near-black) |
+| Accent | `#DC143C` (NMA crimson - role lines, team taglines only) |
+| Secondary | `#71717A` (muted grey) |
+| Dividers | `#E4E4E7` (light grey rules and card borders) |
+| Font | Inter, weights 400/600/700 |
+| Name | 26pt bold, tracking -0.02em |
+| Section headings | 7.5pt bold uppercase, tracking 0.1em, grey rule |
 
 ### Template modes
 
-Controlled by `$documenttype$` Pandoc variable:
+Controlled by Pandoc `--variable` flags:
 
-**`individual`** (default)
-- Name as large bold heading, role + tagline as subtitle block
+**`individual:true`** (default for profile PDFs)
+- Name as large bold heading, role + tagline as subtitle
 - Contact line (location, email, LinkedIn, GitHub, website)
-- Teal rule separator, then all 5 body sections
+- All 5 body sections
 
-**`team`**
-- Centered team name + tagline at top
+**`team:true`** (for team brochure)
+- Centered team name + tagline
 - Team description paragraph
-- Member cards via `accentcard` environment (teal left-border)
+- Member cards assembled from individual Summary + Expertise sections
 - CTA footer
 
 ### Toolchain
 
 ```sh
-pandoc --pdf-engine=typst --template=templates/wandercode.typ sources/person.md -o output/person.pdf
+# Individual profile
+pandoc --pdf-engine=typst --pdf-engine-opt=--font-path=templates/fonts \
+  --template=templates/nomoreapply.typ --variable=individual:true \
+  sources/person.md -o output/person-profile.pdf
+
+# Team brochure (assemble first)
+bash scripts/assemble-team.sh output/_team-assembled.md sources/team.md sources/*.md
+pandoc --pdf-engine=typst --pdf-engine-opt=--font-path=templates/fonts \
+  --template=templates/nomoreapply.typ --variable=team:true \
+  output/_team-assembled.md -o output/team-brochure.pdf
 ```
 
-Inter `.ttf` files in `templates/fonts/` are used by Typst directly (no fontspec/TeX needed).
+Inter `.ttf` files in `templates/fonts/` are loaded directly by Typst (no TeX needed).
 
 ---
 
 ## Phase 5: Build System
 
-**File:** `Makefile` at repo root.
+**Status: complete**
 
-```makefile
-PANDOC    = pandoc
-ENGINE    = --pdf-engine=typst
-TEMPLATE  = --template=templates/wandercode.typ
-COMMON    = $(ENGINE) $(TEMPLATE)
-
-INDIVIDUAL_SRCS = sources/angel-aytov.md sources/catalin-waack.md sources/cosmin-poieana.md
-INDIVIDUALS = $(patsubst sources/%.md,output/%.pdf,$(INDIVIDUAL_SRCS))
-TEAM        = output/team-brochure.pdf
-
-all: $(TEAM) $(INDIVIDUALS)
-
-output/%.pdf: sources/%.md templates/wandercode.typ | output
-	$(PANDOC) $< -o $@ $(COMMON)
-
-output/team-brochure.pdf: sources/team.md $(INDIVIDUAL_SRCS) templates/wandercode.typ | output
-	bash scripts/assemble-team.sh
-	$(PANDOC) output/team-assembled.md -o $@ $(COMMON)
-
-output:
-	mkdir -p output
-
-clean:
-	rm -rf output/
-
-.PHONY: all clean
-```
-
-**`scripts/assemble-team.sh`** - reads `sources/team.md` as header, then extracts `## Summary` and `## Expertise` blocks from each individual file, assembles into `output/team-assembled.md`.
-
-**Local test command:**
-```sh
-make all   # requires pandoc + typst installed locally
-```
+- `Makefile` at repo root: `make all` builds all PDFs, `make clean` removes `output/`
+- `scripts/assemble-team.sh`: assembles team brochure markdown from individual sources
+- Local build: `make all` (requires `pandoc` and `typst` installed natively)
 
 ---
 
 ## Phase 6: CI Workflow
 
+**Status: complete**
+
 **File:** `.github/workflows/build-pdfs.yml`
 
-Triggers:
-- Push to `main` touching `sources/`, `templates/`, `scripts/`, `Makefile`, or the workflow file
-- `workflow_dispatch` (manual)
+Triggers on push to `main` touching `sources/`, `templates/`, `scripts/`, `site/`, `Makefile`, or the workflow file. Also supports `workflow_dispatch`.
 
-Jobs:
-1. **build**: checkout → install `pandoc` + `typst` (or use `pandoc/extra` container) → `make all` → assemble `_site/` with PDFs + `index.html` → upload Pages artifact
-2. **deploy**: `actions/deploy-pages@v4` → publishes to `nomoreapply.github.io/services/`
+Tool versions pinned:
+- Pandoc: 3.9.0.2
+- Typst: 0.14.2
+- actions/checkout: v6.0.2
+- actions/cache: v5.0.4
+- actions/upload-pages-artifact: v4.0.0
+- actions/deploy-pages: v5.0.0
 
-**Prerequisites (manual, one-time):**
-- Enable GitHub Pages on `NoMoreApply/services` repo
-- Set source to "GitHub Actions" (not a branch)
-- Requires org admin
+Site index (`site/index.html`) is copied into `_site/` alongside the PDFs on every build.
+
+**Prerequisites (done):**
+- GitHub Pages enabled on `NoMoreApply/services` (source: GitHub Actions)
+- Repo is public (Pages requires public repo on free plan)
 
 ---
 
 ## Phase 7: README.md
 
-Root-level `README.md` with:
-- One-line project description
-- Mermaid pipeline diagram (resources → sources → PDFs → Pages)
-- Quick start (local build with Docker)
-- Links to live PDFs
-- Team member list (alphabetical)
-- Link to this blueprint
+**Status: complete**
+
+Root-level `README.md` with Mermaid pipeline diagram, member list, and link to live PDFs at `nomoreapply.github.io/services/`.
 
 ---
 
 ## TODO Checklist
 
 ### Blockers
-- [ ] Enable GitHub Pages on NoMoreApply/services (org admin: Cosmin)
-- [x] Source Inter font files → `templates/fonts/` ✓
+- [x] Enable GitHub Pages on NoMoreApply/services
+- [x] Source Inter font files -> `templates/fonts/`
 - [ ] Angel Aytov CV (missing - high priority)
 
 ### Content
-- [ ] Extract `sources/cosmin-poieana.md` from cv.md + wandercode.ltd
-- [ ] Extract `sources/catalin-waack.md` from CV PDF + LinkedIn
-- [ ] Extract `sources/angel-aytov.md` from LinkedIn PDF (sparse, mark gaps)
-- [ ] Download Catalin's contra.com profile → `resources/`
-- [ ] Download Catalin's catalinwaack.com content → `resources/`
-- [ ] Download wandercode.ltd pages for Cosmin → `resources/`
+- [x] Extract `sources/cosmin-poieana.md`
+- [ ] Extract `sources/catalin-waack.md` fully (2 TODOs remaining)
+- [ ] Extract `sources/angel-aytov.md` fully (4 TODOs, blocked on CV)
+- [ ] Download Catalin's contra.com profile -> `resources/`
+- [ ] Download Catalin's catalinwaack.com content -> `resources/`
+- [ ] Download wandercode.ltd pages for Cosmin -> `resources/`
 
 ### Build
-- [x] Write Typst template `templates/wandercode.typ` ✓
-- [x] Write `scripts/assemble-team.sh` ✓
-- [x] Write `Makefile` ✓
-- [ ] Test locally (pandoc + typst installing via brew)
-- [ ] Write CI workflow
-- [ ] Write `README.md`
-- [ ] Verify PDFs render correctly (cream bg, Inter font, all sections)
-- [ ] Verify Pages deployment URL works
+- [x] Write Typst template `templates/nomoreapply.typ`
+- [x] Write `scripts/assemble-team.sh`
+- [x] Write `Makefile`
+- [x] Write CI workflow `.github/workflows/build-pdfs.yml`
+- [x] Write `README.md`
+- [x] Test locally (pandoc + typst)
+- [x] Verify PDFs render correctly
+- [x] Verify Pages deployment URL works (`nomoreapply.github.io/services/`)
