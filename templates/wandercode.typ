@@ -1,4 +1,4 @@
-// wandercode.typ — Pandoc/Typst template for NoMoreApply brochures
+// wandercode.typ: Pandoc/Typst template for NoMoreApply brochures
 // Modes: individual (full profile) | team (member cards)
 // Controlled by $documenttype$ Pandoc variable
 
@@ -12,7 +12,7 @@
   margin: (left: 25mm, right: 25mm, top: 20mm, bottom: 25mm),
   fill: cream,
   footer: align(center)[
-    #text(size: 8pt, fill: midgrey)[NoMoreApply — nomoreapply.com]
+    #text(size: 8pt, fill: midgrey)[NoMoreApply | nomoreapply.com]
   ]
 )
 

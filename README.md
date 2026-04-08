@@ -1,20 +1,45 @@
-# NoMoreApply — Services Brochure Pipeline
+# NoMoreApply: Services Brochure Pipeline
 
 ```mermaid
-flowchart LR
-    classDef manual fill:#e8f4e8,stroke:#4a7c4a,color:#1a1a1a
-    classDef auto   fill:#e8eef8,stroke:#3a5f8a,color:#1a1a1a
+flowchart TD
+    subgraph HUMAN["① Human: Resource Collection"]
+        direction LR
+        R1[CVs / LinkedIn exports]
+        R2[Discord posts / notes]
+        R3[Website snapshots]
+        R1 & R2 & R3 --> RES[resources/]
+    end
 
-    A[resources/]:::manual
-    B[sources/*.md]:::manual
-    C[templates/ + Makefile]:::auto
-    D[output/*.pdf]:::auto
-    E[nomoreapply.github.io/services/]:::auto
+    subgraph AI["② AI: Source Synthesis  (/project:refresh)"]
+        direction LR
+        RES --> READ[Read & distill resources]
+        READ --> SRC["sources/*.md: per-person profiles"]
+        READ --> TRAIL["docs/audit-trail.md: what changed and why"]
+    end
 
-    A -->|humans: extract + distill| B
-    B -->|git push triggers CI| C
-    C -->|pandoc + xelatex| D
-    D -->|GitHub Actions deploy-pages| E
+    subgraph CI["③ CI: PDF Generation & Deploy  (on push to main)"]
+        direction LR
+        SRC --> BUILD["make all: pandoc + typst"]
+        BUILD --> PDF["output/*.pdf: team + 3 individual"]
+        PDF --> PAGES["nomoreapply.github.io/services/"]
+    end
+
+    HUMAN --> AI
+    AI --> CI
 ```
 
-**Green = human-maintained. Blue = fully automated by CI.**
+**Stage 1** is manual: gather raw materials into `resources/`.  
+**Stage 2** is AI-driven: run `/project:refresh` to synthesize `sources/*.md` from the latest resources.  
+**Stage 3** is automated: push to `main` triggers GitHub Actions, builds PDFs, deploys to Pages.
+
+---
+
+## Members
+
+- Angel Aytov: AI Automation, MLOps, AWS
+- Catalin Waack: Full-stack, Shopify, React
+- Cosmin Poieana: Backend, AI/ML, GraphRAG
+
+## Live PDFs
+
+[nomoreapply.github.io/services/](https://nomoreapply.github.io/services/)

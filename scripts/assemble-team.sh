@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-## assemble-team.sh — combine team front matter + per-member Summary/Expertise
+## assemble-team.sh: combine team front matter + per-member Summary/Expertise
 ## Usage: assemble-team.sh <output.md> <team.md> <member1.md> [member2.md ...]
 
 set -euo pipefail

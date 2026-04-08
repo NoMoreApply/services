@@ -1,5 +1,5 @@
 ## NoMoreApply — PDF brochure build system
-## Usage (local): docker run --rm -v $(pwd):/data -w /data pandoc/extra:latest /bin/sh -c "make all"
+## Usage (local): make all  (requires pandoc and typst installed natively)
 
 PANDOC   := pandoc
 TEMPLATE := templates/wandercode.typ

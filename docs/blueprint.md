@@ -1,11 +1,11 @@
-# Blueprint — NoMoreApply Services PDF Pipeline
+# Blueprint - NoMoreApply Services PDF Pipeline
 
 Complete execution guide for all remaining phases after initial scaffolding.
 
 ## Human vs. Machine responsibilities
 
 **Our job (manual):**
-1. Keep `resources/` up to date: add new CVs, profile exports, portfolio links, website snapshots — anything that describes a member.
+1. Keep `resources/` up to date: add new CVs, profile exports, portfolio links, website snapshots - anything that describes a member.
 2. Sync resources into `sources/`: read the raw inputs, extract and distill the relevant content into each person's `.md` file. This is a one-way sync: resources are the source of truth, sources are the structured output.
 3. Commit and push.
 
@@ -14,7 +14,7 @@ Complete execution guide for all remaining phases after initial scaffolding.
 - Runs Pandoc + Typst to produce all PDFs
 - Publishes to GitHub Pages
 
-We never generate PDFs manually. The PDF is always the CI output. If something looks wrong in the PDF, fix the source markdown or the template, then push — CI rebuilds.
+We never generate PDFs manually. The PDF is always the CI output. If something looks wrong in the PDF, fix the source markdown or the template, then push - CI rebuilds.
 
 ## Pipeline Overview
 
@@ -57,11 +57,11 @@ email: "..."
 ```
 
 **Body sections (in this order, H2 headings):**
-1. `## Summary` — 2-3 sentence pitch. Lead with the outcome, not the role.
-2. `## Expertise` — 5-8 bullet points. Core capabilities, technically specific.
-3. `## Notable Work` — 3-5 career highlights. Company name, what was built, measurable outcome.
-4. `## Tech Stack` — Categorized list: languages, frameworks, infra, AI/ML tools.
-5. `## Background` — Education, distinctions, speaking, community.
+1. `## Summary` - 2-3 sentence pitch. Lead with the outcome, not the role.
+2. `## Expertise` - 5-8 bullet points. Core capabilities, technically specific.
+3. `## Notable Work` - 3-5 career highlights. Company name, what was built, measurable outcome.
+4. `## Tech Stack` - Categorized list: languages, frameworks, infra, AI/ML tools.
+5. `## Background` - Education, distinctions, speaking, community.
 
 Gaps are marked with `<!-- TODO: source missing -->` so they're visible in diffs.
 
@@ -71,7 +71,7 @@ Gaps are marked with `<!-- TODO: source missing -->` so they're visible in diffs
 - Primary: `/Users/cmin/Work/cmin764/cmin764/cv.md` (full Markdown source)
 - Supplementary: wandercode.ltd service pages, portfolio GitHub list
 - Compress 13 experience entries to 3-5 highlights (Wandercode, VONQ, Sema4AI, Robocorp + acquisition note)
-- Anchor the "2B tokens/month" stat — it's concrete and credibility-building
+- Anchor the "2B tokens/month" stat - it's concrete and credibility-building
 - Role framing: "Fractional AI Product Strategist"
 
 **Catalin Waack (`sources/catalin-waack.md`)**
@@ -83,7 +83,7 @@ Gaps are marked with `<!-- TODO: source missing -->` so they're visible in diffs
 
 **Angel Aytov (`sources/angel-aytov.md`)**
 - Primary: `resources/Angel_Aytov-profile-06_04_2026.pdf` (LinkedIn only)
-- CV not yet available — mark all gaps with TODO comments
+- CV not yet available - mark all gaps with TODO comments
 - Use roles of interest as positioning signal: AI Automation Architect, Principal Engineer, MLOps Engineer, Data Engineer, AWS Architect
 - Location: Dublin, Ireland (remote/hybrid)
 
@@ -98,7 +98,7 @@ team_name: "NoMoreApply"
 team_tagline: "Trusted engineers. Direct introductions."
 team_description: >
   A vetted collective of senior engineers available for fractional and contract
-  engagements. We embed inside your team — shared Slack, shared GitHub, shared
+  engagements. We embed inside your team - shared Slack, shared GitHub, shared
   standups. Not a vendor on the outside.
 cta: "Reach out via nomoreapply.com"
 ---
@@ -120,7 +120,7 @@ Switched from XeLaTeX to Typst (see `docs/audit-trail.md`). Compiles in seconds 
 | Margins | 25mm L/R, 20mm top, 25mm bottom |
 | Background | `#F5F4EF` (cream) |
 | Body text | `#1A1A2E` (near-black) |
-| Accent | `#2A6F6F` (teal) — rules, dividers, links only |
+| Accent | `#2A6F6F` (teal) - rules, dividers, links only |
 | Font | Inter (files in `templates/fonts/`, loaded via Typst `font` setting) |
 | Body size | 10.5pt |
 | Line leading | 0.8em |
@@ -185,7 +185,7 @@ clean:
 .PHONY: all clean
 ```
 
-**`scripts/assemble-team.sh`** — reads `sources/team.md` as header, then extracts `## Summary` and `## Expertise` blocks from each individual file, assembles into `output/team-assembled.md`.
+**`scripts/assemble-team.sh`** - reads `sources/team.md` as header, then extracts `## Summary` and `## Expertise` blocks from each individual file, assembles into `output/team-assembled.md`.
 
 **Local test command:**
 ```sh
@@ -230,7 +230,7 @@ Root-level `README.md` with:
 ### Blockers
 - [ ] Enable GitHub Pages on NoMoreApply/services (org admin: Cosmin)
 - [x] Source Inter font files → `templates/fonts/` ✓
-- [ ] Angel Aytov CV (missing — high priority)
+- [ ] Angel Aytov CV (missing - high priority)
 
 ### Content
 - [ ] Extract `sources/cosmin-poieana.md` from cv.md + wandercode.ltd

@@ -1,4 +1,4 @@
-# CLAUDE.md — NoMoreApply/services
+# CLAUDE.md: NoMoreApply/services
 
 ## Project
 
@@ -10,7 +10,7 @@ PDF brochure pipeline for the NoMoreApply engineering collective. Converts per-p
 
 **Fallback option:** WeasyPrint/CSS - if Typst hits layout limitations. Document trigger and rationale in `docs/audit-trail.md` before switching.
 
-Pin the Docker image version (e.g. `pandoc/extra:3.1.13`) in CI; only move to `latest` intentionally.
+**Local dev:** `make all` (requires `pandoc` and `typst` installed natively). No Docker.
 
 ## Writing Style
 
@@ -26,7 +26,7 @@ All prose in `sources/` must follow these rules. Apply them when extracting or e
 - **Profile ordering:** always alphabetical: Angel Aytov, Catalin Waack, Cosmin Poieana
 - **Resource filenames:** `{FirstName}_{LastName}-{type}-{DD_MM_YYYY}.ext`
 - **Source filenames:** kebab-case (`angel-aytov.md`, `catalin-waack.md`, `cosmin-poieana.md`)
-- **Generated PDFs:** go to `output/` (gitignored). Never generate PDFs manually — CI owns this.
+- **Generated PDFs:** go to `output/` (gitignored). Never generate PDFs manually. CI owns this.
 - **CI rebuild triggers:** changes to `sources/`, `templates/`, `scripts/`, `Makefile`, or `.github/workflows/build-pdfs.yml`
 
 ## Source Markdown Schema
@@ -52,7 +52,7 @@ When new material arrives for a person (CV, LinkedIn export, website snapshot, p
 2. Add or update the corresponding entry in `metadata.yml`: file, person, type, source_url, added date, notes.
 3. If this replaces an older file of the same type, keep the old file (historical record) and add the new one alongside it with the updated date suffix.
 
-Do not edit `sources/` yet — that is a separate step.
+Do not edit \`sources/\` yet. That is a separate step.
 
 ### 2. Syncing resources into sources
 
@@ -64,33 +64,42 @@ When resources have been updated and the source markdown needs to reflect them:
 4. Mark any gaps where data is unavailable with `<!-- TODO: describe what's missing -->`.
 5. Do not touch other people's source files in the same operation.
 
-After editing `sources/`, the commit and push triggers CI — PDFs rebuild automatically.
+After editing `sources/`, the commit and push triggers CI. PDFs rebuild automatically.
 
 ### 3. Updating the template or build system
 
 When layout, styling, or build mechanics change:
 
 1. Edit `templates/wandercode.typ` and/or `Makefile`/`scripts/`.
-2. Test locally before pushing: `make all` (requires `pandoc` and `typst` installed locally, or via Docker).
+2. Test locally before pushing: `make all` (requires `pandoc` and `typst` installed natively).
 3. Verify the output visually: cream background, Inter font, correct sections, no overflow.
 4. If a toolchain fallback is triggered (switching away from XeLaTeX), document the reason in `docs/audit-trail.md` and update the "Current stack" line in this file.
 
 ### 4. Logging an audit trail entry
 
-Whenever a material decision is made (toolchain change, schema change, structural change, hosting change):
+Log two categories of changes:
 
-1. Open `docs/audit-trail.md`.
-2. Prepend a new entry in this format:
+**Pipeline decisions** (toolchain, schema, structural, hosting):
 
 ```
-**YYYY-MM-DD** — Short title
+**YYYY-MM-DD** - Short title
 
 Decision: One sentence.
 
 Rationale: Why. What alternatives were considered and rejected.
 ```
 
-Do not log routine content edits (updating a person's bio, adding a bullet) — only decisions that affect how the pipeline works or what it produces.
+**Source updates** (when a `sources/*.md` file is meaningfully changed):
+
+```
+**YYYY-MM-DD** - Updated {person}: {brief summary of change}
+
+What changed: Specific sections or facts updated.
+
+Why: New resource added / corrected information / new AI synthesis instruction / previous version was missing X.
+```
+
+Do not log trivial edits (fixing a typo, rewording one sentence). Log when new resources are synced, when the AI synthesis approach changes, or when factual content is corrected.
 
 **The audit trail is append-only.** Never edit or delete existing entries. Only prepend new ones above the previous most-recent entry.
 

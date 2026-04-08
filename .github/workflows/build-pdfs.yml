@@ -1,0 +1,107 @@
+name: Build and Deploy PDFs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "sources/**"
+      - "templates/**"
+      - "scripts/**"
+      - "Makefile"
+      - ".github/workflows/build-pdfs.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache Pandoc
+        id: cache-pandoc
+        uses: actions/cache@v4
+        with:
+          path: /tmp/pandoc.deb
+          key: pandoc-3.1.13
+
+      - name: Install Pandoc
+        run: |
+          if [ ! -f /tmp/pandoc.deb ]; then
+            curl -sLo /tmp/pandoc.deb https://github.com/jgm/pandoc/releases/download/3.1.13/pandoc-3.1.13-1-amd64.deb
+          fi
+          sudo dpkg -i /tmp/pandoc.deb
+
+      - name: Cache Typst
+        id: cache-typst
+        uses: actions/cache@v4
+        with:
+          path: /usr/local/bin/typst
+          key: typst-0.11.1
+
+      - name: Install Typst
+        if: steps.cache-typst.outputs.cache-hit != 'true'
+        run: |
+          curl -sL https://github.com/typst/typst/releases/download/v0.11.1/typst-x86_64-unknown-linux-musl.tar.xz \
+            | tar -xJ --strip-components=1 -C /usr/local/bin typst-x86_64-unknown-linux-musl/typst
+
+      - name: Build PDFs
+        run: make -j4 all
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp output/*.pdf _site/
+          cat > _site/index.html <<'HTMLEOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoMoreApply: Team Brochures</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; color: #1a1a2e; background: #f5f4ef; }
+    h1 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+    p { color: #666677; margin-bottom: 2rem; }
+    ul { list-style: none; padding: 0; }
+    li { margin-bottom: 0.75rem; }
+    a { color: #a0303a; text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>NoMoreApply</h1>
+  <p>Engineering collective. Fractional and contract engagements.</p>
+  <ul>
+    <li><a href="team-brochure.pdf">Team Brochure</a></li>
+    <li><a href="angel-aytov-profile.pdf">Angel Aytov: Profile</a></li>
+    <li><a href="catalin-waack-profile.pdf">Catalin Waack: Profile</a></li>
+    <li><a href="cosmin-poieana-profile.pdf">Cosmin Poieana: Profile</a></li>
+  </ul>
+</body>
+</html>
+HTMLEOF
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
