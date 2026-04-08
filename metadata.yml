@@ -77,13 +77,3 @@ todos:
       - portfolio items from github starred list
     priority: low
     notes: "Richest existing resource set; cv.md at cmin764 repo is primary input."
-
-  - item: admin
-    description: "Enable GitHub Pages on NoMoreApply/services repo (deploy from GitHub Actions). Manual org-admin step."
-    priority: high
-
-  - item: fonts
-    description: "Source Inter .ttf font files and add to templates/fonts/. Inter is OFL-licensed."
-    priority: high
-    status: done
-    notes: "Inter static TTFs + Inter-Italic.otf (v3.19) added. InterVariable-Italic.ttf present but unused (Typst does not support variable fonts yet)."
