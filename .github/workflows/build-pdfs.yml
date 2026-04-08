@@ -7,6 +7,7 @@ on:
       - "sources/**"
       - "templates/**"
       - "scripts/**"
+      - "site/**"
       - "Makefile"
       - ".github/workflows/build-pdfs.yml"
   workflow_dispatch:
@@ -24,25 +25,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.2
 
       - name: Cache Pandoc
         id: cache-pandoc
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.4
         with:
           path: /tmp/pandoc.deb
-          key: pandoc-3.1.13
+          key: pandoc-3.9.0.2
 
       - name: Install Pandoc
         run: |
           if [ ! -f /tmp/pandoc.deb ]; then
-            curl -sLo /tmp/pandoc.deb https://github.com/jgm/pandoc/releases/download/3.1.13/pandoc-3.1.13-1-amd64.deb
+            curl -sLo /tmp/pandoc.deb https://github.com/jgm/pandoc/releases/download/3.9.0.2/pandoc-3.9.0.2-1-amd64.deb
           fi
           sudo dpkg -i /tmp/pandoc.deb
 
       - name: Cache Typst
         id: cache-typst
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.4
         with:
           path: /usr/local/bin/typst
           key: typst-0.14.2
@@ -60,10 +61,10 @@ jobs:
         run: |
           mkdir -p _site
           cp output/*.pdf _site/
-          cp scripts/index.html _site/index.html
+          cp site/index.html _site/index.html
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4.0.0
         with:
           path: _site/
 
@@ -76,4 +77,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5.0.0
