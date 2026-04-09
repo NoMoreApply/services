@@ -6,7 +6,7 @@ team_description: >
   A vetted collective of senior engineers available for fractional and contract
   engagements. We embed inside your team: shared Slack, shared GitHub, shared
   standups. Not a vendor on the outside.
-cta: "Reach out: info.nomoreapply@gmail.com"
+cta: "Reach out: info@nomoreapply.org"
 members:
   - sources/angel-aytov.md
   - sources/catalin-waack.md
@@ -17,4 +17,4 @@ Most AI and software projects stall not because the technology is wrong, but bec
 
 NoMoreApply is different. Three engineers (Angel Aytov, Catalin Waack, and Cosmin Poieana) with complementary depth across AI systems, product engineering, and cloud infrastructure. We take on fractional and contract engagements where the work is specific, the timeline is real, and the outcome is what matters.
 
-We've shipped at companies later acquired by Apple and Siemens. We've built platforms used by governments and DAX companies. We've delivered production AI systems in regulated industries where failure is not an option if we don't learn from it. Reach out at nomoreapply.com.
+We've shipped at companies later acquired by Apple and Siemens. We've built platforms used by governments and DAX companies. We've delivered production AI systems in regulated industries where failure is not an option if we don't learn from it. Reach out at info@nomoreapply.org.
