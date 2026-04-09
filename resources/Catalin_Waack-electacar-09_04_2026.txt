@@ -1,0 +1,27 @@
+Source: https://electacar.com
+Fetched: 2026-04-09
+
+# Electacar - Electric Car Guide Hong Kong
+
+Project Description:
+Electacar is a comprehensive digital platform serving as a complete guide for electric vehicle (EV) shoppers in Hong Kong. The site enables users to "Compare EVs, check prices, find dealers, and learn about charging in Hong Kong."
+
+Core Features:
+
+Vehicle Information & Comparison:
+- Database of electric vehicles available in Hong Kong with specifications including range, acceleration (0-100 km/h), power, and pricing
+- Popular models featured include Tesla Model Y (719 km range), Tesla Model 3, BYD Sealion 7, and BYD ATTO 3
+- Browse functionality organized by manufacturer, with brands including Audi, BMW, Mercedes-Benz, BYD, GAC Aion, Hyundai, Tesla, and Volvo
+
+Resources & Tools:
+- Dealer locator across Hong Kong with authorized service center information
+- Educational guides covering EV ownership topics: charging infrastructure, government incentives, insurance, and maintenance
+- EV tax calculator for first registration tax estimation
+- Running cost comparison tool (EV vs. petrol vehicles)
+- Insurance quote collection service partnering with brokers
+
+Government Incentive Information:
+The platform highlights Hong Kong's One-for-One EV Replacement Scheme, offering "Save up to HK$172,500" for qualifying vehicles, with a deadline of March 31, 2026.
+
+Technical Architecture:
+Built with Next.js framework using React components, featuring multiple theme options (default, electra, monochrome, editorial, ocean) with CSS variable-based theming system.

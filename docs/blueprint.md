@@ -5,8 +5,8 @@ Complete execution guide for all remaining phases after initial scaffolding.
 ## Human vs. Machine responsibilities
 
 **Our job (manual):**
-1. Keep `resources/` up to date: add new CVs, profile exports, portfolio links, website snapshots - anything that describes a member.
-2. Sync resources into `sources/`: read the raw inputs, extract and distill the relevant content into each person's `.md` file. This is a one-way sync: resources are the source of truth, sources are the structured output.
+1. Keep `resources/` up to date: add new CVs, profile exports, portfolio links, website snapshots, cover letters, publications, hobby projects — anything that describes a member.
+2. Sync resources into `sources/`: run `/project:sync-sources` or follow CLAUDE.md procedure 2 manually. This is a one-way sync: resources are the source of truth, sources are the structured output.
 3. Commit and push.
 
 **CI's job (automated, triggered on every push):**
@@ -14,14 +14,14 @@ Complete execution guide for all remaining phases after initial scaffolding.
 - Runs Pandoc + Typst to produce all PDFs
 - Publishes to GitHub Pages
 
-We never generate PDFs manually. The PDF is always the CI output. If something looks wrong in the PDF, fix the source markdown or the template, then push - CI rebuilds.
+We never generate PDFs manually. The PDF is always the CI output. If something looks wrong in the PDF, fix the source markdown or the template, then push — CI rebuilds.
 
 ## Pipeline Overview
 
 ```
-resources/ (raw PDFs, exports, web snapshots)
+resources/ (raw PDFs, exports, web snapshots, discord posts, etc.)
     |
-    | [human: extract + distill]
+    | [human + AI: extract + distill via /project:sync-sources]
     v
 sources/*.md (structured Markdown per person)  <-- commit & push triggers CI
     |
@@ -34,11 +34,15 @@ output/*.pdf (team brochure + 3 individual profiles)
 nomoreapply.github.io/services/ (public, always reflects latest push)
 ```
 
+### How the team brochure summary works
+
+`scripts/assemble-team.sh` extracts the first 4 lines of `## Summary` and first 4 bullets of `## Expertise` from each individual `.md` file, wraps them in Typst `#accentcard()` blocks, and injects them into the assembled team markdown before Pandoc + Typst renders the team PDF. Full profiles stay in their individual PDFs.
+
 ---
 
 ## Phase 3: Source Markdown Extraction
 
-**Status: in progress** (Cosmin complete, Angel and Catalin have open TODOs)
+**Status: in progress** (Cosmin complete, Catalin partially complete, Angel has open TODOs blocked on missing CV)
 
 **Goal:** One well-structured `.md` file per person under `sources/`, extracted from available resources.
 
@@ -60,7 +64,7 @@ email: "..."
 
 **Body sections (in this order, H2 headings):**
 1. `## Summary` - 2-3 sentence pitch. Lead with the outcome, not the role.
-2. `## Expertise` - 5-8 bullet points. Core capabilities, technically specific.
+2. `## Expertise` - 5-8 bullet points. Core capabilities, technically specific. No manual line breaks inside bullets.
 3. `## Notable Work` - 3-5 career highlights. Company name, what was built, measurable outcome.
 4. `## Tech Stack` - Categorized list: languages, frameworks, infra, AI/ML tools.
 5. `## Background` - Education, distinctions, speaking, community.
@@ -71,18 +75,18 @@ Gaps are marked with `<!-- TODO: source missing -->` so they're visible in diffs
 
 **Cosmin Poieana (`sources/cosmin-poieana.md`)** - complete, 0 TODOs
 - Primary: `resources/Cosmin_Poieana-CV-06_04_2026.pdf`
-- Supplementary: LinkedIn profile PDF, Discord post
-- Remaining to pull: wandercode.ltd service pages, blog (cmin764.medium.com), portfolio starred list
+- Supplementary: LinkedIn profile PDF, Discord post, wandercode `About.tsx`
+- Remaining to pull (optional enrichment): wandercode.ltd service pages, portfolio starred list
 
-**Catalin Waack (`sources/catalin-waack.md`)** - 2 TODOs remaining
+**Catalin Waack (`sources/catalin-waack.md`)** - synced 2026-04-09
 - Primary: `resources/Catalin_Waack-CV-06_04_2026.pdf`
-- Supplementary: LinkedIn profile PDF, Discord post
-- Remaining to pull: contra.com profile, catalinwaack.com, electacar.com, rivoara.com
+- Supplementary: LinkedIn profile PDF, Discord post, contra.com, catalinwaack.com, electacar.com, rivoara.com
+- All TODOs resolved
 
-**Angel Aytov (`sources/angel-aytov.md`)** - 4 TODOs remaining
+**Angel Aytov (`sources/angel-aytov.md`)** - 3 TODOs remaining (YAML github/website fields + speaking/community section)
 - Primary: `resources/Angel_Aytov-profile-06_04_2026.pdf` (LinkedIn only - no CV yet)
-- Supplementary: Discord post
-- CV not yet available - all gaps marked with TODO comments
+- Supplementary: Discord post, `resources/Angel_Aytov-aiexpert-09_04_2026.txt` (ai-expert.com)
+- CV not yet available - Notable Work and Background certifications still incomplete
 - Role targets: AI Automation Architect, Principal Engineer, MLOps Engineer, Data Engineer, AWS Architect
 - Location: Dublin, Ireland
 
@@ -96,7 +100,7 @@ Contains team-level front matter and intro paragraph. `scripts/assemble-team.sh`
 
 **Status: complete**
 
-**File:** `templates/nomoreapply.typ` (note: `wandercode.typ` is a legacy leftover, unused)
+**File:** `templates/nomoreapply.typ`
 
 ### Design tokens (NMA brand)
 
@@ -105,12 +109,20 @@ Contains team-level front matter and intro paragraph. `scripts/assemble-team.sh`
 | Paper | A4 |
 | Background | `#FAFAFA` (off-white) |
 | Body text | `#09090B` (near-black) |
-| Accent | `#DC143C` (NMA crimson - role lines, team taglines only) |
+| Accent | `#e8002d` (NMA brand red - confirmed from nomoreapply.com source) |
 | Secondary | `#71717A` (muted grey) |
 | Dividers | `#E4E4E7` (light grey rules and card borders) |
-| Font | Inter, weights 400/600/700 |
+| Font | Inter, weights 400/600/700 + Italic |
 | Name | 26pt bold, tracking -0.02em |
 | Section headings | 7.5pt bold uppercase, tracking 0.1em, grey rule |
+
+### Font files (templates/fonts/)
+
+Only 4 files kept (unused variants removed 2026-04-09):
+- `Inter-Regular.ttf` (400)
+- `Inter-SemiBold.ttf` (600)
+- `Inter-Bold.ttf` (700)
+- `Inter-Italic.otf` (italic)
 
 ### Template modes
 
@@ -142,7 +154,7 @@ pandoc --pdf-engine=typst --pdf-engine-opt=--font-path=templates/fonts \
   output/_team-assembled.md -o output/team-brochure.pdf
 ```
 
-Inter `.ttf` files in `templates/fonts/` are loaded directly by Typst (no TeX needed).
+Inter `.ttf`/`.otf` files in `templates/fonts/` are loaded directly by Typst (no TeX needed).
 
 ---
 
@@ -188,6 +200,14 @@ Root-level `README.md` with Mermaid pipeline diagram, member list, and link to l
 
 ---
 
+## Slash Command
+
+**`/project:sync-sources`** (file: `.claude/commands/sync-sources.md`)
+
+Triggered after new resources are added. Identifies which people have updates since the last `sources/` commit, synthesizes each person's markdown, verifies the build, and logs audit trail entries.
+
+---
+
 ## TODO Checklist
 
 ### Blockers
@@ -197,11 +217,13 @@ Root-level `README.md` with Mermaid pipeline diagram, member list, and link to l
 
 ### Content
 - [x] Extract `sources/cosmin-poieana.md`
-- [ ] Extract `sources/catalin-waack.md` fully (2 TODOs remaining)
-- [ ] Extract `sources/angel-aytov.md` fully (4 TODOs, blocked on CV)
-- [ ] Download Catalin's contra.com profile -> `resources/`
-- [ ] Download Catalin's catalinwaack.com content -> `resources/`
-- [ ] Download wandercode.ltd pages for Cosmin -> `resources/`
+- [x] Extract `sources/catalin-waack.md` fully (all TODOs resolved 2026-04-09)
+- [ ] Extract `sources/angel-aytov.md` fully (3 TODOs remaining: github, website YAML + speaking/community)
+- [x] Download Catalin's contra.com profile -> `resources/`
+- [x] Download Catalin's catalinwaack.com content -> `resources/`
+- [x] Download electacar.com and rivoara.com -> `resources/`
+- [x] Fetch Angel's ai-expert.com -> `resources/`
+- [ ] Download wandercode.ltd pages for Cosmin -> `resources/` (optional enrichment)
 
 ### Build
 - [x] Write Typst template `templates/nomoreapply.typ`
@@ -212,3 +234,7 @@ Root-level `README.md` with Mermaid pipeline diagram, member list, and link to l
 - [x] Test locally (pandoc + typst)
 - [x] Verify PDFs render correctly
 - [x] Verify Pages deployment URL works (`nomoreapply.github.io/services/`)
+- [x] Redesign site/index.html (team brochure hero, named profile links, footer)
+- [x] Remove unused font files (kept 4, removed 16)
+- [x] Correct brand red to `#e8002d`
+- [x] Fix bullet list spacing in template

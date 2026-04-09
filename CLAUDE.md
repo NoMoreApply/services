@@ -13,7 +13,7 @@ PDF brochure pipeline for the NoMoreApply engineering collective. Converts per-p
 **Design tokens:**
 - Background: `#FAFAFA` (off-white)
 - Text: `#09090B` (near-black)
-- Accent: `#DC143C` (NMA crimson — role lines, team taglines only)
+- Accent: `#e8002d` (NMA brand red — role lines, team taglines only)
 - Secondary: `#71717A` (muted grey)
 - Dividers: `#E4E4E7` (light grey rules and card borders)
 - Font: Inter, weights 400/600/700
@@ -39,7 +39,8 @@ All prose in `sources/` must follow these rules. Apply them when extracting or e
 - **Resource filenames:** `{FirstName}_{LastName}-{type}-{DD_MM_YYYY}.ext`
 - **Source filenames:** kebab-case (`angel-aytov.md`, `catalin-waack.md`, `cosmin-poieana.md`)
 - **Generated PDFs:** go to `output/` (gitignored). Never generate PDFs manually. CI owns this.
-- **CI rebuild triggers:** changes to `sources/`, `templates/`, `scripts/`, `Makefile`, or `.github/workflows/build-pdfs.yml`
+- **CI rebuild triggers:** changes to `sources/`, `templates/`, `scripts/`, `site/`, `Makefile`, or `.github/workflows/build-pdfs.yml`
+- **Team members:** Angel Aytov, Catalin Waack, Cosmin Poieana — all male, use he/him pronouns in profile prose
 
 ## Source Markdown Schema
 

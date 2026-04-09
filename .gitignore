@@ -1,5 +1,7 @@
 # Generated artifacts
 output/
+_site/
+output/_team-assembled.md
 
 # macOS
 .DS_Store

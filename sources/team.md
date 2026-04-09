@@ -17,4 +17,4 @@ Most AI and software projects stall not because the technology is wrong, but bec
 
 NoMoreApply is different. Three engineers (Angel Aytov, Catalin Waack, and Cosmin Poieana) with complementary depth across AI systems, product engineering, and cloud infrastructure. We take on fractional and contract engagements where the work is specific, the timeline is real, and the outcome is what matters.
 
-We've shipped at companies later acquired by Apple and Siemens. We've built platforms used by governments and DAX companies. We've delivered production AI systems in regulated industries where failure is not an option. Reach out at nomoreapply.com.
+We've shipped at companies later acquired by Apple and Siemens. We've built platforms used by governments and DAX companies. We've delivered production AI systems in regulated industries where failure is not an option if we don't learn from it. Reach out at nomoreapply.com.

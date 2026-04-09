@@ -1,0 +1,36 @@
+Source: https://contra.com/catalin_waack_jxfa7eut/work
+Fetched: 2026-04-09
+
+# Catalin Waack's Work Portfolio - Contra
+
+Profile Overview:
+Catalin Waack is a Berlin-based professional engineer with over 10 years of experience. His title highlights expertise in "Expert REACT/NEXT/TS" and he has earned $10k+ on the platform with 1 hire and 2 followers.
+
+Portfolio Projects:
+
+1. eLearning Platform for Mobile Development
+   - 8 views
+   - Roles: Backend Engineer, Frontend Engineer, Fullstack Engineer
+   - Technologies: Next.js, React, TypeScript
+   - Industry: Computer Software
+   - Outcome: Training Program
+
+2. Luxury Travel Agency
+   - 6 views
+   - Roles: Web Designer, Frontend Engineer
+   - Technology: Tailwind CSS
+   - Outcome: Design System
+
+3. Digital Sommelier
+   - 2 views
+   - Roles: Backend Engineer, Frontend Engineer, UI Designer
+   - Technologies: React, Strapi, Tailwind CSS
+   - Industry: Marketing
+   - Outcome: Dashboard
+
+Professional Background:
+The profile notes his experience spans "front-end, back-end, UI, and product development." He has served as a CTO at a bootstrapped startup with clients including enterprises and government entities. His availability status indicates he was not currently available as of January 1, 2025.
+
+External Links:
+- LinkedIn: linkedin.com/in/catalinwaack/
+- Instagram: instagram.com/hungryfeeling

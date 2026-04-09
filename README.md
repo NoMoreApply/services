@@ -5,12 +5,14 @@ flowchart TD
     subgraph HUMAN["① Human: Resource Collection"]
         direction LR
         R1[CVs / LinkedIn exports]
-        R2[Discord posts / notes]
-        R3[Website snapshots]
-        R1 & R2 & R3 --> RES[resources/]
+        R2[Discord / community posts]
+        R3[Website snapshots / portfolio repos]
+        R4[Cover letters / publications / articles]
+        R5[Products / hobby projects]
+        R1 & R2 & R3 & R4 & R5 --> RES[resources/]
     end
 
-    subgraph AI["② AI: Source Synthesis  (/project:refresh)"]
+    subgraph AI["② AI: Source Synthesis  (/project:sync-sources)"]
         direction LR
         RES --> READ[Read & distill resources]
         READ --> SRC["sources/*.md: per-person profiles"]
@@ -29,16 +31,16 @@ flowchart TD
 ```
 
 **Stage 1** is manual: gather raw materials into `resources/`.  
-**Stage 2** is AI-driven: run `/project:refresh` to synthesize `sources/*.md` from the latest resources.  
+**Stage 2** is AI-driven: run `/project:sync-sources` to synthesize `sources/*.md` from the latest resources.  
 **Stage 3** is automated: push to `main` triggers GitHub Actions, builds PDFs, deploys to Pages.
 
 ---
 
 ## Members
 
-- Angel Aytov: AI Automation, MLOps, AWS
-- Catalin Waack: Full-stack, Shopify, React
-- Cosmin Poieana: Backend, AI/ML, GraphRAG
+- Angel Aytov: AI systems, GraphRAG, cloud infrastructure (AWS)
+- Catalin Waack: Full-stack product engineering, Shopify, rapid MVP delivery
+- Cosmin Poieana: Fractional AI strategy, Python, agentic systems
 
 ## Live PDFs
 

@@ -55,25 +55,55 @@ resources:
     added: 2026-04-06
     notes: "Discord intro post. Adds: Romania location, Shopify/Hydrogen, ecommerce project (shower filters, Poland), SF startup context, vibe coding focus, community/outreach interest."
 
+  - file: Angel_Aytov-aiexpert-09_04_2026.txt
+    person: Angel Aytov
+    type: company-website
+    source_url: "https://ai-expert.com/"
+    added: 2026-04-09
+    notes: "Healthcare AI company Angel is affiliated with. ISO/IEC 42001, HIPAA, GDPR-compliant privacy-first AI systems."
+
+  - file: Catalin_Waack-contra-09_04_2026.txt
+    person: Catalin Waack
+    type: portfolio
+    source_url: "https://contra.com/catalin_waack_jxfa7eut/work"
+    added: 2026-04-09
+    notes: "Contra portfolio: eLearning platform, luxury travel agency, digital sommelier projects."
+
+  - file: Catalin_Waack-website-09_04_2026.txt
+    person: Catalin Waack
+    type: personal-website
+    source_url: "https://catalinwaack.com"
+    added: 2026-04-09
+    notes: "Personal site listing recent clients: Veddelholzer, FAMFAM, Syntax GmbH, edeltravel, Tailorwine."
+
+  - file: Catalin_Waack-electacar-09_04_2026.txt
+    person: Catalin Waack
+    type: project-website
+    source_url: "https://electacar.com"
+    added: 2026-04-09
+    notes: "EV comparison platform for Hong Kong. Next.js, React, vehicle database, dealer locator, pricing calculator."
+
+  - file: Catalin_Waack-rivoara-09_04_2026.txt
+    person: Catalin Waack
+    type: project-website
+    source_url: "https://rivoara.com"
+    added: 2026-04-09
+    notes: "German shower filter ecommerce brand. Multi-stage filtration, subscription cartridge model, 4.9/5 ratings."
+
 todos:
   - person: Angel Aytov
     missing: cv
     priority: high
-    notes: "No CV provided. Profile built from LinkedIn export only."
+    notes: "No CV provided. Profile built from LinkedIn export + ai-expert.com. Notable Work and Background certifications still incomplete pending CV."
 
   - person: Catalin Waack
-    missing:
-      - contra.com/catalin_waack_jxfa7eut/work
-      - rivoara.com content
-      - electacar.com content
-      - catalinwaack.com content
-    priority: medium
-    notes: "Framing should emphasize AI/consulting positioning."
+    missing: []
+    priority: done
+    notes: "All web resources fetched and synced 2026-04-09."
 
   - person: Cosmin Poieana
     missing:
       - wandercode.ltd service pages
-      - blog (cmin764.medium.com)
       - portfolio items from github starred list
     priority: low
-    notes: "Richest existing resource set; cv.md at cmin764 repo is primary input."
+    notes: "Sources complete (0 TODOs). These would enrich background further but are not blocking."

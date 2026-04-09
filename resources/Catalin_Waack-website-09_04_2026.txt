@@ -1,0 +1,37 @@
+Source: https://catalinwaack.com
+Fetched: 2026-04-09
+
+# Catalin Waack - Software Development Portfolio
+
+About:
+Catalin is a technical advisor and software engineer from Germany with a tech journey starting in 2005. He studied computer science, worked at a bootstrapped startup, and has been an independent software engineer since 2018. His expertise spans lean development, MVP creation, UX design, and business-focused solutions.
+
+Core Technologies:
+- Javascript & Node.js
+- TypeScript
+- React & Next.js
+- Headless CMS
+- Serverless
+- Tailwind CSS
+
+Services Offered:
+
+Development Services:
+Webapps, SaaS applications, website development, e-commerce solutions, and Progressive Web Apps using modern tech stacks.
+
+Advanced Features:
+"Enhance your platform with cutting-edge AI solutions" by integrating services from major providers. Custom dashboards, reporting tools, and data visualization capabilities.
+
+Business Solutions:
+Marketing automation, internal tools, chatbot development, API integration, and programmatic SEO.
+
+Specialized Services:
+Cybersecurity solutions tailored for small businesses, CMS customization, and prompt engineering for AI interactions.
+
+Recent Projects:
+Portfolio includes work with Veddelholzer Corporation (Shopify store), FAMFAM Foundation, Syntax GmbH (eLearning platform), edeltravel (luxury travel website), Tailorwine (digital sommelier), MeinCheckin (contact-tracing), and Coach2talk (coaching platform).
+
+Contact:
+- WhatsApp, email, and phone available
+- Free 30-minute consultation offered
+- LinkedIn and GitHub profiles linked

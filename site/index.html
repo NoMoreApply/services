@@ -3,25 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NoMoreApply: Team Brochures</title>
+  <title>NoMoreApply — Engineering Collective</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; color: #1a1a2e; background: #f5f4ef; }
-    h1 { font-size: 1.4rem; margin-bottom: 0.25rem; }
-    p { color: #666677; margin-bottom: 2rem; }
-    ul { list-style: none; padding: 0; }
-    li { margin-bottom: 0.75rem; }
-    a { color: #a0303a; text-decoration: none; font-weight: 500; }
-    a:hover { text-decoration: underline; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f5f5f3;
+      color: #111;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+    }
+
+    .wordmark {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e8002d;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 0.6rem;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 2.5rem;
+      max-width: 28rem;
+    }
+
+    .brochure-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #111;
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      padding: 0.85rem 1.75rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .brochure-cta:hover { background: #e8002d; }
+    .brochure-cta svg { flex-shrink: 0; }
+
+    .divider {
+      width: 2.5rem;
+      height: 1px;
+      background: #ddd;
+      margin: 3rem auto;
+    }
+
+    .profiles-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 1.25rem;
+    }
+
+    .profiles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .profiles a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #333;
+      text-decoration: none;
+      padding: 0.55rem 1.1rem;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      background: #fff;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .profiles a:hover { border-color: #e8002d; color: #e8002d; }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.75rem;
+      color: #aaa;
+      border-top: 1px solid #e8e8e6;
+    }
+    footer a { color: #888; text-decoration: none; }
+    footer a:hover { color: #e8002d; }
+    footer .sep { margin: 0 0.5rem; }
   </style>
 </head>
 <body>
-  <h1>NoMoreApply</h1>
-  <p>Engineering collective. Fractional and contract engagements.</p>
-  <ul>
-    <li><a href="team-brochure.pdf">Team Brochure</a></li>
-    <li><a href="angel-aytov-profile.pdf">Angel Aytov: Profile</a></li>
-    <li><a href="catalin-waack-profile.pdf">Catalin Waack: Profile</a></li>
-    <li><a href="cosmin-poieana-profile.pdf">Cosmin Poieana: Profile</a></li>
-  </ul>
+  <main>
+    <p class="wordmark">No More Apply</p>
+
+    <p class="hero-label">Engineering Collective</p>
+    <h1>Trusted engineers.<br>Direct introductions.</h1>
+    <p class="tagline">Fractional and contract engagements. We embed inside your team: shared Slack, shared GitHub, shared standups.</p>
+
+    <a class="brochure-cta" href="team-brochure.pdf">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Team Brochure
+    </a>
+
+    <div class="divider"></div>
+
+    <p class="profiles-label">Individual Profiles</p>
+    <div class="profiles">
+      <a href="angel-aytov-profile.pdf">Angel Aytov</a>
+      <a href="catalin-waack-profile.pdf">Catalin Waack</a>
+      <a href="cosmin-poieana-profile.pdf">Cosmin Poieana</a>
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://nomoreapply.com">nomoreapply.com</a>
+    <span class="sep">·</span>
+    <a href="mailto:info.nomoreapply@gmail.com">info.nomoreapply@gmail.com</a>
+  </footer>
 </body>
 </html>

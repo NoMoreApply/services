@@ -35,7 +35,11 @@ Angel builds AI and data infrastructure that goes beyond prototypes into regulat
 
 **Credit Suisse** (2020–2021): Lead Full Stack Engineer on an investment wealth management platform. Contributed to TradeNet and RM Plus financial data feeds. Stack: Angular, Java, Spring Boot, Oracle RDBMS.
 
-<!-- TODO: add further highlights once CV is available - Angel's CV has not been provided yet -->
+**Metapack Group, Engineering Tech Lead** (2019): Architected microservices for a delivery management platform (e-commerce) using Spring Boot, AWS Lambda, and Node.js. Automated infrastructure with Terraform and owned CI/CD pipelines.
+
+**Smart Wealth AG, Lead Engineer** (2017-2019, FinTech): Led a team building a robo-advisory portfolio management platform in Zurich. Designed the architecture using DDD and Attribute-Driven Design, implemented with Java/Spring Boot and Angular, deployed on AWS with CI/CD via CloudBees and Docker.
+
+**Trading 212, Senior Engineer** (2009-2010): Migrated the trading engine's database model to a Domain-Driven Design architecture for the forex trading platform (trading212.com). SQL tuning, stored procedures, and ETL.
 
 ## Tech Stack
 
@@ -57,6 +61,8 @@ MSc Software Technologies, Sofia University St. Kliment Ohridski (2010–2011).
 
 Certifications: Sun Certified Java Programmer (Java 6), Oracle Java SE 11 Programmer (1Z0-815), Veracode Application Security Fundamentals, Introduction to Vector Indexes and Unstructured Data.
 
-<!-- TODO: source full certifications list and any speaking/community activity once CV is available -->
+Languages: German (B1, Goethe Institut), English (proficient), Bulgarian (native).
+
+<!-- TODO: source any speaking/community activity once further data is available -->
 
 Available now. Open to: AI Automation Architect, Principal Engineer, MLOps Engineer, Data Engineer, AWS Architect roles. Remote or hybrid across Europe.

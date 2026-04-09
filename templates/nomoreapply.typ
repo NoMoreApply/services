@@ -4,7 +4,7 @@
 
 #let bg        = rgb("#FAFAFA")   // off-white page background
 #let nearblack = rgb("#09090B")   // primary text
-#let red       = rgb("#DC143C")   // NMA crimson accent
+#let red       = rgb("#e8002d")   // NMA brand red
 #let midgrey   = rgb("#71717A")   // secondary / muted text
 #let lightgrey = rgb("#E4E4E7")   // dividers and card borders
 
@@ -38,6 +38,8 @@
 }
 
 #set list(indent: 1em, spacing: 0.2em)
+// Prevent par spacing from creating extra gaps inside wrapped list items
+#show list: set par(leading: 0.65em, spacing: 0em)
 
 // Member card: subtle left border (team mode)
 #let accentcard(body) = block(

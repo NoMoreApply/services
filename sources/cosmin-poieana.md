@@ -39,7 +39,7 @@ AI handles the repetition. Humans fill the gaps that need judgment. Cosmin build
 
 **Languages:** Python (13+ years professional), TypeScript/JavaScript, Go, C/C++, SQL
 
-**AI/ML:** LangChain, RAG pipelines, OpenAI/Anthropic APIs, Claude Code, MCP, Cursor, prompt engineering
+**AI/ML:** LangChain, RAG pipelines, OpenAI/Anthropic APIs, Claude Code, MCP, Cursor, prompt engineering, Robot Framework, RPA, OCR, IDP
 
 **Web:** FastAPI, Django, Flask, React/Next.js, Node.js/NestJS
 
@@ -47,7 +47,7 @@ AI handles the repetition. Humans fill the gaps that need judgment. Cosmin build
 
 **Databases:** PostgreSQL, Redis, MongoDB, ElasticSearch, SQLite
 
-**Tooling:** PyCharm, VSCode, Git/GitHub Actions, pytest, Ruff, mypy, Pandoc/LaTeX
+**Tooling:** PyCharm, VSCode, Vim, Git/GitHub Actions, pytest, Ruff, mypy, invoke, Fabric
 
 ## Background
 
@@ -58,5 +58,7 @@ Presented at EuroPython 2015 (Bilbao) on open-source CI infrastructure over Open
 Co-founded RoPython (PSF-approved), organizing regional conferences and workshops (2014–2016). Jury member at InfoEducație 2014 (Google-sponsored national contest).
 
 Distinctions: Robocorp Level I/II/III certifications; 2nd place Innovation Labs Iași (2019); Bronze Medal, National Olympiad in Informatics (2012); Stanford AI course (2011).
+
+Writing at cmin764.medium.com and cosminslife.wordpress.com. Photography at asitisphotos (Instagram). Digital nomad since 2021, 50+ countries.
 
 Scale proof: ~2B tokens/month, ~12,750 AI messages/month across systematic agentic workflows.

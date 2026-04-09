@@ -35,10 +35,11 @@ Catalin turns early-stage ideas into working products that people pay for. Fifte
 
 **Tailorwine, Fullstack & PM** (2022): Shipped B2B MVP using B2C data to demonstrate value. Acquired REWE and EDEKA as clients.
 
-<!-- TODO: add detail from contra.com/catalin_waack_jxfa7eut/work when profile is downloaded -->
-**Rivoara** (ongoing): Building an ecommerce brand selling shower filters across Europe, company based in Poland. Full ownership from product sourcing to storefront.
+**edeltravel, Web Designer & Frontend** (2023): Designed and built a luxury travel agency website with a custom Tailwind CSS design system, delivered as a turnkey frontend package.
 
-<!-- TODO: add electacar.com and rivoara.com full project details when content is available -->
+**Rivoara** (ongoing): Ecommerce brand selling shower filters across Europe (Poland-based company). Built the entire Next.js storefront, subscription billing for replacement cartridges, and manages product sourcing. 4.9/5 stars from 112+ verified reviews, with multi-stage filter hardware (KDF-55, carbon fiber) certified to NSF/ANSI Standard 42.
+
+**Electacar** (ongoing): Built electacar.com, a comprehensive EV comparison platform for the Hong Kong market. Features include vehicle spec comparison across manufacturers (Tesla, BYD, BMW, Mercedes-Benz, others), a dealer locator, EV tax calculator, running cost comparison tool, and educational guides on charging and government incentives. Next.js with a CSS variable-based theming system.
 
 ## Tech Stack
 

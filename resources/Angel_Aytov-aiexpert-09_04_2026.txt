@@ -1,0 +1,27 @@
+Source: https://ai-expert.com/
+Fetched: 2026-04-09
+
+# AI Expert - Healthcare AI Systems
+
+Company Overview:
+AI Expert develops healthcare AI systems emphasizing privacy and compliance. They describe themselves as building "privacy-first, production-grade healthcare AI systems" following ISO/IEC 42001, HIPAA, and GDPR practices, though note they are not formally certified.
+
+Core Services:
+The company offers five main service categories:
+- Platform Integration
+- Privacy Engineering
+- Clinical Documentation
+- Decision Support
+- Virtual Assistants
+
+Primary Focus:
+Their stated mission centers on systems "for healthcare operations, clinical workflows, and regulatory compliance." They position themselves as designing, deploying, and governing production-grade AI solutions tailored to organizational needs.
+
+Contact & Engagement:
+- Email: contact@ai-expert.com
+- Demo booking available via Google Calendar
+- Interactive chat widget embedded on site for inquiries
+- Social presence on LinkedIn, Twitter, and GitHub
+
+Additional Information:
+The website includes portfolio sections for featured projects and company information (About, Careers, Contact). Footer links provide access to Privacy Policy and Terms of Service. The site uses Schema.org structured data for SEO optimization and includes compliance badge imagery referencing their approach to industry standards.
