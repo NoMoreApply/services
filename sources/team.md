@@ -6,7 +6,7 @@ team_description: >
   A vetted collective of senior engineers available for fractional and contract
   engagements. We embed inside your team: shared Slack, shared GitHub, shared
   standups. Not a vendor on the outside.
-cta: "Reach out via nomoreapply.com"
+cta: "Reach out: info.nomoreapply@gmail.com"
 members:
   - sources/angel-aytov.md
   - sources/catalin-waack.md
