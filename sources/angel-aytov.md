@@ -45,7 +45,7 @@ Angel builds AI and data infrastructure that goes beyond prototypes into regulat
 
 **Languages:** Python, Java/Kotlin, TypeScript/JavaScript, Go, Node.js
 
-**AI/ML:** LangChain/LangGraph, AWS Bedrock, Neo4j, vector databases, Langfuse, RAGAS, Whisper, ElevenLabs
+**AI/ML:** LangChain/LangGraph, AWS Bedrock, Neo4j, vector databases, Langfuse, RAGAS, Whisper, ElevenLabs, Kubeflow
 
 **Cloud:** AWS (EKS, Lambda, ECS, RDS/Aurora, Step Functions, Bedrock, DataSync), Kubernetes, Helm, Terraform
 
