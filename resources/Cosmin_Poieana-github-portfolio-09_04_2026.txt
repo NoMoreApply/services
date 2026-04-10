@@ -1,0 +1,22 @@
+Source: https://github.com/stars/cmin764/lists/portfolio
+Captured: 2026-04-09
+
+Repositories in portfolio starred list:
+
+- wandercode (TypeScript, 1 star) — "I help B2B companies build intelligent products" — positioning/company repo
+- morseus (Python, 23 stars, 2 forks) — "Morse signals translator" — most-starred open source project
+- healthey (TypeScript, 1 star) — "The Uber of healthcare staffing" — marketplace/platform product
+- deep-ice (Python, 1 star) — "E-commerce platform selling ice cream"
+- image-resize (Go, 1 star) — "Go REST API for resizing images"
+- xhosts (Python, 4 stars) — "Hosts file editor with web support"
+- skillbridge (Python, 1 star) — "SkillBridge - Bridging the gap between purposeful roles and exceptional candidates" — talent/recruitment platform
+- pulsr (Python, 1 star) — "Pulsr - Pipeline orchestration API"
+- TrueStory (Python, 2 stars) — relocated project
+- usphere (PHP, 1 star) — "Modern user management system"
+- cexio (Python, 1 star) — "CEX.io tools for analyzing arbitrage opportunity in the inner market" — crypto/trading tools
+- libmorse (Python, 2 stars) — "Convert timed signals into alphabet"
+- nomads-nest (TypeScript, 1 star) — "Website of Nomad's Nest: short-term self-catering rental unit in Ayia Napa, Cyprus"
+- NoMoreApply/services (HTML, 1 star) — "AI-driven automated resources synthesis aiding tech service offering"
+
+Primary languages across portfolio: Python, TypeScript, Go, PHP
+Positioning statement (from wandercode repo): "I help B2B companies build intelligent products"

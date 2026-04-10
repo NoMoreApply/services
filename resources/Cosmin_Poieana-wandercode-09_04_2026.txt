@@ -1,0 +1,10 @@
+Source: https://wandercode.ltd
+Captured: 2026-04-09
+
+Status: Client-side SPA (JavaScript-rendered). WebFetch only receives the theme-switching shell; no prose content is accessible without a full browser render.
+
+Confirmed: site is live, branding is "Wandercode". No static content extractable at this time.
+
+Subpages attempted: /, /services, /about, /work, /blog — all return the same JS shell.
+
+Note: Content may become accessible if the site adds SSR or static export. Revisit if needed.

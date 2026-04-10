@@ -48,6 +48,20 @@ resources:
     added: 2026-04-06
     notes: "Discord availability post. Useful for: role framing, skills list, vertical targets (SaaS, med/biotech, fintech, HR tech), timezone, availability."
 
+  - file: Cosmin_Poieana-github-portfolio-09_04_2026.txt
+    person: Cosmin Poieana
+    type: github-portfolio
+    source_url: "https://github.com/stars/cmin764/lists/portfolio"
+    added: 2026-04-09
+    notes: "14 repos. Positioning: 'I help B2B companies build intelligent products'. Notable: morseus (23 stars), healthey, skillbridge, pulsr, cexio, nomads-nest. Languages: Python, TypeScript, Go, PHP."
+
+  - file: Cosmin_Poieana-wandercode-09_04_2026.txt
+    person: Cosmin Poieana
+    type: personal-website
+    source_url: "https://wandercode.ltd"
+    added: 2026-04-09
+    notes: "Client-side SPA — no prose extractable via WebFetch. Site confirmed live. Revisit if SSR/static export added."
+
   - file: Catalin_Waack-discord-06_04_2026.txt
     person: Catalin Waack
     type: discord
@@ -117,7 +131,6 @@ todos:
 
   - person: Cosmin Poieana
     missing:
-      - wandercode.ltd service pages
-      - portfolio items from github starred list
+      - wandercode.ltd prose content (SPA, not crawlable without browser)
     priority: low
-    notes: "Sources complete (0 TODOs). These would enrich background further but are not blocking."
+    notes: "Sources complete (0 TODOs). GitHub portfolio fetched 2026-04-09. wandercode.ltd is a client-side SPA — content not extractable via WebFetch. Sync into sources pending."
