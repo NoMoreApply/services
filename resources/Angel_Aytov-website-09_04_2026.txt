@@ -1,0 +1,9 @@
+Source: https://aytov.com/
+Captured: 2026-04-09
+
+Title: aytov.com Ltd.
+
+Status: Holding page. No prose content. Loads Montserrat font and Bootstrap framework only.
+Domain is active under the entity "aytov.com Ltd."
+
+No portfolio, biography, or project content available at this time.

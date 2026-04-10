@@ -4,8 +4,8 @@ role: "AI Automation Architect / Principal Engineer"
 tagline: "Production AI systems that hold up under real-world load."
 location: "Dublin, Ireland (remote or hybrid)"
 linkedin: "https://www.linkedin.com/in/angel-aytov"
-github: "<!-- TODO: source missing -->"
-website: "<!-- TODO: source missing -->"
+github: "https://github.com/aytov"
+website: "https://aytov.com/"
 email: "angel@aytov.com"
 ---
 

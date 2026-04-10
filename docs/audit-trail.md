@@ -2,6 +2,14 @@
 
 ---
 
+**2026-04-09** - Updated Angel: GitHub and website front matter resolved
+
+What changed: Filled in `github` and `website` front matter fields in angel-aytov.md (previously TODO stubs). Added two new resources: Angel_Aytov-github-09_04_2026.txt and Angel_Aytov-website-09_04_2026.txt.
+
+Why: GitHub (github.com/aytov) and personal site (aytov.com) URLs provided directly. Website is a holding page with no prose; domain confirmed as aytov.com Ltd.
+
+---
+
 **2026-04-09** - Brand color correction, font cleanup, template spacing fix
 
 Decision: Updated accent color from `#DC143C` to `#e8002d` (confirmed from nomoreapply.com HTML source). Removed 16 unused font files (Inter Black/ExtraLight/Light/Medium/Thin/ExtraBold, all InterDisplay variants, InterVariable-Italic) — kept only Regular, SemiBold, Bold, Italic. Fixed bullet list paragraph spacing propagation in Typst template that caused visible gaps on wrapped items.

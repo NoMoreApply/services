@@ -55,6 +55,20 @@ resources:
     added: 2026-04-06
     notes: "Discord intro post. Adds: Romania location, Shopify/Hydrogen, ecommerce project (shower filters, Poland), SF startup context, vibe coding focus, community/outreach interest."
 
+  - file: Angel_Aytov-github-09_04_2026.txt
+    person: Angel Aytov
+    type: github-profile
+    source_url: "https://github.com/aytov"
+    added: 2026-04-09
+    notes: "7 public repos. Java, Spring Boot, React.js, HCL/Terraform. Confirms full-stack and infra-as-code work."
+
+  - file: Angel_Aytov-website-09_04_2026.txt
+    person: Angel Aytov
+    type: personal-website
+    source_url: "https://aytov.com/"
+    added: 2026-04-09
+    notes: "Holding page only. Entity name: aytov.com Ltd. No prose content available yet."
+
   - file: Angel_Aytov-aiexpert-09_04_2026.txt
     person: Angel Aytov
     type: company-website

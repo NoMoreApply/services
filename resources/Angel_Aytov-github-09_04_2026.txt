@@ -1,0 +1,14 @@
+Source: https://github.com/aytov
+Captured: 2026-04-09
+
+Profile: Angel Aytov (aytov)
+Public repositories: 7
+
+Repositories:
+- proloc: Promo Locator
+- hathway: Java-based interview challenge solution
+- product-demo: Spring Boot + React.js sample application
+- lambda_tf_sate: Infrastructure-as-code in HCL/Terraform
+- Additional projects in Java and HTML
+
+Primary languages: Java, HCL, HTML, JavaScript
