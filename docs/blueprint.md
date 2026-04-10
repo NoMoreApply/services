@@ -42,7 +42,7 @@ nomoreapply.github.io/services/ (public, always reflects latest push)
 
 ## Phase 3: Source Markdown Extraction
 
-**Status: in progress** (Cosmin complete, Catalin partially complete, Angel has open TODOs blocked on missing CV)
+**Status: in progress** (Cosmin complete, Catalin complete, Angel has 1 TODO remaining: speaking/community; blocked on missing CV for full completion)
 
 **Goal:** One well-structured `.md` file per person under `sources/`, extracted from available resources.
 
@@ -83,9 +83,9 @@ Gaps are marked with `<!-- TODO: source missing -->` so they're visible in diffs
 - Supplementary: LinkedIn profile PDF, Discord post, contra.com, catalinwaack.com, electacar.com, rivoara.com
 - All TODOs resolved
 
-**Angel Aytov (`sources/angel-aytov.md`)** - 3 TODOs remaining (YAML github/website fields + speaking/community section)
+**Angel Aytov (`sources/angel-aytov.md`)** - 1 TODO remaining (speaking/community section)
 - Primary: `resources/Angel_Aytov-profile-06_04_2026.pdf` (LinkedIn only - no CV yet)
-- Supplementary: Discord post, `resources/Angel_Aytov-aiexpert-09_04_2026.txt` (ai-expert.com)
+- Supplementary: Discord post, `resources/Angel_Aytov-aiexpert-09_04_2026.txt` (ai-expert.com), `resources/Angel_Aytov-github-09_04_2026.txt`, `resources/Angel_Aytov-website-09_04_2026.txt`
 - CV not yet available - Notable Work and Background certifications still incomplete
 - Role targets: AI Automation Architect, Principal Engineer, MLOps Engineer, Data Engineer, AWS Architect
 - Location: Dublin, Ireland
@@ -218,7 +218,7 @@ Triggered after new resources are added. Identifies which people have updates si
 ### Content
 - [x] Extract `sources/cosmin-poieana.md`
 - [x] Extract `sources/catalin-waack.md` fully (all TODOs resolved 2026-04-09)
-- [ ] Extract `sources/angel-aytov.md` fully (3 TODOs remaining: github, website YAML + speaking/community)
+- [ ] Extract `sources/angel-aytov.md` fully (1 TODO remaining: speaking/community)
 - [x] Download Catalin's contra.com profile -> `resources/`
 - [x] Download Catalin's catalinwaack.com content -> `resources/`
 - [x] Download electacar.com and rivoara.com -> `resources/`
