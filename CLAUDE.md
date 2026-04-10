@@ -116,6 +116,21 @@ Do not log trivial edits (fixing a typo, rewording one sentence). Log when new r
 
 **The audit trail is append-only.** Never edit or delete existing entries. Only prepend new ones above the previous most-recent entry.
 
+## Blueprint
+
+See [docs/blueprint.md](docs/blueprint.md).
+
+Keep the blueprint current as a living document. Update it whenever:
+- A phase changes status (in progress, complete, blocked)
+- Per-person extraction progress changes (TODOs resolved, new resources added)
+- A toolchain, build, or CI decision is made that affects pipeline architecture
+
+The blueprint covers **what the system is and where it stands**. It does not overlap with:
+- `docs/audit-trail.md` — the append-only log of *what changed and why*
+- `metadata.yml` — the inventory of raw resources and their provenance
+
+Blueprint entries should be forward-looking status snapshots. Audit trail entries are backward-looking records. Metadata is a ledger. They are complementary, not redundant.
+
 ## Audit Trail
 
 See [docs/audit-trail.md](docs/audit-trail.md).
