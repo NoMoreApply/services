@@ -61,7 +61,8 @@ jobs:
         run: |
           mkdir -p _site
           cp output/*.pdf _site/
-          cp site/index.html _site/index.html
+          BUILD_DATE=$(date -u '+%b %d, %Y')
+          sed "s/__BUILD_DATE__/$BUILD_DATE/" site/index.html > _site/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
