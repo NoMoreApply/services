@@ -25,11 +25,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6.0.2
+      - uses: actions/checkout@v6
 
       - name: Cache Pandoc
         id: cache-pandoc
-        uses: actions/cache@v5.0.4
+        uses: actions/cache@v5
         with:
           path: /tmp/pandoc.deb
           key: pandoc-3.9.0.2
@@ -43,7 +43,7 @@ jobs:
 
       - name: Cache Typst
         id: cache-typst
-        uses: actions/cache@v5.0.4
+        uses: actions/cache@v5
         with:
           path: /usr/local/bin/typst
           key: typst-0.14.2
@@ -64,7 +64,7 @@ jobs:
           cp site/index.html _site/index.html
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4.0.0
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site/
 
@@ -77,4 +77,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5.0.0
+        uses: actions/deploy-pages@v5
