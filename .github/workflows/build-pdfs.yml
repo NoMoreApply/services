@@ -19,7 +19,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -65,7 +65,7 @@ jobs:
           sed "s/__BUILD_DATE__/$BUILD_DATE/" site/index.html > _site/index.html
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _site/
 
