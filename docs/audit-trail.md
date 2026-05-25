@@ -2,6 +2,14 @@
 
 ---
 
+**2026-05-25** - Added /about page combining community and company sections
+
+Decision: Created site/about/index.html as a single scrollable static page with two audience sections (engineer community, then companies), linked from the services index, and wired into the CI assemble step.
+
+Rationale: The brief called for one URL serving both audiences separated by visual layout rather than routing. No JS, no build step. Design tokens and structure pulled directly from the two reference HTML files (nma-about.html, nma-for-companies.html). Contact email throughout is info@nomoreapply.org per the brief. A dark "For Companies" band acts as the section divider, with an anchor from the boutique CTA in Section 1 to the Section 2 hero.
+
+---
+
 **2026-04-09** - Updated Angel: GitHub and website front matter resolved
 
 What changed: Filled in `github` and `website` front matter fields in angel-aytov.md (previously TODO stubs). Added two new resources: Angel_Aytov-github-09_04_2026.txt and Angel_Aytov-website-09_04_2026.txt.

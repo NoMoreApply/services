@@ -63,6 +63,7 @@ jobs:
           cp output/*.pdf _site/
           BUILD_DATE=$(date -u '+%b %d, %Y')
           sed "s/__BUILD_DATE__/$BUILD_DATE/" site/index.html > _site/index.html
+          cp -r site/about _site/about
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
