@@ -118,7 +118,7 @@ Do not log trivial edits (fixing a typo, rewording one sentence). Log when new r
 
 ## Blueprint
 
-See [docs/blueprint.md](docs/blueprint.md).
+See [docs/blueprints/initial-structure.md](docs/blueprints/initial-structure.md).
 
 Keep the blueprint current as a living document. Update it whenever:
 - A phase changes status (in progress, complete, blocked)
