@@ -2,6 +2,14 @@
 
 ---
 
+**2026-05-28** - Updated Cosmin: AI-oriented profile refresh from portfolio site
+
+What changed: Role updated from "Fractional AI Product Strategist" to "Fractional AI Engineer & Product Strategist". Added Traced AI (2026 stealth startup, AI compliance/audit trail) to Notable Work. Added Pulsr, AceGuardian detail. Expanded VONQ section with specific tools (Recall.ai, ElevenLabs, Retell, Pinecone, Firecrawl). Extended AI/ML tech stack. Blugen methodology moved up in Summary. Summary rewritten to lead with AI engineering identity.
+
+Why: New resource added (Cosmin_Poieana-portfolio-28_05_2026.txt from cmin764.github.io/portfolio). Portfolio reveals Traced AI stealth startup (2026) not in previous sources, plus fuller detail on VONQ AI tooling and Pulsr. Profile needed to reflect AI engineering depth, not just strategy.
+
+---
+
 **2026-05-25** - Added /about page combining community and company sections
 
 Decision: Created site/about/index.html as a single scrollable static page with two audience sections (engineer community, then companies), linked from the services index, and wired into the CI assemble step.

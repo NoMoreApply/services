@@ -118,6 +118,13 @@ resources:
     added: 2026-04-09
     notes: "German shower filter ecommerce brand. Multi-stage filtration, subscription cartridge model, 4.9/5 ratings."
 
+  - file: Cosmin_Poieana-portfolio-28_05_2026.txt
+    person: Cosmin Poieana
+    type: portfolio
+    source_url: "https://cmin764.github.io/portfolio/"
+    added: 2026-05-28
+    notes: "Portfolio site. Adds: Traced AI stealth startup (2026, AI compliance), Pulsr (pipeline orchestration for AI agents), VONQ project details (Recall.ai, ElevenLabs, Pinecone, Retell, Firecrawl), full tech stack with AI tooling, system design samples. Key positioning: Blugen methodology, AI product builder."
+
 todos:
   - person: Angel Aytov
     missing: cv
@@ -130,7 +137,6 @@ todos:
     notes: "All web resources fetched and synced 2026-04-09."
 
   - person: Cosmin Poieana
-    missing:
-      - wandercode.ltd prose content (SPA, not crawlable without browser)
-    priority: low
-    notes: "Sources complete (0 TODOs). GitHub portfolio fetched 2026-04-09. wandercode.ltd is a client-side SPA — content not extractable via WebFetch. Sync into sources pending."
+    missing: []
+    priority: done
+    notes: "Portfolio resource added 2026-05-28. Includes Traced AI, Pulsr, full VONQ AI details, Blugen methodology. Sync into sources completed 2026-05-28."

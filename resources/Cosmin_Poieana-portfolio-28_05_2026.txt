@@ -1,0 +1,64 @@
+Source: https://cmin764.github.io/portfolio/
+Captured: 2026-05-28
+Type: Portfolio site (cmin764/portfolio on GitHub Pages)
+
+## Positioning
+
+"Systems thinker. AI product builder."
+"Fractional AI Product Strategist helping outlier companies build intelligent products."
+Methodology: Blugen (blueprint-first code generation — wrapping non-deterministic AI generation in deterministic blueprints).
+
+## Active Ventures
+
+**Wandercode** (active): Owner and operator. Embedded consulting practice helping outlier startups build intelligent products and adopt AI-driven engineering. Results-based pricing, not hourly.
+
+**NoMoreApply** (active): Co-founded with Angel Aytov and Catalin Waack. Trust-based talent network, peer-based referrals.
+
+## Startup Trials
+
+**Traced AI** (2026-present, stealth): AI audit trail for compliance in regulated industries (banking, healthcare, defense). The traced-ai library auto-patches LLM clients (OpenAI, Anthropic, etc.) at import time. Raw I/O written to local SQLite — never leaves client perimeter. SHA-256 hashes of every I/O pair + rationale string sent to append-only chained ledger in the cloud. Dashboard: Docker image for self-hosted or hosted at tracedai.co (Supabase + Upstash, deployed on Fly.io). Rule registry covers EU AI Act, ISO 42001, SOC 2 mappings. Stack: Python, FastAPI, PostgreSQL, Redis, Next.js, TypeScript, Fly.io, Vercel, Supabase, Upstash.
+
+**TrueStory** (2019-2020, discontinued): Chrome extension surfacing contradicting news articles. Built with Flask on GCP. Innovation Labs Iași + national Bucharest phase. Shut down 2020, monetization challenges.
+
+## Professional Work
+
+**VONQ - Meeting Assistant** (2025-2026): Recall.ai connects to Google Meet as a bot participant, streams real-time transcripts via webhooks to Django backend. OpenAI API analyzes conversation and generates live reply when agent decides to intervene. ElevenLabs converts text to speech, streams back through Recall's listener. Result: private live hints for interviewer + optional unblocking dialogue. First feature of its kind at VONQ.
+
+**VONQ - Knowledge Base & Careers Agent** (2025-2026): Firecrawl-powered crawler ingests career pages on cron, indexes job listings into Pinecone using OpenAI embeddings. Careers Agent: embeddable chat widget on client career site, candidate uploads CV, k-NN search against stored vectors, feeds retrieved listings into completion call. High-confidence matches route to job URL. RAG pipeline.
+
+**VONQ - Candidate Assessment & Language Evaluator** (2025-2026): Agentic automation system evaluating candidates across multiple criteria (skills alignment, communication quality, role fit). Retell for audio web interview retry on connection drops. Language assessment MVP for major European client: chat screening through to final PDF dossier with language scores (vocabulary, speech fluency, semantics, coherence).
+
+**A5 Labs - AceGuardian** (2025): ML/AI system for competitive online poker. Python/FastAPI orchestration + C++ RL inference server (Drogon framework). Three Python services: GTO service, Strategy service, glue routing under response-time constraints. Analysis benchmark for regression detection and strategy quality measurement. CI via Bitbucket.
+
+**Gorgias - App Store** (2021): OAuth2 developer platform. Developer Portal + OAuth2 server (Flask + authlib). Auth0 for merchant SSO. Led Developer Experience team.
+
+**Comfy (→ Siemens) - Smart Buildings** (2019-2020): gRPC API layer with reverse-proxy transcoder. Polyglot microservices (Go, Python, Node.js). Geolocation service for BMW campus (PostGIS + Mapbox). Acquisition by Siemens.
+
+## OSS / Hobby
+
+**Pulsr** (2025-present, in-progress): Pipeline orchestration API for AI agents. ZenML/Prefect-inspired but focused on AI agent workflows. Agents registered as pipeline steps, dependencies declared explicitly, orchestrated via FastAPI control plane. DAG execution with state management, retry logic, observability.
+
+**Sema4.ai - Action Server** (2023-2024): FastAPI server hosting AI Actions for GPT — discrete, type-safe Python functions with @action or @tool decorator. Before MCP was standardized. Led engineering effort architecture to production. Team of 5. Gallery became reference implementation for enterprise customers.
+
+**Robocorp - Dev Tools** (2021-2023): Built and maintained robocorp-* / rpaframework-* Python automation library suite. Web automation, desktop automation, OCR, document processing, data pipelines. 10k-user community. Led library design, API surface, versioning, contributor onboarding.
+
+**DeepIce** (in-progress): Reference FastAPI app — async, SQLModel, Alembic, uv, invoke, Redis, Docker Compose, pytest async.
+
+## System Design / Interviews
+
+**Content Moderation Platform**: Multi-modal harmful-content classification with per-modality SQS workers, GPU inference (Torch Serve on EKS), human-in-the-loop fallback. AWS stack: FastAPI/ECS Fargate, SQS, PostgreSQL, Redis, S3, Lambda, OpenSearch, Prometheus.
+
+**Bulk CSV Ingest**: Resumable 10GB uploads to S3, stream-parsed into sharded MongoDB Atlas. Presigned S3 multipart URLs, SQS fan-out, Fargate parsers. On-demand AI identicons per row (external image API, deterministic seed, cached in S3).
+
+## Tech Stack (from portfolio)
+
+Languages: Python, TypeScript/JavaScript, Go, C/C++, SQL, PHP
+AI/ML: OpenAI, Anthropic, LangChain, RAG (Pinecone), Recall.ai, ElevenLabs, Retell, Firecrawl, Robot Framework, RPA, OCR, IDP, MCP
+Web: FastAPI, Django, Flask, React/Next.js, Node.js/NestJS
+Infra: Docker, Kubernetes (Helm), Google Cloud, AWS (ECS Fargate, SQS, S3, Lambda, EKS), Fly.io, Vercel, Supabase, Upstash, gRPC/protobuf
+Databases: PostgreSQL, Redis, MongoDB Atlas, ElasticSearch, SQLite, PostGIS
+Tooling: PyCharm, VSCode, Vim, Git/GitHub Actions, pytest, Ruff, mypy, invoke, Fabric, Bitbucket CI
+
+## Scale proof
+
+~2B tokens/month, ~12,750 AI messages/month across systematic agentic workflows.
