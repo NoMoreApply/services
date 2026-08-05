@@ -116,6 +116,16 @@ Do not log trivial edits (fixing a typo, rewording one sentence). Log when new r
 
 **The audit trail is append-only.** Never edit or delete existing entries. Only prepend new ones above the previous most-recent entry.
 
+## Versioning
+
+Every push to `main` that ships a real change gets a git tag, loose SemVer (`vMAJOR.MINOR.PATCH`), decided by judgment call, not a rule engine:
+
+- **Patch** — a single-fact fix or correction with no new structure: wrong email, wrong color, a typo, a bumped CI action version. (e.g. `v1.0.1`, `v1.0.2`)
+- **Minor** — a new section, page, feature, or content addition, including correcting/replacing a whole block of copy (like a pricing or terms section) as long as it doesn't invalidate a live, already-communicated commitment. (e.g. `v1.1.0` new resources, `v1.2.0` build date, `v1.3.0` profile refresh)
+- **Major** — reserved for a real pivot: a business-model change that contradicts terms already committed to a real client or already relied upon, a breaking change to the CI/build contract, or a structural rewrite that makes the previous version's output incompatible. Not yet used in this repo.
+
+This repo has no consumers versioning against these tags. The point is a human-readable changelog anchor, not compatibility guarantees. Decide the bump the same way: what would confuse someone diffing v(N) against v(N-1)?
+
 ## Blueprint
 
 See [docs/blueprints/initial-structure.md](docs/blueprints/initial-structure.md).

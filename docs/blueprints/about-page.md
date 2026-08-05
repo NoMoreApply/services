@@ -88,12 +88,18 @@ Pull directly from `nma-about.html`. Content in order:
 
 **Section 2: For Companies (company-facing)**
 
-Pull directly from `nma-for-companies.html`. Content in order:
+Content in order:
 
 - Dark hero section (inverted colors): "Hire people, not applications." with "applications." in red. Subheading: warm intro over cold pipeline. CTA: "Get in touch" linking to mailto:info@nomoreapply.org.
-- Two tracks side by side: Referral hire (light card) and Engineering boutique (dark card).
-- How a referral hire works: four steps (Brief us / Match and vouch / Three stages then a decision / Placement and retention).
-- The deal, plainly: three cards (Success-only fee / 180-day guarantee / No ghosting, ever).
+- Two tracks side by side: Referral hire (light card, "10% of the hire's monthly pay, paid across their first 10 months. Nothing if they don't start. No retainer, no exclusivity.") and Engineering boutique (dark card).
+- How a referral hire works: four steps (Brief us / Match and vouch / Three stages then a decision / Placement, then 10for10 — 10% of monthly pay invoiced once a month for ten months, starting 30 days after the start date; invoicing just stops if they leave early).
+- The deal, plainly: three cards ("10% x 10, nothing else" / "The monthly drip is the guarantee" / "No ghosting, ever"). No fixed retention window and no replacement clause exist in the real model, don't reintroduce one.
+- The 10for10 explainer, a dedicated block answering the four questions a company needs before they'll ask for the agreement:
+  - **The offer** (row): named "10for10" explicitly. Ten payments of 10% of gross monthly pay, once a month, for ten months, only if the person starts. One number, no negotiation.
+  - **The math** (row): worked example on a $108,000 base — $9,000/month pay, $900 per payment, $9,000 total across ten payments (chosen so the numbers divide evenly and read cleanly; not tied to any real client's salary). Frame as roughly 8.3% of a first year's salary vs. the 20-25% an agency search runs.
+  - **What happens if** (three numbered steps, reusing the `.how-section`/`.steps` pattern): they leave early (invoicing stops, nothing refunded or chased, no guarantee/replacement period) / you already knew them (5 business days from the introduction to say so with a dated record) / you hire them for a different role later (introduction stays live 12 months, any role, any affiliate).
+  - **What signing commits you to** (row): nothing — no retainer, no exclusivity, no obligation to hire. Names the contracting entity plainly: agreements are signed and invoiced by Driftware Dynamics Ltd, which runs the NoMoreApply community; NoMoreApply is a brand, not a legal entity. One line noting the same 10for10 shape (reversed direction) is what Cosmin offers recruiters at wandercode.ltd/10for10. Ends with a `.cta-btn.primary` linking to mailto:info@nomoreapply.org, "Request the agreement."
+  - Governing law/jurisdiction is deliberately not mentioned on this page — left to be agreed per client in the actual signed agreement. No bank/IBAN details, no client or candidate names, no full clause text, no candidate quality/performance guarantees ever appear here — those live only in the signed agreement, kept outside this public repo.
 - This isn't for everyone: disqualifying list with ✕ markers (CV farmers, 6+ round processes, companies who ghost, bulk/junior hiring, middleman replacement).
 - Dual CTA: Referral hire (primary red button to mailto) and Engineering boutique (secondary button to https://nomoreapply.github.io/services/).
 

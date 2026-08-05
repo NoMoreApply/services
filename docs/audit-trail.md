@@ -2,6 +2,14 @@
 
 ---
 
+**2026-08-05** - For Companies: published the real referral fee model, named 10for10
+
+Decision: Replaced the placeholder "share of first-year placement" / "180-day retention guarantee" copy in the For Companies section with the actual referral model: 10% of the hire's gross monthly pay, invoiced once a month for ten months, with no guarantee or replacement period. Added a dedicated "10for10" block (the offer, the math, what happens if, what signing commits you to) so a company can compute the fee and the main objections without emailing first. Updated `docs/blueprints/about-page.md` to match.
+
+Rationale: The original blueprint's guarantee/share language was written before any real agreement existed and contradicted the actual signed-ready master agreement (kept outside this public repo, no client names or bank details on the page). The worked example uses an illustrative $108,000 base (clean $9,000/month, $900/payment numbers), not tied to any real client's salary. Jurisdiction is left unmentioned, per-client. CTA remains mailto:info@nomoreapply.org.
+
+---
+
 **2026-05-28** - Updated Cosmin: AI-oriented profile refresh from portfolio site
 
 What changed: Role updated from "Fractional AI Product Strategist" to "Fractional AI Engineer & Product Strategist". Added Traced AI (2026 stealth startup, AI compliance/audit trail) to Notable Work. Added Pulsr, AceGuardian detail. Expanded VONQ section with specific tools (Recall.ai, ElevenLabs, Retell, Pinecone, Firecrawl). Extended AI/ML tech stack. Blugen methodology moved up in Summary. Summary rewritten to lead with AI engineering identity.
