@@ -2,6 +2,14 @@
 
 ---
 
+**2026-09-02** - Redirected site/about to nomoreapply.com/about, content moved to main site
+
+Decision: Replaced site/about/index.html with a meta-refresh redirect (plus canonical link and a plain fallback line) pointing to https://nomoreapply.com/about, instead of deleting the page. Merge staged to land after the ported page goes live on nomoreapply.com.
+
+Rationale: The About page (community + For Companies sections, including the real 10for10 fee model) is being ported verbatim into the main nomoreapply.com site as its canonical home, with the CTA there switched from mailto:info@nomoreapply.org to the site's existing contact form. Keeping two copies would drift; a redirect preserves old bookmarks/links (site/index.html's nav still points at ./about) without a 404. build-pdfs.yml's `cp -r site/about _site/about` needed no changes, it copies whatever file is present.
+
+---
+
 **2026-08-05** - For Companies: published the real referral fee model, named 10for10
 
 Decision: Replaced the placeholder "share of first-year placement" / "180-day retention guarantee" copy in the For Companies section with the actual referral model: 10% of the hire's gross monthly pay, invoiced once a month for ten months, with no guarantee or replacement period. Added a dedicated "10for10" block (the offer, the math, what happens if, what signing commits you to) so a company can compute the fee and the main objections without emailing first. Updated `docs/blueprints/about-page.md` to match.
