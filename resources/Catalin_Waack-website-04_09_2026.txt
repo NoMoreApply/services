@@ -1,0 +1,61 @@
+Source: https://catalinwaack.com/en
+Fetched: 2026-09-04
+
+# Catalin Waack - Independent AI and Product Consultant
+
+## About/Bio
+Catalin Waack is an independent AI and product consultant based in Germany/EU/US offering remote work. He began in tech at age 14 with web security and SQL injection, pursued formal IT training and computer science studies, and has worked professionally since 2015 across infrastructure, data, web, and product engineering. He established his independent practice in 2018.
+
+## Services Offered
+- AI consulting with production delivery
+- Process analysis and prototyping
+- System integration and production deployment
+- Product and engineering ownership (temporary or project-based)
+- Problem assessment through implementation
+
+## Key Philosophy
+"The model is rarely the bottleneck. Data, rules, permissions, integrations, failure modes and ownership are."
+
+His approach emphasizes moving from demos to reliable, traceable systems that handle real work with clear rules, limited permissions, and controlled handoffs.
+
+## Tech Stack/Skills
+**AI Systems:** OpenAI, Anthropic, Grok, Tool Use, LangChain, LangGraph, Haystack, RAGFlow
+
+**Web/Product:** TypeScript, React, Next.js, Node.js, FastAPI, Python
+
+**Infrastructure:** PostgreSQL, Docker, Kubernetes, AWS S3, Railway, Vercel
+
+**Integrations:** MCP, REST, GraphQL, Webhooks, Google Ads API, Shopify Admin API
+
+**Additional:** SQLite, Playwright, pgvector, Drizzle ORM, Stripe, Sentry
+
+## Notable Projects
+- **ElectaCar (2026)** - Vehicle data platform with 12-stage publishing workflow using Temporal for long-running jobs
+- **Heyamigo + Amigospace (2026)** - WhatsApp/Telegram AI assistant with 15,000+ npm downloads; supports Claude Code and multiple AI providers
+- **Google Ads Operations Platform (2026)** - Multi-workspace advertising platform with controlled publishing and profitability tracking
+- **RuntimeAffiliate (2025-2026)** - Multi-merchant commerce platform for Shopify stores with commission tracking
+- **BREAKEATS (2024-2026)** - Music and motion research system measuring movement-to-music correlation
+- **DAYONE/FAMFAM (2024)** - Music community app reaching 12,000 users and App Store Top 10
+- **Syntax Institut (2023-2024)** - Learning platform supporting 3,000+ active students; launched in 3 months
+- **VOXR (2017-2020)** - Live event platform used by German federal government and 7 of 10 largest DAX companies; handled 10,000+ participants
+- **Tailorwine (2022)** - B2B digital sommelier MVP that helped company win REWE and EDEKA
+- **Luxury Essence (2022)** - Travel publishing platform with 170+ articles
+
+## Testimonial
+Thomas Marbella, Founder & CEO of OneCode GmbH: "In our network, he has an outstanding reputation. Personally, I can say that he is a one-man army. He's pragmatic, solves problems efficiently, and has the right experience."
+
+## Contact Information
+- Email: hello@catalinwaack.com
+- WhatsApp: +1 786-727-6503
+- LinkedIn: linkedin.com/in/catalinwaack
+- GitHub: github.com/C4T4
+
+## Key Statistics
+- In tech since age 14
+- Independent since 2018
+- ElectaCar: 3 days to working first version; 6 weeks kickoff to production
+- Syntax Institut: 3 months from concept to first paying customers
+- VOXR: 7 of 10 largest DAX companies use the product
+
+## Diff vs previous snapshot (Catalin_Waack-website-09_04_2026.txt, fetched 2026-04-09)
+Site has clearly been rebuilt/repositioned since April: shifted from a generalist "software development portfolio" (lean dev, MVP, UX, business solutions) to an "AI and product consultant" positioning matching the new CV. Notable additions not in the April snapshot: the "model is rarely the bottleneck" philosophy quote, the OneCode/Thomas Marbella testimonial, a much deeper AI-specific tech stack (LangChain/LangGraph, Haystack, RAGFlow, MCP, pgvector, Drizzle, Temporal), and named/dated project list (ElectaCar, Heyamigo, Google Ads Operations Platform, RuntimeAffiliate, BREAKEATS, FAMFAM, Syntax Institut, VOXR, Tailorwine, Luxury Essence) replacing the old vague client list (Veddelholzer, FAMFAM, Syntax GmbH, edeltravel, Tailorwine, MeinCheckin, Coach2talk). Heyamigo download count updated to 15,000+ (CV still shows 2,000, likely stale at CV-authoring time).
