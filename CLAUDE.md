@@ -10,15 +10,16 @@ PDF brochure pipeline for the NoMoreApply engineering collective. Converts per-p
 
 **Template:** `templates/nomoreapply.typ` — design aligned to nomoreapply.com brand.
 
-**Design tokens:**
+**Design tokens** (canonical table, keep in sync with `templates/nomoreapply.typ`):
 - Background: `#FAFAFA` (off-white)
-- Text: `#09090B` (near-black)
-- Accent: `#e8002d` (NMA brand red — role lines, team taglines only)
-- Secondary: `#71717A` (muted grey)
+- Text primary: `#09090B` (near-black, also the dark-band fill)
+- Text secondary: `#52525B`
+- Text tertiary / eyebrow: `#71717A` (muted grey), faint variant `#A1A1AA`
+- Accent: `#DC143C` (NMA brand red, confirmed against the live nomoreapply.com — role lines, team taglines, accent bars only)
 - Dividers: `#E4E4E7` (light grey rules and card borders)
 - Font: Inter, weights 400/600/700
 - Name: 26pt bold, tracking -0.02em
-- Section headings: 7.5pt bold uppercase, tracking 0.1em, grey rule
+- Section headings: 7.5pt bold uppercase eyebrow (`#A1A1AA`), tracking 0.12em, 2pt red accent bar above
 
 **Fallback option:** WeasyPrint/CSS - if Typst hits layout limitations. Document trigger and rationale in `docs/audit-trail.md` before switching.
 
@@ -44,12 +45,17 @@ All prose in `sources/` must follow these rules. Apply them when extracting or e
 
 ## Source Markdown Schema
 
-Each `sources/*.md` file must follow the same YAML front matter + H2 section structure so the template can consume them consistently. Sections in order:
-1. `## Summary`
-2. `## Expertise`
-3. `## Notable Work`
-4. `## Tech Stack`
-5. `## Background`
+Each `sources/*.md` file must follow the same YAML front matter + H2 section structure so the template can consume them consistently.
+
+**Front matter** additionally carries `proof:`, a list of 3-4 metric-led fragments (e.g. `"7 of 10 DAX companies"`). This renders as the stat band under the contact line. Avoid `~` in these fragments (Pandoc's Typst writer escapes it when substituting raw template variables, unlike body prose) — write `2B+` rather than `~2B`.
+
+**Body sections, in order:**
+1. `## Summary` - 2-3 sentences. Lead with the outcome and the strongest claim, not biography. The team brochure (`scripts/assemble-team.sh`) extracts only the **first paragraph** (up to the first blank line) for the team card, so keep that opening paragraph self-contained and under ~50 words.
+2. `## Expertise` - 5-8 bullets. The team brochure also extracts the **first 4 bullets** here, so lead with the strongest ones.
+3. `## Notable Work` - **capped at 6 entries.** Write each as an H3 heading (company/project) followed by an italic meta line (`*Role · Years*`), then prose or bullets. Adding a 7th entry means demoting one to `## Also`. Ranking rubric, applied in order: named client or brand a buyer recognises → a hard number → recency → fit with current positioning → technical distinctiveness (ties break toward recency). Every full entry needs at least one number; no metric means it belongs in `## Also`.
+4. `## Also` - one-liners for demoted or minor work. Keep brand names visible, cut the detail.
+5. `## Tech Stack` - Categorized list: languages, frameworks, infra, AI/ML tools.
+6. `## Background` - Education, distinctions, speaking, community.
 
 Gaps (e.g. missing CV data) are marked with `<!-- TODO: ... -->` comments inline.
 
@@ -64,6 +70,7 @@ When new material arrives for a person (CV, LinkedIn export, website snapshot, p
 1. Place the file in `resources/` with the naming convention `{FirstName}_{LastName}-{type}-{DD_MM_YYYY}.ext`, using today's date.
 2. Add or update the corresponding entry in `metadata.yml`: file, person, type, source_url, added date, notes.
 3. If this replaces an older file of the same type, keep the old file (historical record) and add the new one alongside it with the updated date suffix.
+4. If the resource was written for a specific role or audience (e.g. a CV targeted at an iOS position), add a `target:` field to its `metadata.yml` entry recording that intent. A role-targeted resource describes the same work through a different lens: mine it for facts, never let its framing drive the person's positioning.
 
 Do not edit \`sources/\` yet. That is a separate step.
 
@@ -74,8 +81,10 @@ When resources have been updated and the source markdown needs to reflect them:
 1. Read the relevant files in `resources/` for the person being updated.
 2. Extract and distill content into the person's `sources/*.md` file, following the schema above. This is a one-way sync: `resources/` is the source of truth.
 3. Keep the prose tight: brochure-style, not a CV dump. Each section should be the sharpest possible version of the person's story.
-4. Mark any gaps where data is unavailable with `<!-- TODO: describe what's missing -->`.
-5. Do not touch other people's source files in the same operation.
+4. **Enforce the cap.** `## Notable Work` never exceeds 6 entries. Adding one means ranking all candidates by the rubric in the schema section above and demoting the weakest to `## Also`. Never just append.
+5. Update `proof:` in front matter whenever a new hard number or brand surfaces that outranks what's currently there.
+6. Mark any gaps where data is unavailable with `<!-- TODO: describe what's missing -->`.
+7. Do not touch other people's source files in the same operation.
 
 After editing `sources/`, the commit and push triggers CI. PDFs rebuild automatically.
 

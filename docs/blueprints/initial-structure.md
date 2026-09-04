@@ -36,7 +36,7 @@ nomoreapply.github.io/services/ (public, always reflects latest push)
 
 ### How the team brochure summary works
 
-`scripts/assemble-team.sh` extracts the first 4 lines of `## Summary` and first 4 bullets of `## Expertise` from each individual `.md` file, wraps them in Typst `#accentcard()` blocks, and injects them into the assembled team markdown before Pandoc + Typst renders the team PDF. Full profiles stay in their individual PDFs.
+`scripts/assemble-team.sh` extracts the first paragraph (up to the first blank line) of `## Summary` and the first 4 bullets of `## Expertise` from each individual `.md` file, wraps them in Typst `#accentcard()` blocks, and injects them into the assembled team markdown before Pandoc + Typst renders the team PDF. Full profiles stay in their individual PDFs. Every value it injects is escaped for Typst special characters (`#`, `$`, `@`, `\`) before insertion, so raw member prose can never break the build.
 
 ---
 
@@ -59,34 +59,40 @@ linkedin: "https://..."
 github: "https://..."          # optional
 website: "https://..."         # optional
 email: "..."
+proof:
+  - "3-4 metric-led fragments, e.g. '7 of 10 DAX companies'"
 ---
 ```
 
 **Body sections (in this order, H2 headings):**
-1. `## Summary` - 2-3 sentence pitch. Lead with the outcome, not the role.
-2. `## Expertise` - 5-8 bullet points. Core capabilities, technically specific. No manual line breaks inside bullets.
-3. `## Notable Work` - 3-5 career highlights. Company name, what was built, measurable outcome.
-4. `## Tech Stack` - Categorized list: languages, frameworks, infra, AI/ML tools.
-5. `## Background` - Education, distinctions, speaking, community.
+1. `## Summary` - 2-3 sentence pitch. Lead with the outcome and the strongest claim, not the role or biography. The team brochure extracts only the first paragraph verbatim, so keep it self-contained.
+2. `## Expertise` - 5-8 bullet points. Core capabilities, technically specific. No manual line breaks inside bullets. The team brochure extracts the first 4.
+3. `## Notable Work` - **capped at 6 entries**, each an H3 heading + italic meta line (`*Role · Years*`) + prose/bullets. Ranked: named brand → hard number → recency → positioning fit → technical distinctiveness. Every entry needs at least one number.
+4. `## Also` - one-liners for work demoted from Notable Work, or minor engagements. Keep the brand name, cut the detail.
+5. `## Tech Stack` - Categorized list: languages, frameworks, infra, AI/ML tools.
+6. `## Background` - Education, distinctions, speaking, community.
 
 Gaps are marked with `<!-- TODO: source missing -->` so they're visible in diffs.
 
 ### Per-person extraction guide
 
-**Cosmin Poieana (`sources/cosmin-poieana.md`)** - complete, 0 TODOs
+**Cosmin Poieana (`sources/cosmin-poieana.md`)** - complete, 0 TODOs, `proof:` front matter added 2026-09-04 (already at the 6-entry cap, no cuts needed)
 - Primary: `resources/Cosmin_Poieana-CV-06_04_2026.pdf`
 - Supplementary: LinkedIn profile PDF, Discord post, wandercode `About.tsx`
 - Remaining to pull (optional enrichment): wandercode.ltd service pages, portfolio starred list
 
-**Catalin Waack (`sources/catalin-waack.md`)** - synced 2026-09-04
+**Catalin Waack (`sources/catalin-waack.md`)** - repositioned 2026-09-04
 - Primary: `resources/Catalin_Waack-CV-04_09_2026.pdf` (supersedes `Catalin_Waack-CV-06_04_2026.pdf`, kept for history)
+- Also mined: `resources/Catalin_Waack-cv-ios-04_09_2026.pdf` (role-targeted, `target: iOS-focused role` in metadata.yml, facts only)
 - Supplementary: LinkedIn profile PDF, Discord post, contra.com, `resources/Catalin_Waack-website-04_09_2026.txt`, electacar.com, rivoara.com
+- Notable Work capped at 6 (was 14), rest demoted to `## Also`; `proof:` front matter added
 - All TODOs resolved
 
-**Angel Aytov (`sources/angel-aytov.md`)** - 1 TODO remaining (speaking/community section)
+**Angel Aytov (`sources/angel-aytov.md`)** - capped 2026-09-04, 1 TODO remaining (speaking/community section, plus a flagged timeline gap)
 - Primary: `resources/Angel_Aytov-profile-06_04_2026.pdf` (LinkedIn only - no CV yet)
 - Supplementary: Discord post, `resources/Angel_Aytov-aiexpert-09_04_2026.txt` (ai-expert.com), `resources/Angel_Aytov-github-09_04_2026.txt`, `resources/Angel_Aytov-website-09_04_2026.txt`
 - CV not yet available - Notable Work and Background certifications still incomplete
+- Notable Work capped at 6 (was 9); 2009-2017 timeline gap flagged with `<!-- TODO -->` rather than papered over
 - Role targets: AI Automation Architect, Principal Engineer, MLOps Engineer, Data Engineer, AWS Architect
 - Location: Dublin, Ireland
 
@@ -108,9 +114,10 @@ Contains team-level front matter and intro paragraph. `scripts/assemble-team.sh`
 |---------|-------|
 | Paper | A4 |
 | Background | `#FAFAFA` (off-white) |
-| Body text | `#09090B` (near-black) |
-| Accent | `#e8002d` (NMA brand red - confirmed from nomoreapply.com source) |
-| Secondary | `#71717A` (muted grey) |
+| Body text | `#09090B` (near-black, also the dark-band fill) |
+| Accent | `#DC143C` (NMA brand red - confirmed against the live nomoreapply.com) |
+| Text secondary | `#52525B` |
+| Text tertiary / eyebrow | `#71717A`, faint variant `#A1A1AA` |
 | Dividers | `#E4E4E7` (light grey rules and card borders) |
 | Font | Inter, weights 400/600/700 + Italic |
 | Name | 26pt bold, tracking -0.02em |
@@ -176,9 +183,9 @@ Inter `.ttf`/`.otf` files in `templates/fonts/` are loaded directly by Typst (no
 
 Triggers on push to `main` touching `sources/`, `templates/`, `scripts/`, `site/`, `Makefile`, or the workflow file. Also supports `workflow_dispatch`.
 
-Tool versions pinned:
-- Pandoc: 3.9.0.2
-- Typst: 0.14.2
+Tool versions pinned (matches local dev toolchain):
+- Pandoc: 3.11
+- Typst: 0.15.1
 - actions/checkout: v6.0.2
 - actions/cache: v5.0.4
 - actions/upload-pages-artifact: v4.0.0

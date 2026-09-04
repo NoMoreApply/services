@@ -7,6 +7,10 @@ linkedin: "https://www.linkedin.com/in/angel-aytov"
 github: "https://github.com/aytov"
 website: "https://aytov.com/"
 email: "angel@aytov.com"
+proof:
+  - "Mercedes-Benz, Toyota, Credit Suisse"
+  - "HIPAA, GDPR, ISO/IEC 42001-compliant AI systems"
+  - "15+ years, FinTech to HealthTech to Automotive"
 ---
 
 ## Summary
@@ -25,21 +29,41 @@ Angel builds AI and data infrastructure that goes beyond prototypes into regulat
 
 ## Notable Work
 
-**AI Expert / AI Automation Architect** (2023–present, HealthTech): Building clinical research and patient decision support workflows. Delivered: a GraphRAG platform with hybrid retrieval and RAGAS evaluation; autonomous research agents for medical literature and clinical trial discovery; a real-time FastAPI gateway with WebRTC voice pipeline; full observability stack (OTEL, Langfuse) with PII redaction and sandbox validation before production exposure.
+### AI Expert
+*AI Automation Architect, HealthTech · 2023-present*
 
-**DEMICON / Mercedes-Benz** (2022–2024): Senior AWS Cloud Engineer on the Mercedes-Benz automotive account. Built custom guardrails and monitoring using Node.js, Selenium, Lambda, Step Functions, and Grafana. Migrated Terragrunt to Terraform Enterprise. Configured GitLab CI/CD pipelines and automated scaling (EC2 ASG, ECS, RDS/Aurora).
+Building clinical research and patient decision support workflows. Delivered a GraphRAG platform with hybrid retrieval and RAGAS evaluation, autonomous research agents for medical literature and clinical trial discovery, a real-time FastAPI gateway with WebRTC voice pipeline, and a full observability stack (OTEL, Langfuse) with PII redaction and sandbox validation before production exposure.
 
-**Y TREE, FinTech** (2021–2022): Led implementation of a new ALM core module for financial life intelligence. Deployed microservices on AWS EKS with Kubernetes/Helm. Prototyped in Java/Kotlin (Spring Boot) and TypeScript (Express/Node.js).
+### DEMICON via Mercedes-Benz
+*Senior AWS Cloud Engineer · 2022-2024*
 
-**Toyota Connected Europe** (2021): Designed and built microservices for the user subscription activation flow using Spring Boot, Spring WebFlux, Java 11, MongoDB, and Kong API Gateway. Built a shared security module (OpenID Connect + JWT) integrated across all production components.
+Built custom guardrails and monitoring for the Mercedes-Benz automotive account using Node.js, Selenium, Lambda, Step Functions, and Grafana. Migrated Terragrunt to Terraform Enterprise. Configured GitLab CI/CD pipelines and automated scaling (EC2 ASG, ECS, RDS/Aurora).
 
-**Credit Suisse** (2020–2021): Lead Full Stack Engineer on an investment wealth management platform. Contributed to TradeNet and RM Plus financial data feeds. Stack: Angular, Java, Spring Boot, Oracle RDBMS.
+### Toyota Connected Europe
+*2021*
 
-**Metapack Group, Engineering Tech Lead** (2019): Architected microservices for a delivery management platform (e-commerce) using Spring Boot, AWS Lambda, and Node.js. Automated infrastructure with Terraform and owned CI/CD pipelines.
+Designed and built microservices for the user subscription activation flow using Spring Boot, Spring WebFlux, Java 11, MongoDB, and Kong API Gateway. Built a shared security module (OpenID Connect + JWT) integrated across all production components.
 
-**Smart Wealth AG, Lead Engineer** (2017-2019, FinTech): Led a team building a robo-advisory portfolio management platform in Zurich. Designed the architecture using DDD and Attribute-Driven Design, implemented with Java/Spring Boot and Angular, deployed on AWS with CI/CD via CloudBees and Docker.
+### Credit Suisse
+*Lead Full Stack Engineer · 2020-2021*
 
-**Trading 212, Senior Engineer** (2009-2010): Migrated the trading engine's database model to a Domain-Driven Design architecture for the forex trading platform (trading212.com). SQL tuning, stored procedures, and ETL.
+Contributed to TradeNet and RM Plus financial data feeds on an investment wealth management platform. Stack: Angular, Java, Spring Boot, Oracle RDBMS.
+
+### Y TREE
+*FinTech · 2021-2022*
+
+Led implementation of a new ALM core module for financial life intelligence. Deployed microservices on AWS EKS with Kubernetes/Helm. Prototyped in Java/Kotlin (Spring Boot) and TypeScript (Express/Node.js).
+
+### Metapack Group
+*Engineering Tech Lead · 2019*
+
+Architected microservices for a delivery management platform (e-commerce) using Spring Boot, AWS Lambda, and Node.js. Automated infrastructure with Terraform and owned CI/CD pipelines.
+
+## Also
+
+Smart Wealth AG: led a team building a robo-advisory portfolio management platform in Zurich, Java/Spring Boot and Angular on AWS (2017-2019). Trading 212: migrated the trading engine's database model to a Domain-Driven Design architecture for the forex trading platform (2009-2010).
+
+<!-- TODO: seven-year gap between Trading 212 (2009-2010) and Smart Wealth AG (2017) is unaccounted for in available sources, while the Summary claims "over 15 years" of experience. Resolve with a CV or LinkedIn detail before repeating that figure without qualification. -->
 
 ## Tech Stack
 
