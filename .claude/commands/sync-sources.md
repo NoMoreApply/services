@@ -25,7 +25,7 @@ For each person with new resources, follow CLAUDE.md procedure 2 (Syncing resour
 
 - Read **all** resource files for that person in `resources/` (not just the newest)
 - Synthesize into their `sources/*.md` file: brochure-style, not a CV dump
-- The sharpest version of each section: Summary (2-3 sentences, lead with outcome and strongest claim, first paragraph self-contained since the team brochure extracts it verbatim), Expertise (5-8 bullets, technically specific, no manual line breaks), Notable Work (**capped at 6**, ranked by named brand → hard number → recency → positioning fit → technical distinctiveness; demote the rest to `## Also` as one-liners), Tech Stack (categorized), Background (education, distinctions, community)
+- The sharpest version of each section: Summary (2-3 sentences, lead with outcome and strongest claim, first paragraph self-contained and under ~50 words since the team brochure extracts it verbatim), Expertise (5-8 bullets, technically specific, no manual line breaks), Notable Work (**capped at 6**; rank candidates by named brand → hard number → recency → positioning fit → technical distinctiveness to decide which 6 survive, demote the rest to `## Also` as one-liners, then order the surviving 6 chronologically by end date descending; brand-first naming, e.g. `VONQ via Wandercode`, `ElectaCar for Navigator Insurance Brokers`), Tech Stack (categorized), Background (education, distinctions, community)
 - Update `proof:` front matter (3-4 metric-led fragments) if a new resource surfaces a stronger number or brand
 - Remove `<!-- TODO -->` comments for any gaps that are now filled
 - Keep remaining TODOs for still-missing data

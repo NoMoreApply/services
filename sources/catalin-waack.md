@@ -33,7 +33,7 @@ Catalin designs and builds AI-enabled products end to end: requirements, archite
 
 ## Notable Work
 
-### ElectaCar via Navigator Insurance Brokers
+### ElectaCar for Navigator Insurance Brokers
 *AI Product Consultant and Lead Full Stack Engineer · 2026*
 
 Owned product and technical delivery for a Hong Kong EV comparison platform covering 100+ vehicle models. From kickoff to a working build in 3 days, live product in 6 weeks. Python/FastAPI backend turns fragmented vehicle data and manual publishing into structured search, comparison, calculation and localization workflows, plus government-price ingestion and insurance matching through a 12-stage AI research and publishing pipeline built on Temporal.
@@ -43,10 +43,10 @@ Owned product and technical delivery for a Hong Kong EV comparison platform cove
 
 Multi-provider agent runtime executing Claude Code, OpenAI Codex, Gemini CLI and Grok Build from WhatsApp and Telegram. Durable queues, stable task identity, idempotent side effects, worker heartbeats and restart recovery keep long AI jobs reliable. Published on npm with 15,000+ downloads.
 
-### VOXR GmbH
-*CTO, Employee with Revenue Share · 2017-2020*
+### BreakEats LLC
+*Product Engineer, Contract · 2024-2026*
 
-Led product technology used by the German federal government and 7 of the top 10 DAX companies, handling 10,000+ live participants. Architected a fault-tolerant system for unreliable live-event connectivity. Progressed from business-development trainee to CTO, and helped pivot the product portfolio during the COVID-19 disruption.
+R&D alongside a former NVIDIA manager and multiple-patent holder on novel audio-motion signal processing, pursuing patent protection. Designed real-time synchronization and pattern recognition across nine frequency bands, combining FFT-based frequency analysis with accelerometer, gyroscope and headphone-motion data. Built the supporting infrastructure: Swift/CoreMotion capture with Accelerate/vDSP, LiveKit and WebRTC streaming, Python signal analysis, latency-aware matching, Swift Testing/XCTest coverage, and diagnostic timelines for visual debugging.
 
 ### FAMFAM via DAYONE
 *Senior Frontend Developer, Contract · 2024*
@@ -58,10 +58,10 @@ Built FAMFAM, a music-community and event app co-founded by the Keinemusik DJ co
 
 Took a B2C eLearning platform from concept to paying customers in three months, supporting 3,000+ active students and 100+ instructors. Owned architecture, frontend, backend and the core commercial integrations: Next.js, TypeScript, Strapi, authentication, courses, video, quizzes (27,000+ quiz results), progress tracking, certificates, Stripe payments and subscriptions, Calendly.
 
-### BreakEats LLC
-*Product Engineer, Contract · 2024-2026*
+### VOXR GmbH
+*CTO, Employee with Revenue Share · 2017-2020*
 
-R&D alongside a former NVIDIA manager and multiple-patent holder on novel audio-motion signal processing, pursuing patent protection. Designed real-time synchronization and pattern recognition across nine frequency bands, combining FFT-based frequency analysis with accelerometer, gyroscope and headphone-motion data. Built the supporting infrastructure: Swift/CoreMotion capture with Accelerate/vDSP, LiveKit and WebRTC streaming, Python signal analysis, latency-aware matching, Swift Testing/XCTest coverage, and diagnostic timelines for visual debugging.
+Led product technology used by the German federal government and 7 of the top 10 DAX companies, handling 10,000+ live participants. Architected a fault-tolerant system for unreliable live-event connectivity. Progressed from business-development trainee to CTO, and helped pivot the product portfolio during the COVID-19 disruption.
 
 ## Also
 

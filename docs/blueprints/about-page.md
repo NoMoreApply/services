@@ -50,7 +50,7 @@ Match nomoreapply.com exactly:
 - Background: `#f5f5f3` (light cream)
 - White sections: `#ffffff`
 - Near-black text: `#111111`
-- Accent: `#e8002d` (red — used sparingly: hero accents, value highlights, CTAs)
+- Accent: `#DC143C` (red, used sparingly: hero accents, value highlights, CTAs)
 - Muted text: `#777777`
 - Borders: `#e2e2de`
 - Font: Inter (weights 400–900) + JetBrains Mono for labels and metadata

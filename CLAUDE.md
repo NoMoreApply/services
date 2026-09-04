@@ -1,5 +1,7 @@
 # CLAUDE.md: NoMoreApply/services
 
+This file and `.claude/commands/` are the single source of truth for agent instructions in this repo. `AGENTS.md` is a symlink to this file, kept for tools that look for that name specifically. Never fork it into a real copy: a duplicate freezes at whatever it was at migration time and silently drifts out of sync with every change made here. If a tool ever writes a standalone `AGENTS.md` or an `.agents/` directory, that is a bug in the migration, not a second source of truth: delete it and re-symlink.
+
 ## Project
 
 PDF brochure pipeline for the NoMoreApply engineering collective. Converts per-person Markdown profiles into polished PDFs (one team brochure + individual pages) via Pandoc + Typst, built automatically in CI and published to GitHub Pages.
@@ -15,7 +17,7 @@ PDF brochure pipeline for the NoMoreApply engineering collective. Converts per-p
 - Text primary: `#09090B` (near-black, also the dark-band fill)
 - Text secondary: `#52525B`
 - Text tertiary / eyebrow: `#71717A` (muted grey), faint variant `#A1A1AA`
-- Accent: `#DC143C` (NMA brand red, confirmed against the live nomoreapply.com — role lines, team taglines, accent bars only)
+- Accent: `#DC143C` (NMA brand red, confirmed against the live nomoreapply.com: role lines, team taglines, accent bars only)
 - Dividers: `#E4E4E7` (light grey rules and card borders)
 - Font: Inter, weights 400/600/700
 - Name: 26pt bold, tracking -0.02em
@@ -47,12 +49,12 @@ All prose in `sources/` must follow these rules. Apply them when extracting or e
 
 Each `sources/*.md` file must follow the same YAML front matter + H2 section structure so the template can consume them consistently.
 
-**Front matter** additionally carries `proof:`, a list of 3-4 metric-led fragments (e.g. `"7 of 10 DAX companies"`). This renders as the stat band under the contact line. Avoid `~` in these fragments (Pandoc's Typst writer escapes it when substituting raw template variables, unlike body prose) — write `2B+` rather than `~2B`.
+**Front matter** additionally carries `proof:`, a list of 3-4 metric-led fragments (e.g. `"7 of 10 DAX companies"`). This renders as the stat band under the contact line. Avoid `@word` in these fragments and in body prose generally: Pandoc parses it as a citation (`#cite(<word>, ...)`), which fails the build with "the document does not contain a bibliography" since there is no bibliography configured.
 
 **Body sections, in order:**
 1. `## Summary` - 2-3 sentences. Lead with the outcome and the strongest claim, not biography. The team brochure (`scripts/assemble-team.sh`) extracts only the **first paragraph** (up to the first blank line) for the team card, so keep that opening paragraph self-contained and under ~50 words.
 2. `## Expertise` - 5-8 bullets. The team brochure also extracts the **first 4 bullets** here, so lead with the strongest ones.
-3. `## Notable Work` - **capped at 6 entries.** Write each as an H3 heading (company/project) followed by an italic meta line (`*Role · Years*`), then prose or bullets. Adding a 7th entry means demoting one to `## Also`. Ranking rubric, applied in order: named client or brand a buyer recognises → a hard number → recency → fit with current positioning → technical distinctiveness (ties break toward recency). Every full entry needs at least one number; no metric means it belongs in `## Also`.
+3. `## Notable Work` - **capped at 6 entries.** Write each as an H3 heading (company/project) followed by an italic meta line (`*Role · Years*`), then prose or bullets. Italics are reserved for this meta line only (the template renders all `*emphasis*` at 9pt muted grey document-wide, so inline emphasis in prose reads as a rendering glitch, not a style choice). Adding a 7th entry means demoting one to `## Also`. Ranking rubric decides which entries make the cut, applied in order: named client or brand a buyer recognises → a hard number → recency → fit with current positioning → technical distinctiveness (ties break toward recency). Every full entry needs at least one number; no metric means it belongs in `## Also`. **Order the entries chronologically** (by end date descending, then start date descending) rather than by rubric strength, so the section reads as a timeline. For an entry titled by the company you delivered through, put the recognisable brand first: `VONQ via Wandercode`, not `Wandercode via VONQ`. For an entry titled by a product you built for a client, use `for`: `ElectaCar for Navigator Insurance Brokers`.
 4. `## Also` - one-liners for demoted or minor work. Keep brand names visible, cut the detail.
 5. `## Tech Stack` - Categorized list: languages, frameworks, infra, AI/ML tools.
 6. `## Background` - Education, distinctions, speaking, community.

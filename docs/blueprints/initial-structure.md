@@ -36,7 +36,7 @@ nomoreapply.github.io/services/ (public, always reflects latest push)
 
 ### How the team brochure summary works
 
-`scripts/assemble-team.sh` extracts the first paragraph (up to the first blank line) of `## Summary` and the first 4 bullets of `## Expertise` from each individual `.md` file, wraps them in Typst `#accentcard()` blocks, and injects them into the assembled team markdown before Pandoc + Typst renders the team PDF. Full profiles stay in their individual PDFs. Every value it injects is escaped for Typst special characters (`#`, `$`, `@`, `\`) before insertion, so raw member prose can never break the build.
+`scripts/assemble-team.sh` extracts the first paragraph (up to the first blank line) of `## Summary` and the first 4 bullets of `## Expertise` from each individual `.md` file, wraps them in Typst `#accentcard()` blocks, and injects them into the assembled team markdown before Pandoc + Typst renders the team PDF. Full profiles stay in their individual PDFs. Every value it injects is escaped for Typst special characters (`#`, `$`, `@`, `\`, `[`, `]`, `<`, `>`) before insertion, so raw member prose can never break the build.
 
 ---
 
@@ -67,7 +67,7 @@ proof:
 **Body sections (in this order, H2 headings):**
 1. `## Summary` - 2-3 sentence pitch. Lead with the outcome and the strongest claim, not the role or biography. The team brochure extracts only the first paragraph verbatim, so keep it self-contained.
 2. `## Expertise` - 5-8 bullet points. Core capabilities, technically specific. No manual line breaks inside bullets. The team brochure extracts the first 4.
-3. `## Notable Work` - **capped at 6 entries**, each an H3 heading + italic meta line (`*Role · Years*`) + prose/bullets. Ranked: named brand → hard number → recency → positioning fit → technical distinctiveness. Every entry needs at least one number.
+3. `## Notable Work` - **capped at 6 entries**, each an H3 heading + italic meta line (`*Role · Years*`) + prose/bullets. Which 6 survive is ranked: named brand → hard number → recency → positioning fit → technical distinctiveness. The survivors are then ordered chronologically (end date descending). Every entry needs at least one number.
 4. `## Also` - one-liners for work demoted from Notable Work, or minor engagements. Keep the brand name, cut the detail.
 5. `## Tech Stack` - Categorized list: languages, frameworks, infra, AI/ML tools.
 6. `## Background` - Education, distinctions, speaking, community.
@@ -188,8 +188,8 @@ Tool versions pinned (matches local dev toolchain):
 - Typst: 0.15.1
 - actions/checkout: v6.0.2
 - actions/cache: v5.0.4
-- actions/upload-pages-artifact: v4.0.0
-- actions/deploy-pages: v5.0.0
+- actions/upload-pages-artifact: v5
+- actions/deploy-pages: v5
 
 Site index (`site/index.html`) is copied into `_site/` alongside the PDFs on every build.
 
@@ -243,5 +243,5 @@ Triggered after new resources are added. Identifies which people have updates si
 - [x] Verify Pages deployment URL works (`nomoreapply.github.io/services/`)
 - [x] Redesign site/index.html (team brochure hero, named profile links, footer)
 - [x] Remove unused font files (kept 4, removed 16)
-- [x] Correct brand red to `#e8002d`
+- [x] Correct brand red to `#DC143C`
 - [x] Fix bullet list spacing in template

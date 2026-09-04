@@ -13,10 +13,13 @@ strip_emdash() {
   echo "$1" | sed 's/ — / - /g; s/—/-/g'
 }
 
-# Escape characters that are meaningful inside a Typst content block (#, $, @, \)
-# so raw member prose can never break the build.
+# Escape characters that are meaningful inside a Typst content block
+# (#, $, @, \, and the [ ] < > that delimit content blocks and labels)
+# so raw member prose can never break the build. Injected values land inside
+# #accentcard([...]) and #text(...)[...] - an unescaped ] closes that block
+# early and desyncs everything after it.
 typst_escape() {
-  echo "$1" | sed 's/\\/\\\\/g; s/#/\\#/g; s/\$/\\$/g; s/@/\\@/g'
+  echo "$1" | sed 's/\\/\\\\/g; s/#/\\#/g; s/\$/\\$/g; s/@/\\@/g; s/\[/\\[/g; s/\]/\\]/g; s/</\\</g; s/>/\\>/g'
 }
 
 # Front matter: lines between first and second --- (exclusive of both)

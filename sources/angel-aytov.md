@@ -10,12 +10,12 @@ email: "angel@aytov.com"
 proof:
   - "Mercedes-Benz, Toyota, Credit Suisse"
   - "HIPAA, GDPR, ISO/IEC 42001-compliant AI systems"
-  - "15+ years, FinTech to HealthTech to Automotive"
+  - "FinTech, HealthTech, Automotive: Dublin, remote EU"
 ---
 
 ## Summary
 
-Angel builds AI and data infrastructure that goes beyond prototypes into regulated, observable production systems. Over 15 years across FinTech, HealthTech, and Automotive (Mercedes-Benz, Toyota, Credit Suisse, Metapack), with a current focus on agentic AI: GraphRAG pipelines, multi-agent reasoning, real-time voice interfaces, and the observability layer that makes them auditable. Based in Dublin, open to remote or hybrid engagements across Europe.
+Angel builds AI and data infrastructure that goes beyond prototypes into regulated, observable production systems. Across FinTech, HealthTech, and Automotive (Mercedes-Benz, Toyota, Credit Suisse, Metapack), with a current focus on agentic AI: GraphRAG pipelines, multi-agent reasoning, real-time voice interfaces, and the observability layer that makes them auditable. Based in Dublin, open to remote or hybrid engagements across Europe.
 
 ## Expertise
 
@@ -34,10 +34,15 @@ Angel builds AI and data infrastructure that goes beyond prototypes into regulat
 
 Building clinical research and patient decision support workflows. Delivered a GraphRAG platform with hybrid retrieval and RAGAS evaluation, autonomous research agents for medical literature and clinical trial discovery, a real-time FastAPI gateway with WebRTC voice pipeline, and a full observability stack (OTEL, Langfuse) with PII redaction and sandbox validation before production exposure.
 
-### DEMICON via Mercedes-Benz
+### Mercedes-Benz via DEMICON
 *Senior AWS Cloud Engineer · 2022-2024*
 
 Built custom guardrails and monitoring for the Mercedes-Benz automotive account using Node.js, Selenium, Lambda, Step Functions, and Grafana. Migrated Terragrunt to Terraform Enterprise. Configured GitLab CI/CD pipelines and automated scaling (EC2 ASG, ECS, RDS/Aurora).
+
+### Y TREE
+*FinTech · 2021-2022*
+
+Led implementation of a new ALM core module for financial life intelligence. Deployed microservices on AWS EKS with Kubernetes/Helm. Prototyped in Java/Kotlin (Spring Boot) and TypeScript (Express/Node.js).
 
 ### Toyota Connected Europe
 *2021*
@@ -48,11 +53,6 @@ Designed and built microservices for the user subscription activation flow using
 *Lead Full Stack Engineer · 2020-2021*
 
 Contributed to TradeNet and RM Plus financial data feeds on an investment wealth management platform. Stack: Angular, Java, Spring Boot, Oracle RDBMS.
-
-### Y TREE
-*FinTech · 2021-2022*
-
-Led implementation of a new ALM core module for financial life intelligence. Deployed microservices on AWS EKS with Kubernetes/Helm. Prototyped in Java/Kotlin (Spring Boot) and TypeScript (Express/Node.js).
 
 ### Metapack Group
 *Engineering Tech Lead · 2019*

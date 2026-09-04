@@ -9,14 +9,16 @@ website: "https://wandercode.ltd"
 email: "cmin764@gmail.com"
 proof:
   - "Two startups acquired: Fashwell by Apple, Comfy by Siemens"
-  - "2B+ tokens/month across production agentic workflows"
+  - "~2B tokens/month across production agentic workflows"
   - "5,000+ job channels, 10k-user open-source community"
   - "13+ years Python, embedded fractional engineer"
 ---
 
 ## Summary
 
-AI handles the repetition. Humans fill the gaps that need judgment. Cosmin builds the systems that make that split work in production. 13+ years of Python, a decade of full-time roles at startups (two acquired: Fashwell to Apple, Comfy to Siemens), and a methodology for it: Blugen, wrapping non-deterministic AI generation in deterministic blueprints for reproducible output. Now available for fractional AI product strategy, working across multi-agent architectures, RAG pipelines, and AI compliance tooling to help B2B startups move from AI experiments to production-grade intelligent products.
+AI handles the repetition. Humans fill the gaps that need judgment. Cosmin builds the systems that make that split work in production: 13+ years of Python, two startups acquired (Fashwell to Apple, Comfy to Siemens), and a methodology for it, Blugen, wrapping non-deterministic AI generation in deterministic blueprints for reproducible output.
+
+Now available for fractional AI product strategy, working across multi-agent architectures, RAG pipelines, and AI compliance tooling to help B2B startups move from AI experiments to production-grade intelligent products.
 
 ## Expertise
 
@@ -37,10 +39,15 @@ AI handles the repetition. Humans fill the gaps that need judgment. Cosmin build
 
 Building an AI audit trail for regulated industries (banking, healthcare, defense). The `traced-ai` library auto-patches LLM clients at import time: raw I/O goes to a local SQLite store that never leaves the client perimeter, while SHA-256 hashes and rationale strings are sent to an append-only chained ledger in the cloud. Rule registry maps EU AI Act, ISO 42001, and SOC 2 requirements to concrete logging obligations per decision type.
 
-### Wandercode via VONQ
+### VONQ via Wandercode
 *Embedded AI Engineer · 2025-2026*
 
 Serving a recruitment marketing platform with 5,000+ job channels. Shipped four AI products in parallel: a Meeting Assistant (Recall.ai, Google Meet, ElevenLabs, live private hints for interviewers), Interview Retry (Retell, audio session recovery), a Knowledge Base with Careers Agent (Firecrawl, Pinecone, OpenAI embeddings, CV-to-job RAG matching), and a language assessment MVP for a major European client producing scored PDF dossiers. Now running ~2B tokens/month across these systems.
+
+### A5 Labs via Wandercode
+*2025*
+
+Built Python/FastAPI services and a C++ inference server delivering Game Theory Optimal (GTO) and reinforcement learning strategies for high-stakes poker. Three-service mesh with response-time-constrained routing, automated regression benchmark via Bitbucket CI.
 
 ### Sema4.ai
 *2023-2024*
@@ -56,11 +63,6 @@ Built the Python RPA library ecosystem: intelligent document processing, browser
 *Acquired by Siemens · 2019-2020*
 
 Architected microservices for a smart buildings IoT platform (Go + Python/Django, gRPC/protobuf, PostGIS). Saw the full arc of the acquisition.
-
-### Wandercode via A5 Labs
-*2025*
-
-Built Python/FastAPI services and a C++ inference server delivering Game Theory Optimal (GTO) and reinforcement learning strategies for high-stakes poker. Three-service mesh with response-time-constrained routing, automated regression benchmark via Bitbucket CI.
 
 ## Tech Stack
 
