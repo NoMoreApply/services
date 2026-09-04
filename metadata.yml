@@ -139,6 +139,14 @@ resources:
     added: 2026-09-04
     notes: "Site rebuilt since April snapshot: AI consultant positioning, 'model is rarely the bottleneck' philosophy quote, deeper AI-specific tech stack (LangChain/LangGraph, Haystack, RAGFlow, MCP, pgvector, Drizzle, Temporal), Google Ads Operations Platform (2026, not in CV), Heyamigo downloads updated to 15,000+."
 
+  - file: Catalin_Waack-cv-ios-04_09_2026.pdf
+    person: Catalin Waack
+    type: cv
+    source_url: null
+    added: 2026-09-04
+    target: "iOS-focused role"
+    notes: "Same career, iOS-role framing. Mine for facts only, not positioning: Navigator Insurance Brokers Ltd as ElectaCar's client, 100+ vehicle models, Syntax's 100+ instructors and 27,000+ quiz results, AmigoEngine pairing with HeyAmigo, BreakEats' nine frequency bands, new open-source TailRemote project, VoxR as revenue-share employment."
+
 todos:
   - person: Angel Aytov
     missing: cv

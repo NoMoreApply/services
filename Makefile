@@ -36,7 +36,7 @@ $(TEAM_PDF): $(TEAM_MD) $(TEMPLATE) | $(OUTDIR)
 		--variable=team:true \
 		-o $@ $<
 
-$(TEAM_MD): $(SOURCES)/team.md $(addprefix $(SOURCES)/,$(addsuffix .md,$(MEMBERS))) | $(OUTDIR)
+$(TEAM_MD): $(SOURCES)/team.md $(addprefix $(SOURCES)/,$(addsuffix .md,$(MEMBERS))) scripts/assemble-team.sh | $(OUTDIR)
 	bash scripts/assemble-team.sh $@ $(SOURCES)/team.md $(addprefix $(SOURCES)/,$(addsuffix .md,$(MEMBERS)))
 
 $(OUTDIR):

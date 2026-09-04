@@ -6,7 +6,7 @@ You are running the NoMoreApply source sync. This command is triggered after new
 
 - All team members (Angel Aytov, Catalin Waack, Cosmin Poieana) are male. Use he/him pronouns in all profile prose.
 - Bullet text in `sources/` must never contain manual line breaks. Write each bullet as a single continuous line; let the PDF engine wrap naturally.
-- Brand red accent is `#e8002d`. Do not use `#DC143C`.
+- Brand red accent is `#DC143C` (confirmed against the live nomoreapply.com; matches the `nma` repo source).
 - Writing style rules are in `CLAUDE.md`: no em dashes, no AI filler, concrete outcomes, active voice.
 
 ## 1. Identify updated resources
@@ -25,7 +25,8 @@ For each person with new resources, follow CLAUDE.md procedure 2 (Syncing resour
 
 - Read **all** resource files for that person in `resources/` (not just the newest)
 - Synthesize into their `sources/*.md` file: brochure-style, not a CV dump
-- The sharpest version of each section: Summary (2-3 sentences, lead with outcome), Expertise (5-8 bullets, technically specific, no manual line breaks), Notable Work (3-5 highlights with company + outcome), Tech Stack (categorized), Background (education, distinctions, community)
+- The sharpest version of each section: Summary (2-3 sentences, lead with outcome and strongest claim, first paragraph self-contained and under ~50 words since the team brochure extracts it verbatim), Expertise (5-8 bullets, technically specific, no manual line breaks), Notable Work (**capped at 6**; rank candidates by named brand → hard number → recency → positioning fit → technical distinctiveness to decide which 6 survive, demote the rest to `## Also` as one-liners, then order the surviving 6 chronologically by end date descending; brand-first naming, e.g. `VONQ via Wandercode`, `ElectaCar for Navigator Insurance Brokers`), Tech Stack (categorized), Background (education, distinctions, community)
+- Update `proof:` front matter (3-4 metric-led fragments) if a new resource surfaces a stronger number or brand
 - Remove `<!-- TODO -->` comments for any gaps that are now filled
 - Keep remaining TODOs for still-missing data
 - Log a source-level audit trail entry in `docs/audit-trail.md` (see CLAUDE.md format)

@@ -7,11 +7,18 @@ linkedin: "https://www.linkedin.com/in/cmin764"
 github: "https://github.com/cmin764"
 website: "https://wandercode.ltd"
 email: "cmin764@gmail.com"
+proof:
+  - "Two startups acquired: Fashwell by Apple, Comfy by Siemens"
+  - "~2B tokens/month across production agentic workflows"
+  - "5,000+ job channels, 10k-user open-source community"
+  - "13+ years Python, embedded fractional engineer"
 ---
 
 ## Summary
 
-AI handles the repetition. Humans fill the gaps that need judgment. Cosmin builds the systems that make that split work in production. 13+ years of Python, a decade of full-time roles at startups (two acquired: Fashwell to Apple, Comfy to Siemens), and a methodology for it: Blugen, wrapping non-deterministic AI generation in deterministic blueprints for reproducible output. Now available for fractional AI product strategy, working across multi-agent architectures, RAG pipelines, and AI compliance tooling to help B2B startups move from AI experiments to production-grade intelligent products.
+AI handles the repetition. Humans fill the gaps that need judgment. Cosmin builds the systems that make that split work in production: 13+ years of Python, two startups acquired (Fashwell to Apple, Comfy to Siemens), and a methodology for it, Blugen, wrapping non-deterministic AI generation in deterministic blueprints for reproducible output.
+
+Now available for fractional AI product strategy, working across multi-agent architectures, RAG pipelines, and AI compliance tooling to help B2B startups move from AI experiments to production-grade intelligent products.
 
 ## Expertise
 
@@ -27,17 +34,35 @@ AI handles the repetition. Humans fill the gaps that need judgment. Cosmin build
 
 ## Notable Work
 
-**Traced AI** (2026, stealth): Building an AI audit trail for regulated industries (banking, healthcare, defense). The `traced-ai` library auto-patches LLM clients at import time: raw I/O goes to a local SQLite store that never leaves the client perimeter, while SHA-256 hashes and rationale strings are sent to an append-only chained ledger in the cloud. Rule registry maps EU AI Act, ISO 42001, and SOC 2 requirements to concrete logging obligations per decision type. Dashboard available as a self-hosted Docker image or hosted on Fly.io.
+### Traced AI
+*Stealth · 2026*
 
-**Wandercode / VONQ** (2025-2026): Embedded engineer at a recruitment marketing platform serving 5,000+ job channels. Shipped four AI products in parallel: a Meeting Assistant (Recall.ai + Google Meet + ElevenLabs, live private hints for interviewers), Interview Retry (Retell, audio session recovery), a Knowledge Base with Careers Agent (Firecrawl + Pinecone + OpenAI embeddings, CV-to-job RAG matching), and a language assessment MVP for a major European client producing scored PDF dossiers (vocabulary, fluency, semantics, coherence). Drove AI adoption across the engineering team.
+Building an AI audit trail for regulated industries (banking, healthcare, defense). The `traced-ai` library auto-patches LLM clients at import time: raw I/O goes to a local SQLite store that never leaves the client perimeter, while SHA-256 hashes and rationale strings are sent to an append-only chained ledger in the cloud. Rule registry maps EU AI Act, ISO 42001, and SOC 2 requirements to concrete logging obligations per decision type.
 
-**Wandercode / A5 Labs** (2025): Built Python/FastAPI services and a C++ inference server delivering Game Theory Optimal (GTO) and reinforcement learning strategies for high-stakes poker. Three-service mesh with response-time-constrained routing; automated regression benchmark via Bitbucket CI.
+### VONQ via Wandercode
+*Embedded AI Engineer · 2025-2026*
 
-**Sema4.ai** (2023-2024): Led a team of 5 engineers building AI Actions for OpenGPT-powered agents. Core product: an Action Server (FastAPI) that discovers and runs action packages in isolation. Pre-dates MCP standardization: type-safe Python functions annotated with `@action` or `@tool` and exposed via OpenAPI/MCP spec. Covered Google, Slack, HubSpot, and local document operations. Designed OAuth2 flows, drove DX improvements, managed hiring and 360 reviews.
+Serving a recruitment marketing platform with 5,000+ job channels. Shipped four AI products in parallel: a Meeting Assistant (Recall.ai, Google Meet, ElevenLabs, live private hints for interviewers), Interview Retry (Retell, audio session recovery), a Knowledge Base with Careers Agent (Firecrawl, Pinecone, OpenAI embeddings, CV-to-job RAG matching), and a language assessment MVP for a major European client producing scored PDF dossiers. Now running ~2B tokens/month across these systems.
 
-**Robocorp** (2021-2023, acquired by Sema4.ai): Built the Python RPA library ecosystem: intelligent document processing, browser automation (Selenium/Playwright), OCR, OAuth2, PDF handling. 10k-user community. Prioritized ruthlessly from direct customer support.
+### A5 Labs via Wandercode
+*2025*
 
-**Comfy to Siemens** (2019-2020): Architected microservices for a smart buildings IoT platform (Go + Python/Django, gRPC/protobuf, PostGIS). Saw the full arc of a Siemens acquisition.
+Built Python/FastAPI services and a C++ inference server delivering Game Theory Optimal (GTO) and reinforcement learning strategies for high-stakes poker. Three-service mesh with response-time-constrained routing, automated regression benchmark via Bitbucket CI.
+
+### Sema4.ai
+*2023-2024*
+
+Led a team of 5 engineers building AI Actions for OpenGPT-powered agents. Core product: an Action Server (FastAPI) that discovers and runs action packages in isolation, predating MCP standardization: type-safe Python functions annotated with `@action` or `@tool` and exposed via OpenAPI/MCP spec. Covered Google, Slack, HubSpot, and local document operations.
+
+### Robocorp
+*Acquired by Sema4.ai · 2021-2023*
+
+Built the Python RPA library ecosystem: intelligent document processing, browser automation (Selenium/Playwright), OCR, OAuth2, PDF handling. Grew a 10k-user open-source community, prioritizing ruthlessly from direct customer support.
+
+### Comfy
+*Acquired by Siemens · 2019-2020*
+
+Architected microservices for a smart buildings IoT platform (Go + Python/Django, gRPC/protobuf, PostGIS). Saw the full arc of the acquisition.
 
 ## Tech Stack
 
@@ -64,5 +89,3 @@ Co-founded RoPython (PSF-approved), organizing regional conferences and workshop
 Distinctions: Robocorp Level I/II/III certifications; 2nd place Innovation Labs Iași (2019); Bronze Medal, National Olympiad in Informatics (2012); Stanford AI course (2011).
 
 Writing at cmin764.medium.com and cosminslife.wordpress.com. Photography at asitisphotos (Instagram). Digital nomad since 2021, 50+ countries.
-
-Scale proof: ~2B tokens/month, ~12,750 AI messages/month across systematic agentic workflows.
