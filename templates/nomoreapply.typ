@@ -62,7 +62,7 @@
 #show heading.where(level: 3): it => block(sticky: true, below: 0pt)[
   #v(0.4em)
   #text(size: 10.5pt, weight: "bold")[#it.body]
-  #v(0.05em)
+  #v(0.35em)
 ]
 
 // Meta line under a level-3 heading, written as *italic* in source markdown
