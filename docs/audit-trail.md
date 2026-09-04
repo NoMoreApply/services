@@ -2,6 +2,14 @@
 
 ---
 
+**2026-09-04** - Updated Catalin: refreshed CV and website resynced
+
+What changed: Corrected the 2024 job history: the "DAYONE, Senior Frontend" entry was conflating two different clients. FAMFAM (Keinemusik DJ collective music/event app, React Native/Expo/TypeScript, 12,000+ users, App Store Top 10 Music) is now its own entry via DAYONE; the AEM migration work is a separate client, Verlag des Österreichischen Gewerkschaftsbundes. Added ElectaCar (2026), Google Ads Operations Platform (2026), and expanded Rivoara to cover the paired Runtime Affiliate platform. Updated Heyamigo's npm downloads to 15,000+ (was 2,000). Rewrote Summary to lead with 20 years in tech, independent since 2018, the "model is rarely the bottleneck" positioning quote, and added the OneCode GmbH testimonial. Corrected location from Romania to Germany (remote, EU/international). Expanded Tech Stack with AI/agent tooling confirmed on both sources: LangChain/LangGraph, Haystack, RAGFlow, MCP, GEO/LLMO, Temporal, pgvector, Drizzle ORM, Google Ads API, Shopify Admin API. Corrected edeltravel/Luxury Essence entry to cover both the travel publishing platform (170+ articles) and the design framework, dated 2022-2023.
+
+Why: New CV received (`resources/Catalin_Waack-CV-04_09_2026.pdf`) plus a refreshed website snapshot (`resources/Catalin_Waack-website-04_09_2026.txt`) showed the site had been rebuilt around an AI-consultant positioning since the April sync. Cross-referencing both against the existing source caught a real factual error (the FAMFAM/DAYONE conflation) in addition to stale numbers and missing 2026 projects.
+
+---
+
 **2026-09-02** - Redirected site/about to nomoreapply.com/about, content moved to main site
 
 Decision: Replaced site/about/index.html with a meta-refresh redirect (plus canonical link and a plain fallback line) pointing to https://nomoreapply.com/about, instead of deleting the page. Merge staged to land after the ported page goes live on nomoreapply.com.

@@ -78,9 +78,9 @@ Gaps are marked with `<!-- TODO: source missing -->` so they're visible in diffs
 - Supplementary: LinkedIn profile PDF, Discord post, wandercode `About.tsx`
 - Remaining to pull (optional enrichment): wandercode.ltd service pages, portfolio starred list
 
-**Catalin Waack (`sources/catalin-waack.md`)** - synced 2026-04-09
-- Primary: `resources/Catalin_Waack-CV-06_04_2026.pdf`
-- Supplementary: LinkedIn profile PDF, Discord post, contra.com, catalinwaack.com, electacar.com, rivoara.com
+**Catalin Waack (`sources/catalin-waack.md`)** - synced 2026-09-04
+- Primary: `resources/Catalin_Waack-CV-04_09_2026.pdf` (supersedes `Catalin_Waack-CV-06_04_2026.pdf`, kept for history)
+- Supplementary: LinkedIn profile PDF, Discord post, contra.com, `resources/Catalin_Waack-website-04_09_2026.txt`, electacar.com, rivoara.com
 - All TODOs resolved
 
 **Angel Aytov (`sources/angel-aytov.md`)** - 1 TODO remaining (speaking/community section)

@@ -125,6 +125,20 @@ resources:
     added: 2026-05-28
     notes: "Portfolio site. Adds: Traced AI stealth startup (2026, AI compliance), Pulsr (pipeline orchestration for AI agents), VONQ project details (Recall.ai, ElevenLabs, Pinecone, Retell, Firecrawl), full tech stack with AI tooling, system design samples. Key positioning: Blugen methodology, AI product builder."
 
+  - file: Catalin_Waack-CV-04_09_2026.pdf
+    person: Catalin Waack
+    type: cv
+    source_url: null
+    added: 2026-09-04
+    notes: "Refreshed CV. Repositions as 'Independent AI Consultant and Product Engineer', 20 years in tech. Corrects 2024 job history (FAMFAM via DAYONE is the Keinemusik music app; Verlag des Österreichischen Gewerkschaftsbundes is a separate AEM migration client, previously conflated in sources/catalin-waack.md). Adds ElectaCar (2026), Heyamigo, Runtime Affiliate alongside Rivoara. OneCode GmbH testimonial."
+
+  - file: Catalin_Waack-website-04_09_2026.txt
+    person: Catalin Waack
+    type: personal-website
+    source_url: "https://catalinwaack.com/en"
+    added: 2026-09-04
+    notes: "Site rebuilt since April snapshot: AI consultant positioning, 'model is rarely the bottleneck' philosophy quote, deeper AI-specific tech stack (LangChain/LangGraph, Haystack, RAGFlow, MCP, pgvector, Drizzle, Temporal), Google Ads Operations Platform (2026, not in CV), Heyamigo downloads updated to 15,000+."
+
 todos:
   - person: Angel Aytov
     missing: cv
@@ -134,7 +148,7 @@ todos:
   - person: Catalin Waack
     missing: []
     priority: done
-    notes: "All web resources fetched and synced 2026-04-09."
+    notes: "Refreshed CV and website resynced 2026-09-04. Corrected FAMFAM/DAYONE vs Verlag des Österreichischen Gewerkschaftsbundes conflation, added ElectaCar, Google Ads Operations Platform, Runtime Affiliate."
 
   - person: Cosmin Poieana
     missing: []
