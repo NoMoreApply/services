@@ -83,7 +83,7 @@ Romania (home), Cyprus (business hub). Also lived/worked in USA, Switzerland (Zu
 | Young Founders School: Certificate of Appreciation (mentor) | 2026 |
 | Robocorp Level I, II, III | 2021-2022 |
 | Innovation Labs Iași, 2nd place (qualified for Bucharest) | 2019 |
-| Best Marketing, Startup Weekend Iași (TrueStory) | 2014 |
+| Best Marketing, Startup Weekend Iași (You Match Me) | 2014 |
 | Bronze Medal, National Olympiad in Informatics | 2012 |
 | Stanford Introduction to AI, Advanced Track | 2011 |
 | National Physics Olympiad, Mention & Special Mention | 2007-2008 |
