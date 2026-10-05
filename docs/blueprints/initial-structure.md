@@ -76,9 +76,9 @@ Gaps are marked with `<!-- TODO: source missing -->` so they're visible in diffs
 
 ### Per-person extraction guide
 
-**Cosmin Poieana (`sources/cosmin-poieana.md`)** - complete, 0 TODOs, `proof:` front matter added 2026-09-04 (already at the 6-entry cap, no cuts needed)
-- Primary: `resources/Cosmin_Poieana-CV-06_04_2026.pdf`
-- Supplementary: LinkedIn profile PDF, Discord post, wandercode `About.tsx`
+**Cosmin Poieana (`sources/cosmin-poieana.md`)** - complete, 0 TODOs, `proof:` front matter added 2026-09-04 (already at the 6-entry cap, no cuts needed); resynced 2026-10-05 from the Markdown CV, codex and README
+- Primary: `resources/Cosmin_Poieana-cv-05_10_2026.md` (supersedes `Cosmin_Poieana-CV-06_04_2026.pdf`, kept for history), `resources/Cosmin_Poieana-codex-05_10_2026.md`
+- Supplementary: README, LinkedIn profile PDF, Discord post, portfolio snapshot, wandercode `About.tsx`
 - Remaining to pull (optional enrichment): wandercode.ltd service pages, portfolio starred list
 
 **Catalin Waack (`sources/catalin-waack.md`)** - repositioned 2026-09-04

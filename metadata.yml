@@ -125,6 +125,27 @@ resources:
     added: 2026-05-28
     notes: "Portfolio site. Adds: Traced AI stealth startup (2026, AI compliance), Pulsr (pipeline orchestration for AI agents), VONQ project details (Recall.ai, ElevenLabs, Pinecone, Retell, Firecrawl), full tech stack with AI tooling, system design samples. Key positioning: Blugen methodology, AI product builder."
 
+  - file: Cosmin_Poieana-cv-05_10_2026.md
+    person: Cosmin Poieana
+    type: cv
+    source_url: "https://github.com/cmin764/cmin764/blob/main/cv.md"
+    added: 2026-10-05
+    notes: "CV Markdown at v4.6.0 (215c5dd). Adds Bonsai Labs (main client), Change Agents (full-time embedded), Dentio, harness-only development, corrected career dates. Owner confirmed removals: token/PR stats, 5,000+ channels, A5 Labs tech lead claim."
+
+  - file: Cosmin_Poieana-codex-05_10_2026.md
+    person: Cosmin Poieana
+    type: codex
+    source_url: "https://github.com/cmin764/cmin764/blob/main/codex.md"
+    added: 2026-10-05
+    notes: "Canonical facts source behind the CV. Mine for engagement detail and dates only. Contains personal, partnership and review material that must stay out of brochure copy."
+
+  - file: Cosmin_Poieana-readme-05_10_2026.md
+    person: Cosmin Poieana
+    type: readme
+    source_url: "https://github.com/cmin764/cmin764/blob/main/README.md"
+    added: 2026-10-05
+    notes: "GitHub profile README. Current-role framing and highlights."
+
   - file: Catalin_Waack-CV-04_09_2026.pdf
     person: Catalin Waack
     type: cv
@@ -161,4 +182,4 @@ todos:
   - person: Cosmin Poieana
     missing: []
     priority: done
-    notes: "Portfolio resource added 2026-05-28. Includes Traced AI, Pulsr, full VONQ AI details, Blugen methodology. Sync into sources completed 2026-05-28."
+    notes: "CV, codex and README added 2026-10-05. Sync into sources completed 2026-10-05."
