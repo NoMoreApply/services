@@ -32,12 +32,12 @@ jobs:
         uses: actions/cache@v5
         with:
           path: /tmp/pandoc.deb
-          key: pandoc-3.11
+          key: pandoc-3.12
 
       - name: Install Pandoc
         run: |
           if [ ! -f /tmp/pandoc.deb ]; then
-            curl -sLo /tmp/pandoc.deb https://github.com/jgm/pandoc/releases/download/3.11/pandoc-3.11-1-amd64.deb
+            curl -sLo /tmp/pandoc.deb https://github.com/jgm/pandoc/releases/download/3.12/pandoc-3.12-1-amd64.deb
           fi
           sudo dpkg -i /tmp/pandoc.deb
 
