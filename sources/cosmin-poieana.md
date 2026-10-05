@@ -8,7 +8,7 @@ github: "https://github.com/cmin764"
 website: "https://wandercode.ltd"
 email: "cmin764@gmail.com"
 proof:
-  - "Two companies he worked at acquired: Fashwell by Apple, Comfy by Siemens"
+  - "Two companies he worked at got acquired: Fashwell (Apple), Comfy (Siemens)"
   - "Python since 2007, 14+ years professional"
   - "10k-user open-source community at Robocorp"
   - "Led 5 Python engineers at Sema4.ai"
@@ -23,11 +23,11 @@ His method, Blugen, wraps non-deterministic AI generation in deterministic bluep
 ## Expertise
 
 - Harness-only development since summer 2025: every change runs through an agent harness (Claude Code, Cursor, Codex, Devin) with custom agents, skills, hooks, guards and MCP connectors packaged as plugins
-- AI SDLC transformation: harness assessment, a delivery baseline tied to a business metric, agent-driven QA, ticket-to-PR flows and a playbook with a named owner
+- AI SDLC transformation: harness assessment, a delivery baseline tied to a business metric, agent-driven QA and ticket-to-PR flows
 - LLM products and RAG pipelines on OpenAI, Anthropic, Gemini, Perplexity and Grok APIs, with multi-engine fan-out, failure isolation and run cost observability
 - Real-time AI agents: live transcript analysis, speech synthesis and audio interview recovery (Recall.ai, ElevenLabs, Retell)
-- Embedded fractional engineering: inside your Slack, GitHub and standups, with shared conventions, AI-augmented code review and blueprint-first methods
-- Technical audits and strategy: stack analysis, risk registers and phased roadmaps for startups scaling past their first architecture
+- Embedded fractional engineering: inside your Slack, GitHub and standups, with shared conventions, AI-augmented code review
+- Technical audits and strategy: stack analysis, risk registers and phased roadmaps for startups and high-growth companies
 - Python at depth: FastAPI, Django, Flask, asyncio, distributed systems (gRPC, Celery, Dramatiq, arq), uv monorepos with enforced module boundaries, multi-tenant PostgreSQL with forced row-level security
 - Full-stack delivery when needed: React/Next.js frontends, Docker and Kubernetes deployments
 
@@ -36,7 +36,7 @@ His method, Blugen, wraps non-deterministic AI generation in deterministic bluep
 ### Bonsai Labs
 *Forward Deployed AI SDLC Engineer · 2026-present*
 
-Main client. Bonsai Labs does AI transformation for PE-backed companies through short Forward Deployed Engineer engagements. First one: a 5-week engagement for a US payments and tax company. Assess the existing agent harness and team baseline, make agent-based test planning and execution QA-owned, make the harness the default ticket-to-PR flow, and hand over a playbook with a named owner.
+Main client. Bonsai Labs does AI transformation for PE-backed companies through short Forward Deployed Engineer engagements. First one: a 5-week engagement for a US payments and tax company. He assesses the existing agent harness and team baseline, makes agent-based test planning and execution QA-owned, makes the harness the default ticket-to-PR flow, and hands over a playbook with a named owner.
 
 ### Change Agents
 *AI Product Engineer · 2026-present*
@@ -59,19 +59,19 @@ ML/AI for competitive online gaming. Built Python/FastAPI services and a C++ inf
 Led a team of 5 Python engineers building AI Actions for OpenGPT-powered agents. Core product: an Action Server (FastAPI) that discovers and runs action packages in isolation, the execution layer after the model reasons. Covered Google, Slack, HubSpot and local document operations, and designed the OAuth2 flow for the products. Redesigned the hiring challenge as both a technical and psychological filter.
 
 ### Robocorp
-*Senior Engineer, then Engineering Lead · 2021-2024*
+*Senior Software Engineer, then Software Engineering Lead · 2021-2024*
 
 Built the Python RPA library ecosystem: intelligent document processing, browser automation (Selenium), OCR, OAuth2 email and PDF handling. Supported a 10k-user open-source community through direct customer threads and calls, and resolved a pywin OSS issue the team considered nearly impossible. Acquired by Sema4.ai in January 2024.
 
 ## Also
 
-- Traced AI (2026): founded a tamper-evident audit trail for AI decisions, built for EU AI Act compliance
+- Traced AI (2026): founder: tamper-evident evidence of AI decisions for EU AI Act compliance
 - Dentio (2026): technical audit and phased roadmap for a dental-software startup scaling desktop EHR automation
-- NoMoreApply (2024-present): co-founded the private engineer community this brochure belongs to
+- NoMoreApply (2024-present): co-founded a private community for trusted engineers who skip the recruiter
 - Gorgias (2021): OAuth2 authorization server and the foundation of an App Store for third-party developers
 - Comfy (2019-2020): tech lead on Go and Python microservices (gRPC, PostGIS) for a smart buildings IoT platform, worked through the Siemens integration
-- Fashwell (2018): rate limiting on Redis and a Python 2 to 3 migration for an ML fashion detection API, later acquired by Apple
-- Cloudbase Solutions and Bitdefender (2013-2015): cloudbase-init for OpenStack with Microsoft as a key client, and distributed scanning systems in malware research
+- Fashwell (2018): rate limiting on Redis and a Python 2 to 3 migration for an ML fashion detection API; Fashwell was later acquired by Apple
+- Cloudbase Solutions and Bitdefender (2013-2015): cloudbase-init for OpenStack at a cloud company whose key client was Microsoft, and distributed scanning systems in malware research
 
 ## Tech Stack
 
