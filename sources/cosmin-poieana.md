@@ -28,8 +28,8 @@ His method, Blugen, wraps non-deterministic AI generation in deterministic bluep
 - Real-time AI agents: live transcript analysis, speech synthesis and audio interview recovery (Recall.ai, ElevenLabs, Retell)
 - Embedded fractional engineering: inside your Slack, GitHub and standups, with shared conventions, AI-augmented code review and blueprint-first methods
 - Technical audits and strategy: stack analysis, risk registers and phased roadmaps for startups scaling past their first architecture
-- Python at depth: FastAPI, Django, Flask, asyncio, distributed systems (gRPC, Celery, Dramatiq, arq), uv monorepos with enforced module boundaries
-- Multi-tenant PostgreSQL with forced row-level security, plus Redis, Elasticsearch and MongoDB
+- Python at depth: FastAPI, Django, Flask, asyncio, distributed systems (gRPC, Celery, Dramatiq, arq), uv monorepos with enforced module boundaries, multi-tenant PostgreSQL with forced row-level security
+- Full-stack delivery when needed: React/Next.js frontends, Docker and Kubernetes deployments
 
 ## Notable Work
 
@@ -77,15 +77,15 @@ Built the Python RPA library ecosystem: intelligent document processing, browser
 
 **Languages:** Python (since 2007), TypeScript/JavaScript, Go, C/C++, SQL
 
-**AI/ML:** Claude Code, Cursor, Codex, Devin, MCP, OpenAI, Anthropic, Gemini, Perplexity and Grok APIs, LangChain, RAG pipelines, Pinecone, Firecrawl, Recall.ai, ElevenLabs, Retell, Robot Framework, RPA, OCR
+**AI/ML:** Claude Code, Cursor, Codex, Devin, MCP, OpenAI, Anthropic, Gemini, Perplexity and Grok APIs, LangChain, RAG pipelines, Pinecone, Firecrawl, Recall.ai, ElevenLabs, Retell, prompt engineering, Robot Framework, RPA, OCR, IDP
 
 **Web:** FastAPI, Django, Flask, React/Next.js, Node.js/NestJS
 
-**Infra:** Docker, Kubernetes (Helm), AWS (Fargate, RDS, SES), Terraform, Google Cloud, Vercel, gRPC/protobuf, Celery/Dramatiq/arq, uv
+**Infra:** Docker, Kubernetes (Helm), AWS (Fargate, RDS, SES, SQS, S3, Lambda, EKS), Terraform, ArgoCD, Prometheus/Grafana (Loki, Tempo), Google Cloud, Fly.io, Vercel, Supabase, gRPC/protobuf, Celery/Dramatiq/arq, RabbitMQ, ZeroMQ, WebSocket, uv
 
-**Databases:** PostgreSQL (row-level security, multi-tenancy, PostGIS), Redis, MongoDB, Elasticsearch, SQLite
+**Databases:** PostgreSQL (row-level security, multi-tenancy, PostGIS), Redis, MongoDB, MySQL, Elasticsearch, SQLite
 
-**Tooling:** GitHub Actions, CodeRabbit, Linear, Stripe, pytest, Ruff, mypy, import-linter
+**Tooling:** PyCharm, VSCode, Vim, GitHub Actions, CodeRabbit, Linear, Stripe, pytest, Ruff, mypy, import-linter, invoke, Fabric
 
 ## Background
 
@@ -97,4 +97,4 @@ Co-created RoPython (PSF-approved), organizing regional conferences and workshop
 
 Certifications and distinctions: Anthropic Claude Code in Action, Claude Code 101, Claude Platform 101 and Claude 101 (2026); Robocorp Level I/II/III; 2nd place Innovation Labs Iași with TrueStory (2019); Best Marketing at Startup Weekend Iași with You Match Me (2014); Bronze Medal, National Olympiad in Informatics (2012); Stanford Introduction to AI (2011).
 
-Writing at cmin764.medium.com. Photography at asitisphotos (Instagram). Digital nomad since 2021, 50+ countries.
+Writing at cmin764.medium.com and cosminslife.wordpress.com. Photography at asitisphotos (Instagram). Digital nomad since 2021, 50+ countries.
