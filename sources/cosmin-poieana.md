@@ -33,12 +33,12 @@ His method, Blugen, wraps non-deterministic AI generation in deterministic bluep
 
 ## Notable Work
 
-### Bonsai Labs
+### Bonsai Labs via Wandercode
 *Forward Deployed AI SDLC Engineer · 2026-present*
 
 Main client. Bonsai Labs does AI transformation for PE-backed companies through short Forward Deployed Engineer engagements. First one: a 5-week engagement for a US payments and tax company. He assesses the existing agent harness and team baseline, makes agent-based test planning and execution QA-owned, makes the harness the default ticket-to-PR flow, and hands over a playbook with a named owner.
 
-### Change Agents
+### Change Agents via Wandercode
 *AI Product Engineer · 2026-present*
 
 Full-time embedded on an AI visibility platform for local SMBs. It audits how a business appears across five engines (ChatGPT, Gemini, Perplexity, Grok and Google) and deploys fixing agents only after the owner approves. Built the measurement pipeline and owner funnel on multi-tenant Postgres with row-level security, and set up the agent-assisted dev workflow. Python, FastAPI, AWS.
