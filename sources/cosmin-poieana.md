@@ -26,30 +26,30 @@ His method, Blugen, wraps non-deterministic AI generation in deterministic bluep
 - AI SDLC transformation: harness assessment, a delivery baseline tied to a business metric, agent-driven QA and ticket-to-PR flows
 - LLM products and RAG pipelines on OpenAI, Anthropic, Gemini, Perplexity and Grok APIs, with multi-engine fan-out, failure isolation and run cost observability
 - Real-time AI agents: live transcript analysis, speech synthesis and audio interview recovery (Recall.ai, ElevenLabs, Retell)
-- Embedded fractional engineering: inside your Slack, GitHub and standups, with shared conventions, AI-augmented code review
+- Embedded engineering: inside your Slack, GitHub and standups, with shared conventions, AI-augmented code review
 - Technical audits and strategy: stack analysis, risk registers and phased roadmaps for startups and high-growth companies
 - Python at depth: FastAPI, Django, Flask, asyncio, distributed systems (gRPC, Celery, Dramatiq, arq), uv monorepos with enforced module boundaries, multi-tenant PostgreSQL with forced row-level security
 - Full-stack delivery when needed: React/Next.js frontends, Docker and Kubernetes deployments
 
 ## Notable Work
 
-### Bonsai Labs via Wandercode
-*Forward Deployed AI SDLC Engineer · 2026-present*
-
-Main client. Bonsai Labs does AI transformation for PE-backed companies through short Forward Deployed Engineer engagements. First one: a 5-week engagement for a US payments and tax company. He assesses the existing agent harness and team baseline, makes agent-based test planning and execution QA-owned, makes the harness the default ticket-to-PR flow, and hands over a playbook with a named owner.
-
 ### Change Agents via Wandercode
 *AI Product Engineer · 2026-present*
 
-Full-time embedded on an AI visibility platform for local SMBs. It audits how a business appears across five engines (ChatGPT, Gemini, Perplexity, Grok and Google) and deploys fixing agents only after the owner approves. Built the measurement pipeline and owner funnel on multi-tenant Postgres with row-level security, and set up the agent-assisted dev workflow. Python, FastAPI, AWS.
+Primary client. Full-time embedded in a two-engineer team on an AI visibility platform for local SMBs. It audits how a business appears across five engines (ChatGPT, Gemini, Perplexity, Grok and Google) and deploys fixing agents only after the owner approves. Co-led delivery from first commit to paid production in about three and a half months, on dated demo milestones. Built the five-engine measurement pipeline and owner funnel on multi-tenant Postgres with row-level security, and took the nightly user-journey suite from 20 of 41 to 40 of 41 passing. Wrote the team's working agreement and org-wide PR conventions, and architected the human-in-the-lead agent harness that lets two people ship like a team: role charters, a CodeRabbit convergence loop and a Linear toolkit. Python, FastAPI, AWS.
+
+### Bonsai Labs via Wandercode
+*Forward Deployed AI SDLC Engineer · 2026-present*
+
+Secondary client. Bonsai Labs does AI transformation for PE-backed companies through short Forward Deployed Engineer engagements. First one, five weeks for a US payments and tax company: harness baseline and a strict go/no-go, a QA-owned agent testing lane merged into the client's harness, and a playbook handed to a named owner and deputy. AI-marked PRs rose from 6% to 70% across the team (directional, a floor, small sample). Every headline claim was verified or withdrawn before it reached leadership.
 
 ### VONQ via Wandercode
-*Fractional AI Engineer · 2025-2026*
+*Embedded Engineer · 2025-2026*
 
-Recruitment marketing platform distributing jobs to thousands of media channels. Shipped four AI products across Python/Django and React: the Meeting Assistant, a first for VONQ (an agent that joins Google Meet interviews and gives the interviewer private live hints, with Recall.ai and ElevenLabs), a Knowledge Base and Careers Agent (Firecrawl crawler, Pinecone, RAG matching jobs to uploaded CVs), interview audio recovery (Retell), and a language-assessment MVP with a PDF dossier for a major European client. Drove team-wide AI adoption by example.
+Recruitment marketing platform distributing jobs to thousands of media channels. Full-time embedded across product streams. Shipped four AI products across Python/Django and React: the Meeting Assistant, a first for VONQ (an agent that joins Google Meet interviews and gives the interviewer private live hints, with Recall.ai and ElevenLabs), a Knowledge Base and Careers Agent (Firecrawl crawler, Pinecone, RAG matching jobs to uploaded CVs), interview audio recovery (Retell), and a language-assessment MVP with a PDF dossier for a major European client. Drove team-wide AI adoption by example.
 
 ### A5 Labs via Wandercode
-*Fractional Engineer · 2025*
+*Embedded Engineer · 2025*
 
 ML/AI for competitive online gaming. Built Python/FastAPI services and a C++ inference server delivering Game Theory Optimal (GTO) and reinforcement learning strategies for high-stakes poker tournaments. Three-service mesh with response-time-constrained routing and an automated regression benchmark in Bitbucket CI.
 
@@ -79,7 +79,7 @@ Built the Python RPA library ecosystem: intelligent document processing, browser
 
 **AI/ML:** Claude Code, Cursor, Codex, Devin, MCP, OpenAI, Anthropic, Gemini, Perplexity and Grok APIs, LangChain, RAG pipelines, Pinecone, Firecrawl, Recall.ai, ElevenLabs, Retell, prompt engineering, Robot Framework, RPA, OCR, IDP
 
-**Web:** FastAPI, Django, Flask, React/Next.js, Node.js/NestJS
+**Web:** FastAPI, Django, Flask, React/Next.js, Node.js/NestJS, jQuery
 
 **Infra:** Docker, Kubernetes (Helm), AWS (Fargate, RDS, SES, SQS, S3, Lambda, EKS), Terraform, ArgoCD, Prometheus/Grafana (Loki, Tempo), Google Cloud, Fly.io, Vercel, Supabase, gRPC/protobuf, Celery/Dramatiq/arq, RabbitMQ, ZeroMQ, WebSocket, uv
 

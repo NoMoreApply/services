@@ -168,6 +168,27 @@ resources:
     added: 2026-10-05
     notes: "GitHub profile README. Current-role framing and highlights."
 
+  - file: Cosmin_Poieana-CV-14_11_2026.md
+    person: Cosmin Poieana
+    type: cv
+    source_url: "https://github.com/cmin764/cmin764/blob/main/cv.md"
+    added: 2026-11-14
+    notes: "CV Markdown at dc3b8be (PR #6). Change Agents now primary (two-engineer team), Bonsai Labs secondary with the closed first engagement outcome (AI-marked PRs 6% to 70%, directional floor), VONQ now full-time embedded, startups since 2014 (was 2016)."
+
+  - file: Cosmin_Poieana-codex-14_11_2026.md
+    person: Cosmin Poieana
+    type: codex
+    source_url: "https://github.com/cmin764/cmin764/blob/main/codex.md"
+    added: 2026-11-14
+    notes: "Canonical facts source at dc3b8be. Adds Bonsai engagement detail (Oct 7 to Nov 11, 2026), Change Agents delivery to paid production (Oct 27), A5 Labs and VONQ as Embedded Engineer (full-time contractor). Mine for detail only; client-identifying and personal material stays out of brochure copy."
+
+  - file: Cosmin_Poieana-readme-14_11_2026.md
+    person: Cosmin Poieana
+    type: readme
+    source_url: "https://github.com/cmin764/cmin764/blob/main/README.md"
+    added: 2026-11-14
+    notes: "GitHub profile README at dc3b8be. Embedded Engineer role wording for VONQ and A5 Labs, jQuery restored in the frontend stack."
+
 todos:
   - person: Angel Aytov
     missing: cv
@@ -182,4 +203,4 @@ todos:
   - person: Cosmin Poieana
     missing: []
     priority: done
-    notes: "CV, codex and README added 2026-10-05. Sync into sources completed 2026-10-05."
+    notes: "CV, codex and README added 2026-10-05, refreshed 2026-11-14 (cmin764 PR #6). Sync into sources completed 2026-11-14."
