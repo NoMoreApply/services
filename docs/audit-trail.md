@@ -2,6 +2,14 @@
 
 ---
 
+**2026-11-14** - Updated Cosmin: resynced from cmin764 PR #6 (dc3b8be)
+
+What changed: Change Agents is now the primary client and leads Notable Work (full-time embedded, two-engineer team, paid production in about three and a half months, nightly user-journey suite from 20 to 40 of 41 passing). Bonsai Labs is secondary, with the closed first engagement outcome kept anonymous: AI-marked PRs from 6% to 70%, framed as a directional floor on a small sample. VONQ is now full-time embedded and A5 Labs is Embedded Engineer, replacing the fractional wording. "Embedded fractional engineering" in Expertise became "Embedded engineering". jQuery added to the Web stack per the README. The brochure never carried "startups since 2016", so the CV's change to 2014 needed no edit here.
+
+Why: New resources added (`Cosmin_Poieana-CV-14_11_2026.md`, `-codex-`, `-readme-`). The previous Bonsai "main client" framing was stale. The chronological ordering rule would put Bonsai first (later start date), so Change Agents leads by deliberate exception as the primary engagement.
+
+---
+
 **2026-10-05** - Updated Cosmin: resynced from CV v4.6.0, codex and README
 
 What changed: Role is now "Fractional AI Product Strategist". Notable Work rebuilt around current engagements: Bonsai Labs (main client, Forward Deployed AI SDLC Engineer) and Change Agents (full-time embedded) added, Robocorp and Sema4.ai kept with corrected dates and the Sema4.ai team-of-5 lead claim, VONQ and A5 Labs kept. Traced AI demoted to `## Also` (no hard number, and the CV lists it as a venture, not a job), joined there by Dentio, NoMoreApply, Gorgias, Comfy, Fashwell, Cloudbase and Bitdefender. Dropped the "~2B tokens/month" and "5,000+ job channels" proof claims and the "13+ years" figure (now "14+ years professional"). Expertise rewritten around harness-only development, AI SDLC transformation and multi-engine LLM products. Tech Stack aligned to the CV and README, keeping tools the CV does not mention but he uses (AWS SQS/S3/Lambda/EKS, Fly.io, Supabase, ArgoCD, Prometheus/Grafana, RabbitMQ/ZeroMQ, MySQL, PyCharm/VSCode/Vim, invoke/Fabric), since absence from the CV is not proof of non-use. Background gained the 2026 Anthropic certifications and Young Founders School mentoring. The Bonsai end client stays anonymous ("a US payments and tax company"), with no rates or contract terms.
